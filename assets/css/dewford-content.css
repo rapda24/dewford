@@ -1,0 +1,17 @@
+/* Content typography only: original template grids, spacing and breakpoints remain. */
+.dewford-site { font-family: 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+.dewford-site p, .dewford-site .pxl-text-editor, .dewford-site .pxl-heading--text { word-break: keep-all; overflow-wrap: break-word; }
+.dewford-site .pxl-heading--text, .dewford-site .pxl-item--subtext { font-family: 'Funnel Display', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+.dewford-site [id] { scroll-margin-top: 100px; }
+.dewford-site .elementor-element-0f6e0a9 .pxl-item--subtext { font-size: clamp(60px, 12vw, 150px); }
+.dewford-site .elementor-element-6d9e127 .elementor-background-video-container { background: transparent; }
+.dewford-site .elementor-element-6d9e127 video { object-fit: cover; }
+.dewford-site .pxl-progressbar .pxl--percentage { font-size: 14px; }
+
+.dewford-site .elementor-element-6d9e127 .pxl-text-editor { font-size: 18px; font-weight: 600; text-shadow: 0 1px 7px rgba(0,0,0,.65); }
+body.dewford-site .elementor-15 .elementor-element.elementor-element-0f6e0a9 .pxl-heading .pxl-item--subtitle,
+body.dewford-site .elementor-15 .elementor-element.elementor-element-0f6e0a9 .pxl-heading .pxl-item--subtitle span { font-size: clamp(60px, 12vw, 150px); letter-spacing: -.045em; }
+body.dewford-site .elementor-15 .elementor-element.elementor-element-6d9e127 .pxl-text-editor { color: #fff; font-size: 18px; font-weight: 600; text-shadow: 0 1px 7px rgba(0,0,0,.8); }
+.dewford-site .elementor-widget-google_maps iframe { filter: none !important; }
+.dewford-site h1, .dewford-site h2, .dewford-site h3, .dewford-site h4, .dewford-site h5, .dewford-site h6,
+.dewford-site .pxl-post--title, .dewford-site .pxl-post--excerpt { word-break: keep-all; overflow-wrap: break-word; }

@@ -1,0 +1,32 @@
+{
+  "photoReferences": 145,
+  "uniquePhotos": 145,
+  "duplicateReferences": {},
+  "generatedPhotos": 141,
+  "totalGeneratedBytes": 31541128,
+  "scope": [
+    "index.html",
+    "why-dewford.html",
+    "educational-philosophy.html",
+    "learning-journey.html",
+    "student-outcomes.html",
+    "rolling-enrollment.html",
+    "admissions-inquiry.html",
+    "international-preschool.html",
+    "elementary-esl.html",
+    "elementary-international.html",
+    "literacy-program.html",
+    "inquiry-learning.html",
+    "special-subjects.html",
+    "preschool-calendar.html",
+    "elementary-calendar.html",
+    "contact.html"
+  ],
+  "exemptions": [
+    "Shared wordmark and crest",
+    "UI icons and decorative patterns",
+    "Runtime carousel clones of a single logical slide"
+  ],
+  "generator": "Built-in image_gen",
+  "prompts": "unique-photo-plan.json"
+}

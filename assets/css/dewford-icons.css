@@ -1,0 +1,5 @@
+/* Small decorative icons attached to existing content; no extra grid or panels. */
+body.dewford-site .dewford-topic-icon {display:flex;align-items:center;justify-content:center;width:48px;height:48px;margin:0 0 16px;border-radius:14px;background:#f1eaf5;flex:0 0 auto;}
+body.dewford-site .dewford-topic-icon img {display:block;width:28px!important;height:28px!important;max-width:none;object-fit:contain;box-shadow:none;border:0;border-radius:0;}
+body.dewford-site .pxl-post--title .dewford-topic-icon {margin-bottom:18px;}
+@media(max-width:767px){body.dewford-site .dewford-topic-icon{width:42px;height:42px;margin-bottom:12px;border-radius:12px;}body.dewford-site .dewford-topic-icon img{width:25px!important;height:25px!important;}}

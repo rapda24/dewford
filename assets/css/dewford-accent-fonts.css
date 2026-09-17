@@ -1,0 +1,22 @@
+/* Template-based sans-serif pairing: Funnel Display Latin + Pretendard Korean.
+   Both existing local families use matching 600 weight and restrained tracking. */
+body.dewford-site[data-dewford-page] {
+ --dewford-display-font:'Funnel Display','Dewford Pretendard','Apple SD Gothic Neo',sans-serif;
+}
+body.dewford-site[data-dewford-page] .elementor .pxl-heading :is(h1,h2,h3),
+body.dewford-site[data-dewford-page] .elementor .pxl-heading :is(h1,h2,h3) :is(span,.pxl-heading--text),
+body.dewford-site[data-dewford-page] .elementor h2.dewford-stage-title,
+body.dewford-site[data-dewford-page] .dewford-principle-label,
+body.dewford-site[data-dewford-page] .elementor .pxl-post--title {
+ font-family:var(--dewford-display-font)!important;
+ font-weight:600!important;
+ font-style:normal!important;
+ letter-spacing:-.025em!important;
+ line-height:1.4!important;
+ font-synthesis:none;
+ word-break:keep-all;
+}
+body.dewford-site[data-dewford-page] .elementor .pxl-heading :is(.pxl-item--subtext,.pxl-item--subtitle) {
+ font-family:var(--dewford-display-font)!important;
+ font-style:normal!important;
+}

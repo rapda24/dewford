@@ -1,0 +1,107 @@
+[
+  {
+    "file": "why-dewford.html",
+    "title": "Why Dewford?",
+    "section": "ABOUT",
+    "layoutSource": "about-us/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "educational-philosophy.html",
+    "title": "Educational Philosophy",
+    "section": "ABOUT",
+    "layoutSource": "about-us/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "learning-journey.html",
+    "title": "The Dewford Learning Journey",
+    "section": "ABOUT",
+    "layoutSource": "about-us/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "student-outcomes.html",
+    "title": "Student Outcomes",
+    "section": "ABOUT",
+    "layoutSource": "portfolio-grid/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "rolling-enrollment.html",
+    "title": "Rolling Enrollment",
+    "section": "ADMISSIONS",
+    "layoutSource": "faq/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "admissions-inquiry.html",
+    "title": "Admissions Inquiry",
+    "section": "ADMISSIONS",
+    "layoutSource": "contact-us/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "international-preschool.html",
+    "title": "International Preschool",
+    "section": "PROGRAMS",
+    "layoutSource": "service/creative-branding/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "elementary-esl.html",
+    "title": "Elementary ESL",
+    "section": "PROGRAMS",
+    "layoutSource": "service/ui-ux-design/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "elementary-international.html",
+    "title": "Elementary International",
+    "section": "PROGRAMS",
+    "layoutSource": "service/intro-service/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "literacy-program.html",
+    "title": "Literacy Program",
+    "section": "PROGRAMS",
+    "layoutSource": "service/creative-branding/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "inquiry-learning.html",
+    "title": "Inquiry Learning",
+    "section": "PROGRAMS",
+    "layoutSource": "service/ui-ux-design/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "special-subjects.html",
+    "title": "Special Subjects",
+    "section": "PROGRAMS",
+    "layoutSource": "service-3/index.html",
+    "status": "content-populated"
+  },
+  {
+    "file": "preschool-calendar.html",
+    "title": "Preschool Calendar",
+    "section": "CALENDAR",
+    "layoutSource": null,
+    "status": "empty-calendar"
+  },
+  {
+    "file": "elementary-calendar.html",
+    "title": "Elementary Calendar",
+    "section": "CALENDAR",
+    "layoutSource": null,
+    "status": "empty-calendar"
+  },
+  {
+    "file": "contact.html",
+    "title": "Contact",
+    "section": "CONTACT",
+    "layoutSource": "contact-us-v2/index.html",
+    "status": "content-populated"
+  }
+]

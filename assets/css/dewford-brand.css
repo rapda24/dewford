@@ -1,0 +1,108 @@
+/* Brand color is reserved for primary inquiry actions and back-to-top controls. */
+body.dewford-site {
+ --dewford-purple:#601d7f;
+ --dewford-purple-dark:#48165f;
+ --dewford-orange:#f5a100;
+}
+body.dewford-site .dewford-primary-action {
+ background-color:var(--dewford-purple)!important;
+ border-color:var(--dewford-purple)!important;
+ color:#fff!important;
+}
+body.dewford-site .dewford-primary-action:hover {
+ background-color:var(--dewford-purple-dark)!important;
+ border-color:var(--dewford-purple-dark)!important;
+}
+body.dewford-site .dewford-primary-action:focus-visible {
+ outline:3px solid var(--dewford-orange);outline-offset:4px;
+}
+body.dewford-site .dewford-primary-action .pxl--btn-icon {
+ background-color:var(--dewford-orange)!important;
+ color:#222!important;
+}
+/* One discreet, monochrome crest in the existing footer slot. */
+body.dewford-site img.dewford-footer-crest {
+ width:110px!important;height:110px!important;max-width:100%;
+ object-fit:contain!important;aspect-ratio:1;
+}
+@media(max-width:767px){
+ body.dewford-site img.dewford-footer-crest{width:90px!important;height:90px!important;}
+}
+
+/* Small navigation accent; retain neutral text and large backgrounds. */
+body.dewford-site .pxl-scroll-top { background-color:var(--dewford-purple)!important; color:#fff!important; }
+body.dewford-site .pxl-scroll-top:hover { background-color:var(--dewford-purple-dark)!important; }
+
+/* Explicitly marked focal points only; never recolor general text or sections. */
+body.dewford-site #pxl-main .dewford-accent-action {
+ --color-primary:var(--dewford-purple);
+ background:var(--dewford-purple)!important;
+ border-color:var(--dewford-purple)!important;
+ color:#fff!important;
+}
+body.dewford-site #pxl-main .dewford-accent-action:hover {
+ background:var(--dewford-purple-dark)!important;
+ border-color:var(--dewford-purple-dark)!important;
+}
+body.dewford-site #pxl-main .dewford-accent-action:focus-visible {
+ outline:3px solid var(--dewford-purple);outline-offset:4px;
+}
+body.dewford-site #pxl-main .dewford-accent-video i {
+ background:var(--dewford-purple)!important;color:#fff!important;
+}
+body.dewford-site #pxl-main .dewford-accent-label,
+body.dewford-site #pxl-main .dewford-accent-label .pxl-item--subtext {
+ color:var(--dewford-purple)!important;
+}
+
+/* Filled CTA geometry: the template's original transparent buttons had no padding. */
+body.dewford-site #pxl-main :is(.dewford-accent-action,.dewford-primary-action) {
+ display:inline-flex!important;align-items:center;justify-content:center;
+ gap:10px;min-height:48px;height:auto!important;max-width:100%;
+ padding:8px 22px 8px 10px!important;border:1px solid transparent!important;
+ border-radius:999px!important;line-height:1.45!important;
+ font-size:15px;font-weight:600;text-transform:none;white-space:normal;
+ box-sizing:border-box;vertical-align:middle;text-decoration:none;
+}
+body.dewford-site #pxl-main :is(.dewford-accent-action,.dewford-primary-action) .pxl--btn-icon {
+ display:inline-flex;align-items:center;justify-content:center;
+ position:static!important;transform:none!important;
+ width:30px!important;min-width:30px!important;height:30px!important;
+ flex:0 0 30px;margin:0!important;padding:0!important;border-radius:50%;
+ background:rgba(255,255,255,.16)!important;color:#fff!important;
+}
+body.dewford-site #pxl-main :is(.dewford-accent-action,.dewford-primary-action) .pxl--btn-icon svg {
+ width:11px;height:11px;display:block;flex:none;
+}
+body.dewford-site #pxl-main :is(.dewford-accent-action,.dewford-primary-action) .pxl--btn-text {
+ margin:0!important;padding:0!important;line-height:inherit;transform:none!important;
+}
+/* Additional compact accents, leaving large surfaces and body text neutral. */
+body.dewford-site #pxl-main .pxl-heading .pxl-item--subtitle .pxl-item--subtext {
+ color:var(--dewford-purple);
+}
+body.dewford-site #pxl-main .pxl-progressbar--wrap .pxl--progressbar {
+ background:#e5e5e5!important;color:#0a0a0a!important;
+}
+body.dewford-site #pxl-main .pxl-progressbar .pxl--item:nth-child(even) .pxl-progressbar--wrap .pxl--progressbar {
+ background:#0a0a0a!important;color:#fff!important;
+}
+body.dewford-site #pxl-main .pxl-progressbar--wrap .pxl--percentage {color:inherit!important;}
+body.dewford-site #pxl-main .pxl-marquee .pxl-item--text {
+ color:#0a0a0a!important;-webkit-text-fill-color:#0a0a0a!important;
+}
+body.dewford-site #pxl-main form :is(input,textarea,select):focus {
+ border-color:var(--dewford-purple)!important;
+ outline:2px solid rgba(96,29,127,.18);outline-offset:2px;
+}
+@media(max-width:767px){
+ body.dewford-site #pxl-main :is(.dewford-accent-action,.dewford-primary-action){
+  min-height:46px;padding:7px 18px 7px 9px!important;font-size:14px;
+ }
+}
+
+/* Explicit subtitle color requested across all Dewford pages. */
+body.dewford-site #pxl-main .pxl-heading .pxl-item--subtitle .pxl-item--subtext {
+ color:#0a0a0a!important;
+ -webkit-text-fill-color:#0a0a0a!important;
+}

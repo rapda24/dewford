@@ -1,0 +1,22 @@
+/* Deliberate home-page color exceptions and section accents. */
+
+body.dewford-site #pxl-main .dewford-hero-action,
+body.dewford-site #pxl-main .dewford-hero-action:hover {
+ --color-primary:#0a0a0a;background:#0a0a0a!important;border-color:#0a0a0a!important;color:#fff!important;
+}
+body.dewford-site #pxl-main .elementor-element-565b131 .pxl-text-editor,
+body.dewford-site #pxl-main .elementor-element-565b131 .pxl-text-editor p {
+ color:#999!important;
+}
+body.dewford-site #pxl-main .elementor-element-7fa9ce6 .pxl--item {
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
+}
+body.dewford-site #pxl-main .elementor-element-ecba271 .pxl-item--text {
+ color:#0a0a0a!important;
+}
+body.dewford-site #pxl-main .elementor-element-4b1f7c9 {
+ background-color:var(--dewford-purple)!important;
+}
+body.dewford-site #pxl-main .elementor-element-b56b3e4 .pxl-swiper-slide:nth-child(odd) .pxl-item--holder {
+ background:var(--dewford-purple)!important;
+}

@@ -1,0 +1,41 @@
+/* Shared main, sticky and subpage header geometry. */
+@media (min-width: 1201px) {
+  body.dewford-site :is(.elementor-4277, .elementor-191) .elementor-element-4c151ff > .e-con-inner {
+    flex-wrap: nowrap;
+    gap: 28px;
+  }
+  body.dewford-site :is(.elementor-4277, .elementor-191) .elementor-element-51a4010 {
+    flex: 0 0 145px;
+    width: 145px;
+  }
+  body.dewford-site :is(.elementor-4277, .elementor-191) .elementor-element-51a4010 > .elementor-widget-container {
+    margin: 0;
+  }
+  body.dewford-site :is(.elementor-4277, .elementor-191) .elementor-element-51a4010 .pxl-logo img {
+    width: 145px;
+    height: auto;
+    max-height: none;
+  }
+  body.dewford-site :is(.elementor-4277, .elementor-191) .elementor-element-abb0524 {
+    width: auto;
+    flex: 1 1 auto;
+  }
+  body.dewford-site :is(.elementor-4277, .elementor-191) .pxl-nav-menu .pxl-menu-primary {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 28px;
+  }
+  body.dewford-site :is(.elementor-4277, .elementor-191) .elementor-element-abb0524 .pxl-nav-menu .pxl-menu-primary > li {
+    margin: 0;
+    white-space: nowrap;
+  }
+  body.dewford-site :is(.elementor-4277, .elementor-191) .elementor-element-6eb09a6,
+  body.dewford-site :is(.elementor-4277, .elementor-191) .elementor-element-2fdce40 {
+    width: auto;
+    flex: 0 0 auto;
+  }
+}
+
+body.dewford-site header .pxl-menu-primary a:hover,
+body.dewford-site header .pxl-menu-primary a:focus-visible { color:var(--dewford-purple)!important; }
