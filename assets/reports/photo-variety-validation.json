@@ -1,0 +1,19 @@
+{
+  "images": 18,
+  "pages": [
+    "educational-philosophy.html",
+    "elementary-esl.html",
+    "elementary-international.html",
+    "index.html",
+    "inquiry-learning.html",
+    "international-preschool.html",
+    "literacy-program.html",
+    "special-subjects.html",
+    "student-outcomes.html",
+    "why-dewford.html"
+  ],
+  "duplicate_images": false,
+  "missing_files": false,
+  "only_image_paths_and_alt_changed": true,
+  "total_bytes": 5871548
+}

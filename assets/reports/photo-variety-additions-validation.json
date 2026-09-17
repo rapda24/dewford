@@ -1,0 +1,18 @@
+{
+  "additional_images": 12,
+  "main_images": 7,
+  "subpage_images": 5,
+  "total_variety_images": 30,
+  "pages": [
+    "admissions-inquiry.html",
+    "contact.html",
+    "index.html",
+    "rolling-enrollment.html",
+    "student-outcomes.html",
+    "why-dewford.html"
+  ],
+  "unique": true,
+  "paths_valid": true,
+  "aspect_ratios_preserved": true,
+  "only_image_paths_and_alt_changed": true
+}

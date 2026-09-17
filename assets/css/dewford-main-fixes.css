@@ -94,23 +94,6 @@ body[data-dewford-page="home"] .elementor-element-7a24eb0 {
   width: 100%;
   align-self: stretch;
 }
-body[data-dewford-page="home"] .elementor-element-1ce07bd .pxl-heading .pxl-item--title {
-  font-size: clamp(38px, 7vw, 110px) !important;
-  line-height: 1.18 !important;
-}
-body[data-dewford-page="home"] .elementor-element-1ce07bd .pxl-heading .pxl-heading--inner {
-  width: 100%;
-  max-width: 1100px !important;
-}
-body[data-dewford-page="home"] .elementor-element-dd13669 > .elementor-widget-container {
-  margin: 24px 0 0 !important;
-}
-body[data-dewford-page="home"] .elementor-element-1ce07bd .text-gradient-2 {
-  background-image: linear-gradient(180deg, #fff 0%, #999 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 body[data-dewford-page="home"] .pxl-progressbar-1 .pxl--progressbar {
   min-width: 100%;
 }

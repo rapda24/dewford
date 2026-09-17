@@ -101,6 +101,12 @@ body.dewford-site #pxl-main form :is(input,textarea,select):focus {
  }
 }
 
+/* Shared footer call-to-action uses the Dewford identity color. */
+body.dewford-site .elementor-1199 .elementor-element.elementor-element-55072e4:not(.elementor-motion-effects-element-type-background),
+body.dewford-site .elementor-1199 .elementor-element.elementor-element-55072e4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+ background-color:var(--dewford-purple, #601d7f)!important;
+}
+
 /* Explicit subtitle color requested across all Dewford pages. */
 body.dewford-site #pxl-main .pxl-heading .pxl-item--subtitle .pxl-item--subtext {
  color:#0a0a0a!important;

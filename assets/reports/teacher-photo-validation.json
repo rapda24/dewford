@@ -1,0 +1,22 @@
+{
+  "images": 71,
+  "pages": [
+    "admissions-inquiry.html",
+    "contact.html",
+    "educational-philosophy.html",
+    "elementary-esl.html",
+    "elementary-international.html",
+    "index.html",
+    "inquiry-learning.html",
+    "international-preschool.html",
+    "literacy-program.html",
+    "rolling-enrollment.html",
+    "special-subjects.html",
+    "student-outcomes.html",
+    "why-dewford.html"
+  ],
+  "unique_images": 71,
+  "only_image_paths_changed": true,
+  "total_bytes": 16915941,
+  "tool": "built-in image_gen"
+}

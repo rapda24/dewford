@@ -1,7 +1,14 @@
-/* Template-based sans-serif pairing: Funnel Display Latin + Pretendard Korean.
-   Both existing local families use matching 600 weight and restrained tracking. */
+/* Licensed Maharlika webfont pending; local face used when installed. */
+@font-face {
+ font-family:'Dewford Maharlika';src:local('Maharlika');font-weight:600;font-style:normal;font-display:swap;
+ unicode-range:U+0000-024F,U+2000-206F;
+}
+@font-face {
+ font-family:'Dewford MaruBuri';src:url('../fonts/MaruBuri-SemiBold.ttf') format('truetype');
+ font-weight:600;font-style:normal;font-display:swap;
+}
 body.dewford-site[data-dewford-page] {
- --dewford-display-font:'Funnel Display','Dewford Pretendard','Apple SD Gothic Neo',sans-serif;
+ --dewford-display-font:'Dewford Maharlika','Dewford MaruBuri',serif;
 }
 body.dewford-site[data-dewford-page] .elementor .pxl-heading :is(h1,h2,h3),
 body.dewford-site[data-dewford-page] .elementor .pxl-heading :is(h1,h2,h3) :is(span,.pxl-heading--text),

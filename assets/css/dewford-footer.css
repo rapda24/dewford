@@ -1,0 +1,19 @@
+/* Backup footer geometry comes from post-1199.css; keep global display-font
+   customizations from changing its original oversized heading. */
+body.dewford-site #pxl-footer-elementor .elementor-element-1ce07bd .pxl-item--title,
+body.dewford-site #pxl-footer-elementor .elementor-element-1ce07bd .pxl-heading--text {
+ font-family:'Funnel Display',sans-serif!important;
+ font-weight:400!important;
+ font-style:normal!important;
+ line-height:.86!important;
+ letter-spacing:-7.5px!important;
+ word-break:normal;
+ overflow-wrap:normal;
+}
+/* Fit replacement photography and crest into the backup's original slots. */
+body.dewford-site #pxl-footer-elementor .elementor-element-849e97f img {
+ width:645px;max-width:100%;height:auto;aspect-ratio:645/500;object-fit:cover;
+}
+body.dewford-site #pxl-footer-elementor .elementor-element-e2b9157 img {
+ object-fit:contain;
+}
