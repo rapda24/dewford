@@ -17,3 +17,25 @@ body.dewford-site #pxl-footer-elementor .elementor-element-849e97f img {
 body.dewford-site #pxl-footer-elementor .elementor-element-e2b9157 img {
  object-fit:contain;
 }
+
+/* Main footer: compact single-line invitation and balanced, centered columns. */
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-1ce07bd .pxl-item--title,
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-1ce07bd .pxl-heading--text {
+ font-size:clamp(38px,8vw,120px)!important;line-height:1.1!important;
+ letter-spacing:-.04em!important;white-space:nowrap;
+}
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-1ce07bd .pxl-heading--inner {max-width:100%;width:100%;}
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-dd13669>.elementor-widget-container {margin:24px 0 0;}
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-44efa12 {
+ display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.65fr) minmax(0,1fr);
+ width:100%;max-width:1200px;margin:60px auto 0;gap:clamp(28px,4vw,64px);align-items:start;
+}
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-44efa12> .elementor-element {width:100%;min-width:0;padding:0;}
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-849e97f img {width:100%;aspect-ratio:4/3;object-position:30% center;}
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-e2b9157 {left:auto;right:16px;top:16px;width:70px;--e-transform-translateX:0;--e-transform-translateY:0;transform:none!important;}
+body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-e2b9157 img {width:70px;height:auto;}
+@media(max-width:767px){
+ body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-44efa12 {max-width:480px;grid-template-columns:1fr;gap:32px;margin-top:40px;text-align:center;}
+ body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-44efa12 .pxl-link,
+ body[data-dewford-page="home"] #pxl-footer-elementor .elementor-element-44efa12 .pxl-icon-list {justify-content:center;}
+}
