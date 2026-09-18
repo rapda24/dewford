@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="800" viewBox="0 0 960 800" fill="none">
+  <rect width="960" height="800" fill="#E8E7E2"/>
+  <rect x="48" y="48" width="864" height="704" rx="16" stroke="#C5C4BC" stroke-width="2" stroke-dasharray="8 10"/>
+  <g stroke="#7D8075" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M480 300c-25 0-45 20-45 45 0 34 45 73 45 73s45-39 45-73c0-25-20-45-45-45Z"/>
+    <circle cx="480" cy="345" r="14"/>
+  </g>
+  <text x="480" y="478" fill="#42483E" font-family="Arial, sans-serif" font-size="25" letter-spacing="4" text-anchor="middle">LOCATION IMAGE</text>
+  <text x="480" y="520" fill="#767A70" font-family="Arial, 'Malgun Gothic', sans-serif" font-size="20" text-anchor="middle">지도 이미지 준비 중</text>
+</svg>

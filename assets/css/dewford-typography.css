@@ -1,0 +1,60 @@
+/* Pretendard for page text; Min Sans is reserved for the brand wordmark. */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../fonts/PretendardVariable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root, body {
+  --dewford-display-font: 'Pretendard', sans-serif;
+  --font-body: 'Pretendard', sans-serif;
+  --font-heading: 'Pretendard', sans-serif;
+  --e-global-typography-primary-font-family: 'Pretendard';
+  --e-global-typography-secondary-font-family: 'Pretendard';
+  --e-global-typography-text-font-family: 'Pretendard';
+  --e-global-typography-accent-font-family: 'Pretendard';
+}
+/* Important declarations in this layer override the template's unlayered
+   font rules. Icon fonts and their pseudo-elements retain their own glyphs. */
+@layer dewford-typography {
+  html, body,
+  body *:not(i[class], [class*="icon"], [class*="fa-"], .fa, .fas, .far, .fab, .fal, .fad, .fat, .material-icons) {
+    font-family: 'Pretendard', sans-serif !important;
+  }
+}
+
+/* Give headings real variable-font weight while keeping body copy light. */
+@layer dewford-typography {
+  body :is(h1, h2, h3),
+  body .pxl-heading :is(h1, h2, h3) .pxl-heading--text {
+    font-weight: 700 !important;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  body :is(strong, b) { font-weight: 750 !important; }
+  #home .elementor-element-d4ddac1 :is(h2, .pxl-heading--text),
+  #about .elementor-element-ac278bf :is(h2, .pxl-heading--text) {
+    font-weight: 800 !important;
+    letter-spacing: -.035em;
+  }
+  #about .dewford-outcome-card :is(h2, .pxl-heading--text) { font-weight: 650 !important; }
+  #about .dewford-about-description { font-weight: 400; }
+}
+
+
+/* Match the York House hero's Min Sans Medium typography. */
+@font-face {
+  font-family: 'Min Sans';
+  src: url('../fonts/MinSansVF.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@layer dewford-typography {
+  body #home .elementor-element-d4ddac1 h2,
+  body #home .elementor-element-d4ddac1 h2 * {
+    font-family: 'Min Sans', sans-serif !important;
+    font-weight: 500 !important;
+  }
+}

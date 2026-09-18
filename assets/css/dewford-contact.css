@@ -1,0 +1,12 @@
+/* Kakao contact details live on the Contact page, outside the navigation. */
+.dewford-kakao-contact { width: 100%; padding: 28px; border: 1px solid #e8dfaf; border-radius: 16px; background: #fffbea; color: #302c20; }
+.dewford-kakao-contact-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.dewford-kakao-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; height: 44px; border-radius: 14px; background: #fee500; color: #392020; }
+.dewford-kakao-contact h3 { margin: 0; font-size: 22px; line-height: 1.4; color: inherit; }
+.dewford-kakao-contact p { margin: 0 0 16px; font-size: 15px; line-height: 1.8; }
+.dewford-kakao-status { display: inline-block; padding: 8px 14px; border-radius: 8px; background: #eee8cc; font-size: 14px; font-weight: 600; }
+.dewford-kakao-contact .dewford-kakao-alternative { margin: 16px 0 0; font-size: 13px; }
+.dewford-kakao-alternative a { color: inherit; text-decoration: underline; }
+@media (max-width: 767px) { .dewford-kakao-contact { padding: 22px; } }
+
+#kakao-channel { scroll-margin-top: 110px; }

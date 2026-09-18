@@ -1,0 +1,3 @@
+Source: https://github.com/poposnail61/min-sans
+Revision: b8ad5007a55575d030f6b57c2a0d038f295e323b
+File: web/fonts/variable/MinSansVF.woff2

@@ -1,0 +1,140 @@
+/* Home page brand palette: purple identity, orange accents. */
+:root {
+  --dewford-purple: #601d7f;
+  --dewford-purple-dark: #48165f;
+  --dewford-orange: #f5a100;
+  --dewford-ink: #000;
+}
+body {
+  --color-primary: #000;
+  --color-secondary: #000;
+  --color-heading: #000;
+  --e-global-color-primary: var(--dewford-purple);
+  --e-global-color-secondary: var(--dewford-orange);
+}
+/* Former black surfaces, including the expanded menu. */
+body .elementor-element.elementor-element-8f6c08f,
+body .elementor-element.elementor-element-eeab512,
+body .elementor-element.elementor-element-b3a562d,
+body .pxl-hidden-template-1756 .pxl-popup--conent,
+body .pxl-item--close,
+body .search-submit,
+body .wpcf7-response-output,
+body .woosc-table,
+body .woosc-bar,
+#home .dewford-hero-slideshow {
+  background-color: var(--dewford-purple) !important;
+}
+body .elementor-element.elementor-element-8f6c08f::before {
+  background-image: none !important;
+}
+body .pxl-popup--overlay,
+body .woosc-popup,
+body .woosc-bar-notice,
+body .woosw-popup { background-color: rgb(72 22 95 / 85%) !important; }
+#home .dewford-hero-slideshow::after {
+  background: linear-gradient(180deg, rgb(48 12 67 / 62%), rgb(48 12 67 / 52%) 40%, rgb(48 12 67 / 72%));
+}
+/* Purple calls to action with orange icon/hover accents. */
+body .elementor-element-ced3c42 .btn,
+body #inquiry .wpcf7-submit,
+body .elementor-repeater-item-c1d8f95,
+body .pxl-scroll-top {
+  background: var(--dewford-purple) !important;
+  border-color: var(--dewford-purple) !important;
+  color: #fff !important;
+}
+body .btn .pxl--btn-icon { background: var(--dewford-orange) !important; color: #000 !important; }
+body .btn .pxl--btn-icon svg path { fill: currentColor; }
+body .elementor-element-ced3c42 .btn:hover,
+body #inquiry .wpcf7-submit:hover,
+body .elementor-repeater-item-c1d8f95:hover,
+body .pxl-scroll-top:hover {
+  background: var(--dewford-orange) !important;
+  border-color: #000 !important;
+  color: #000 !important;
+}
+body .pxl-scroll-top::before, body .pxl-scroll-top::after { color: inherit !important; }
+body .pxl-scroll-top svg path { stroke: var(--dewford-orange); }
+body .pxl-button--arrow > a { color: #000; border-color: rgb(96 29 127 / 25%); }
+body .pxl-button--arrow > a:hover { background: var(--dewford-orange); color: #000; border-color: #000; }
+/* Keep body copy neutral while highlighting titles, labels and navigation. */
+#events .pxl-item--title, #about .pxl-item--title,
+#event-list .pxl-post--title a, #location-title { color: #000; }
+#events .pxl-item--subtitle, #about .pxl-item--subtitle,
+#event-list .pxl-item--category a,
+.dewford-location-info > span { color: #000; }
+#inquiry .pxl-item--subtitle { color: #000 !important; }
+.dewford-location { background: #f5f0f7; color: var(--dewford-ink); }
+.dewford-location-info > span::after { content: ""; display: inline-block; width: 28px; height: 3px; margin-left: 12px; vertical-align: middle; background: var(--dewford-orange); }
+body .dewford-navigation > li > a:hover,
+body .dewford-navigation > li > a:focus-visible,
+body .dewford-navigation .sub-menu a:hover { color: #000 !important; opacity: 1; }
+body .pxl-header-elementor-sticky .pxl-icon-line { background: var(--dewford-purple) !important; }
+body .dewford-floating-links a { color: #fff; background: var(--dewford-purple); border-left: 3px solid var(--dewford-orange); }
+body .dewford-floating-links a:hover,
+body .dewford-floating-links a:focus-visible { background: var(--dewford-orange); color: #000; }
+body .dewford-floating-links a:hover svg { color: #000; }
+body #pxl-footer-elementor .pxl-text-editor,
+body #pxl-footer-elementor .pxl-item--description { color: #fff; }
+body #pxl-footer-elementor a:hover { color: #000 !important; }
+body .pxl-cursor--follower { border-color: var(--dewford-purple); }
+body .pxl-cursor.is-active .pxl-cursor--follower { background-color: rgb(245 161 0 / 24%); }
+body :is(a, button, input, select, textarea):focus-visible { outline-color: #000; }
+/* Keep copy readable on the new purple surfaces. */
+#inquiry .pxl-heading--text { color: #fff !important; }
+#inquiry .pxl-item--subtext { color: #000 !important; }
+body .pxl-scroll-top::before { background: var(--dewford-purple) !important; }
+body .pxl-scroll-top:hover::before { background: var(--dewford-orange) !important; }
+
+/* Compact scroll header: purple background with white navigation. */
+body .pxl-header-elementor-sticky,
+body .pxl-header-elementor-sticky .elementor-element-4c151ff {
+  background: var(--dewford-purple) !important;
+  color: #fff;
+}
+body .pxl-header-elementor-sticky .dewford-navigation > li > a,
+body .pxl-header-elementor-sticky .pxl-text-editor,
+body .pxl-header-elementor-sticky .pxl-text-editor a,
+body .pxl-header-elementor-sticky .pxl-anchor-button { color: #fff !important; }
+body .pxl-header-elementor-sticky .pxl-icon-line { background: #fff !important; }
+body .pxl-header-elementor-sticky .pxl-logo img { filter: brightness(0) invert(1); }
+body .pxl-header-elementor-sticky .dewford-navigation > li > a:hover,
+body .pxl-header-elementor-sticky .dewford-navigation > li > a:focus-visible { color: #000 !important; }
+body #pxl-header-mobile.pxl-header-mobile-fixed { background: var(--dewford-purple) !important; color: #fff; }
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img { filter: brightness(0) invert(1); }
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-nav-mobile-button .pxl-icon-line,
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-nav-mobile-button .pxl-icon-line::before,
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-nav-mobile-button .pxl-icon-line::after { background: #fff !important; }
+
+/* Black/white typography; brand colors belong to background surfaces. */
+body { color: #000; }
+body :is(.pxl-heading, .pxl-text-editor, .pxl-post--title, .pxl-post--content,
+  .pxl-post--date, .pxl-user--name, .pxl-user--position, .pxl-item--category,
+  .pxl-ctf-title, .dewford-inquiry-note) { color: #000 !important; }
+body :is(.pxl-heading--text, .pxl-item--subtext, .pxl-text-editor p) { color: inherit !important; }
+#home :is(.pxl-heading, .pxl-heading--text),
+#inquiry .pxl-heading,
+#inquiry .pxl-item--subtext,
+body #pxl-footer-elementor :is(.pxl-heading, .pxl-text-editor, .pxl-text-editor p, a),
+body .pxl-hidden-template-1756 :is(.pxl-heading, .pxl-text-editor, a) { color: #fff !important; }
+#inquiry .elementor-element-9de683c,
+#inquiry .elementor-element-9de683c :is(.pxl-heading, .pxl-heading--text, input, textarea, select, .nice-select, .pxl-ctf-title) { color: #000 !important; }
+body .pxl-header-elementor-sticky .pxl-text-editor { color: #fff !important; }
+body .dewford-navigation .sub-menu a { color: #000 !important; }
+body .dewford-navigation .sub-menu a:hover,
+body .dewford-navigation .sub-menu a:focus-visible { background: var(--dewford-orange); color: #000 !important; }
+body .dewford-main-menu .dewford-navigation > li > a:hover,
+body .dewford-main-menu .dewford-navigation > li > a:focus-visible,
+body .pxl-header-elementor-sticky .dewford-navigation > li > a:hover,
+body .pxl-header-elementor-sticky .dewford-navigation > li > a:focus-visible { color: #fff !important; box-shadow: inset 0 -3px var(--dewford-orange); }
+body #pxl-footer-elementor a:hover { color: #fff !important; text-decoration: underline; text-decoration-color: var(--dewford-orange); }
+#inquiry input::placeholder, #inquiry textarea::placeholder { color: #000; opacity: .65; }
+#about .pxl-list :is(label, .pxl-content),
+#home .pxl-button .pxl--btn-text, #home .pxl-button .pxl--btn-text * { color: #000 !important; }
+body .pxl-hidden-template-1756 .pxl-heading--text { color: #fff !important; }
+
+/* A deeper purple grounds the footer while retaining white text. */
+body #pxl-footer-elementor .elementor-element.elementor-element-eeab512 {
+  background-color: #351044 !important;
+}
