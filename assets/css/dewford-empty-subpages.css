@@ -1,0 +1,14 @@
+/* Subpages retain shared site navigation and footer, with no body content. */
+body.dewford-empty-subpage { background: #fff; }
+body.dewford-empty-subpage .dewford-empty-main { min-height: 55vh; padding: 0; margin: 0; }
+@media (min-width: 1200px) {
+ body.dewford-empty-subpage #pxl-header-elementor { position: sticky; top: 0; z-index: 1000; }
+ body.dewford-empty-subpage #pxl-header-elementor .pxl-header-elementor-sticky {
+  position: relative !important;
+  top: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  pointer-events: auto !important;
+ }
+}

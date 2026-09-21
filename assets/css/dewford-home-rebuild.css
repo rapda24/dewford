@@ -7,7 +7,7 @@ html { scroll-behavior: smooth; }
 .dewford-location-info h2 { font-size: clamp(36px, 4vw, 64px); margin: 0; }
 .dewford-location-info p, .dewford-location-info address { font-size: 18px; line-height: 1.8; margin: 0; font-style: normal; }
 .dewford-location-info a { color: inherit; overflow-wrap: anywhere; }
-.dewford-location-map { min-width: 0; min-height: 560px; position: relative; overflow: hidden; background: #e8e7e2 url("../images/location-placeholder.svg") center / cover no-repeat; }
+.dewford-location-map { min-width: 0; min-height: 560px; position: relative; overflow: hidden; background: #e8e7e2 url("../images/dewford/location-map.jpg?v=20260921-2") center / cover no-repeat; }
 .dewford-inquiry-note { font-size: 13px; line-height: 1.6; margin-top: 20px; }
 @media (max-width: 767px) { .dewford-location { grid-template-columns: 1fr; } .dewford-location-map { height: 420px; min-height: 420px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -617,3 +617,13 @@ body #pxl-footer-elementor a.dewford-social-instagram:is(:hover, :focus-visible)
 body #pxl-footer-elementor a.dewford-social-facebook:is(:hover, :focus-visible) { background: #1877f2; border-color: #1877f2; }
 body #pxl-footer-elementor a.dewford-social-youtube:is(:hover, :focus-visible) { background: #f00; border-color: #f00; }
 body #pxl-footer-elementor a.dewford-social-youtube:is(:hover, :focus-visible) .dewford-youtube-play { fill: #f00 !important; }
+
+/* Fill the consultation section with the photo positioned at 30% vertically. */
+body #inquiry .elementor-element.elementor-element-8f6c08f {
+  background-color: #30103f !important;
+  background-image: linear-gradient(90deg, rgba(42, 15, 56, .78), rgba(42, 15, 56, .48)), url('../images/dewford/unique/admissions-inquiry-hero-variety-v4.jpg');
+  background-position: center, center 30%;
+  background-size: 100% 100%, cover;
+  background-repeat: no-repeat;
+}
+body #inquiry .elementor-element.elementor-element-8f6c08f::before { background-image: none !important; }

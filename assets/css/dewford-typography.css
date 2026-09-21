@@ -58,3 +58,32 @@
     font-weight: 500 !important;
   }
 }
+
+/* Consistent hierarchy and reading rhythm across Dewford pages. */
+@layer dewford-typography {
+  body :is(h1, h2), body .pxl-heading :is(h1, h2) .pxl-heading--text {
+    font-weight: 700 !important;
+    letter-spacing: -.025em;
+    line-height: 1.35;
+  }
+  body h3 { font-weight: 600 !important; letter-spacing: -.015em; line-height: 1.45; }
+  body #home .elementor-element-d4ddac1 h2,
+  body #home .elementor-element-d4ddac1 h2 * { font-weight: 700 !important; }
+  body #home .elementor-element-d4ddac1 h2 .dewford-hero-prefix { font-weight: 300 !important; }
+  body #about .elementor-element-ac278bf :is(h2, .pxl-heading--text) { font-weight: 700 !important; }
+}
+body :is(#pxl-content-main, #location) p,
+body .pxl-text-editor p {
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+body #home .elementor-element-d4ddac1 .pxl-item--title { line-height: 1.25; letter-spacing: -.03em; }
+body #home p.dewford-hero-description { line-height: 1.65; letter-spacing: -.01em; }
+body #about .dewford-about-description,
+body #about .dewford-learning-description { line-height: 1.75; letter-spacing: -.01em; }
+body #inquiry :is(input, select, textarea) { font-weight: 400; line-height: 1.5; letter-spacing: 0; }
+body #inquiry .dewford-inquiry-note { line-height: 1.6; }
+body #pxl-footer-elementor :is(p, address, .dewford-footer-contact) { line-height: 1.7; letter-spacing: 0; }

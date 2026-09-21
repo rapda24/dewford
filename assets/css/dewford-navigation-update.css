@@ -1,0 +1,63 @@
+/* Menu tracking applies to the existing site navigation. */
+#pxl-header-elementor .pxl-menu-primary > li > a { letter-spacing: .02em; }
+#pxl-header-mobile .pxl-menu-primary > li > a { letter-spacing: .02em; }
+
+/* Only the main, pre-scroll desktop header gets the larger wordmark. */
+@media (min-width: 1200px) {
+ body #pxl-header-elementor .pxl-header-elementor-main .elementor-element-422bc32 {
+  align-items: center;
+  --align-items: center;
+  min-height: 168px;
+ }
+ body #pxl-header-elementor .pxl-header-elementor-main .pxl-logo img {
+  width: 330px !important;
+  max-width: 330px !important;
+  max-height: none !important;
+  height: auto !important;
+ }
+ body #pxl-header-elementor .pxl-header-elementor-main .dewford-main-menu {
+  top: 50%; transform: translate(-50%, -50%);
+ }
+ body #pxl-header-elementor .pxl-header-elementor-main .elementor-element-56f1b46 > .elementor-widget-container {
+  margin-top: 0;
+ }
+ body #pxl-header-elementor .pxl-header-elementor-main .elementor-element-422bc32 > .elementor-widget {
+  align-self: center;
+ }
+}
+@media (min-width: 1200px) and (max-width: 1439px) {
+ body #pxl-header-elementor .pxl-header-elementor-main .pxl-logo img { width: 285px !important; max-width: 285px !important; }
+}
+/* Retain the original Elementor popup layout and its photo proportions. */
+body .pxl-hidden-template-1756 .pxl-popup--conent,
+body .pxl-hidden-template-1756 .elementor-element-b3a562d { background-color: #601d7f !important; }
+body .pxl-hidden-template-1756 .elementor-element-2f0e061 .pxl-heading--text { color: #fff; }
+body .pxl-hidden-template-1756 .elementor-element-d0ba664 img { height: auto; object-fit: contain; }
+body .pxl-hidden-template-1756 .dewford-navigation > li > a { color: #fff; }
+
+/* White controls and orange interaction states in the original popup. */
+body .pxl-hidden-template-1756 .pxl-popup--conent .dewford-navigation > li > a {
+  color: #fff !important;
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 1.4;
+  transition: color .2s ease;
+}
+body .pxl-hidden-template-1756 .pxl-popup--conent .dewford-navigation > li > a:is(:hover, :focus-visible),
+body .pxl-hidden-template-1756 .pxl-popup--conent .dewford-navigation > li > a:is(:hover, :focus-visible) .pxl-menu-item-text {
+  color: var(--dewford-orange, #f5a100) !important;
+}
+body .pxl-hidden-template-1756 .pxl-close-popup,
+body .pxl-hidden-template-1756 .pxl-close-popup .pxl-btn--text { color: #fff !important; transition: color .2s ease; }
+body .pxl-hidden-template-1756 .pxl-close-popup .pxl-icon-line { background-color: #fff !important; }
+body .pxl-hidden-template-1756 .pxl-close-popup:is(:hover, :focus-visible),
+body .pxl-hidden-template-1756 .pxl-close-popup:is(:hover, :focus-visible) .pxl-btn--text { color: var(--dewford-orange, #f5a100) !important; }
+body .pxl-hidden-template-1756 .pxl-close-popup:is(:hover, :focus-visible) .pxl-icon-line { background-color: var(--dewford-orange, #f5a100) !important; }
+body .pxl-hidden-template-1756 .elementor-element-2f0e061 .pxl-item--title { line-height: 1.4; letter-spacing: -.025em; }
+
+/* Explicit language labels prevent the page's Korean lang from affecting English menus. */
+#pxl-header-elementor .pxl-menu-primary a,
+#pxl-header-mobile .pxl-menu-primary a { letter-spacing: .02em; }
+#pxl-header-elementor .pxl-menu-primary a[lang="ko"],
+#pxl-header-mobile .pxl-menu-primary a[lang="ko"],
+body .pxl-hidden-template-1756 .pxl-popup--conent .dewford-navigation > li > a[lang="ko"] { letter-spacing: -.02em; }

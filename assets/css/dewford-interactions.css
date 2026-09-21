@@ -1,0 +1,5 @@
+/* Linked text, images and icons share the same pointer cursor. */
+html body a[href],
+html body a[href] * {
+  cursor: pointer !important;
+}

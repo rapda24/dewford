@@ -1,0 +1,54 @@
+/* September home refinements. Loaded after the theme and brand styles. */
+@media (min-width: 1200px) {
+  body #pxl-header-elementor .pxl-logo img {
+    width: 220px !important;
+    max-width: 220px !important;
+    height: auto !important;
+  }
+  body #pxl-header-elementor .dewford-navigation > li > a {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  body #pxl-header-elementor a[href^="mailto:"] { font-size: 13px; }
+  body .elementor-4277 .elementor-element.elementor-element-abb0524 {
+    align-self: stretch;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: stretch;
+  }
+  body .elementor-4277 .elementor-element-abb0524 :is(.elementor-widget-container, .pxl-nav-menu, .menu-menu-main-container, .dewford-navigation) {
+    height: 100%;
+  }
+  body .elementor-4277 .dewford-navigation > li { display: flex; align-items: stretch; }
+  body .elementor-4277 .dewford-navigation > li > a { display: flex; align-items: center; }
+  body #pxl-header-elementor .dewford-navigation > li > .sub-menu { top: 100%; margin-top: 0; }
+  body #pxl-header-elementor .dewford-navigation > li:focus-within > .sub-menu {
+    opacity: 1; visibility: visible; transform: translateY(0);
+  }
+}
+@media (min-width: 1200px) and (max-width: 1439px) {
+  body #pxl-header-elementor .pxl-logo img { width: 190px !important; max-width: 190px !important; }
+  body .elementor-4277 .elementor-element.elementor-element-abb0524 .dewford-navigation { gap: 14px; }
+}
+#home .elementor-element-d4ddac1 .pxl-heading .pxl-item--title { line-height: 1.25; }
+#home .dewford-hero-prefix { font-weight: 300 !important; }
+#home .dewford-hero-description {
+  margin: 24px 0 0;
+  max-width: 780px;
+  color: #fff;
+  font-size: clamp(16px, 1.35vw, 20px);
+  font-weight: 400;
+  line-height: 1.6;
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+#location .dewford-location-intro { font-size: clamp(22px, 2vw, 30px); line-height: 1.5; word-break: keep-all; }
+#location .dewford-location-intro strong { color: var(--dewford-purple, #601d7f); }
+body #pxl-footer-elementor .elementor-element.elementor-element-eeab512 { background-color: var(--dewford-purple, #601d7f) !important; }
+body #pxl-footer-elementor a.dewford-footer-kakao svg text,
+body #pxl-footer-elementor a.dewford-social-youtube .dewford-youtube-play { fill: var(--dewford-purple, #601d7f) !important; }
+@media (max-width: 767px) {
+  #home .dewford-hero-description { margin-top: 18px; }
+}
