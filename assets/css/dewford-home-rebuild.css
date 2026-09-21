@@ -7,7 +7,7 @@ html { scroll-behavior: smooth; }
 .dewford-location-info h2 { font-size: clamp(36px, 4vw, 64px); margin: 0; }
 .dewford-location-info p, .dewford-location-info address { font-size: 18px; line-height: 1.8; margin: 0; font-style: normal; }
 .dewford-location-info a { color: inherit; overflow-wrap: anywhere; }
-.dewford-location-map { min-width: 0; min-height: 560px; position: relative; overflow: hidden; background: #e8e7e2 url("../images/dewford/location-map.jpg?v=20260921-2") center / cover no-repeat; }
+.dewford-location-map { min-width: 0; min-height: 560px; position: relative; overflow: hidden; background: #e8e7e2; }
 .dewford-inquiry-note { font-size: 13px; line-height: 1.6; margin-top: 20px; }
 @media (max-width: 767px) { .dewford-location { grid-template-columns: 1fr; } .dewford-location-map { height: 420px; min-height: 420px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -520,16 +520,25 @@ body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img[src="assets
 #about .elementor-element-361288f .pxl-icon1 a::after {
   border-color: #e9e5ec !important;
 }
-/* One event in each stable-width slot; only the active event reveals details. */
-#event-list .pxl-post--inner { display: flex; width: 100%; min-width: 0; height: 420px; min-height: 420px; margin: 0; padding: 0; animation: none !important; }
-#event-list .pxl-post--featured { flex: 0 0 100%; width: 100%; overflow: hidden; }
-#event-list .swiper-slide-active .pxl-post--featured { flex-basis: 50%; width: 50%; }
+/* Every photo keeps one unit; the active card adds one equal text unit. */
+#event-list .dewford-events-ready { overflow: hidden; touch-action: pan-y; }
+#event-list .dewford-events-ready .pxl-swiper-wrapper { display: flex; gap: var(--event-gap, 32px); margin: 0; padding: 0; transition: transform 650ms ease; }
+#event-list .dewford-events-ready .pxl-swiper-slide { flex: 0 0 auto; width: var(--event-unit); min-width: 0; max-width: none; padding: 0; margin: 0; transition: width 650ms ease; box-sizing: border-box; }
+#event-list .dewford-events-ready .swiper-slide-active { width: calc(var(--event-unit) * 2); }
+#event-list .pxl-post--inner { display: flex; gap: 0; width: 100%; min-width: 0; height: 420px; min-height: 420px; margin: 0; padding: 0; overflow: hidden; animation: none !important; }
+#event-list .pxl-post--featured { flex: 0 0 var(--event-unit, 100%); width: var(--event-unit, 100%); max-width: none; margin: 0; overflow: hidden; }
 #event-list .pxl-post--featured a { display: block; height: 100%; }
 #event-list .pxl-post--featured img { width: 100%; height: 100%; object-fit: cover; }
-#event-list .pxl-post--holder { display: none !important; }
-#event-list .swiper-slide-active .pxl-post--holder { display: flex !important; flex: 0 0 50%; width: 50%; padding: 24px 18px; box-sizing: border-box; opacity: 1 !important; visibility: visible !important; overflow-y: auto; }
+#event-list .pxl-post--holder { display: flex !important; flex: 0 0 var(--event-unit, 50%); width: var(--event-unit, 50%); margin: 0; padding: 24px 18px; box-sizing: border-box; opacity: 0 !important; visibility: hidden !important; overflow-y: auto; }
+#event-list .swiper-slide-active .pxl-post--holder { opacity: 1 !important; visibility: visible !important; }
 #event-list .pxl-post--title { font-size: 22px; line-height: 1.4; }
 #event-list .pxl-post--content { font-size: 14px; line-height: 1.6; }
+#event-list .dewford-events-reset .pxl-swiper-wrapper,
+#event-list .dewford-events-reset .pxl-swiper-slide { transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  #event-list .dewford-events-ready .pxl-swiper-wrapper,
+  #event-list .dewford-events-ready .pxl-swiper-slide { transition: none; }
+}
 
 /* Footer Kakao button matches the floating Kakao button. */
 body #pxl-footer-elementor a.dewford-footer-kakao {
@@ -627,3 +636,21 @@ body #inquiry .elementor-element.elementor-element-8f6c08f {
   background-repeat: no-repeat;
 }
 body #inquiry .elementor-element.elementor-element-8f6c08f::before { background-image: none !important; }
+
+/* Live Kakao map uses the existing responsive map region. */
+#location .root_daum_roughmap { position: absolute; inset: 0; width: 100% !important; height: 100%; padding: 0; border: 0; box-sizing: border-box; }
+#location .root_daum_roughmap .wrap_map { width: 100% !important; height: 100% !important; margin: 0; }
+#location .root_daum_roughmap .wrap_cont,
+#location .root_daum_roughmap .cont { display: none !important; }
+/* Hide Kakao's controller strip within the home map only. */
+#location .root_daum_roughmap .wrap_controllers { display: none !important; }
+
+/* Mobile shortcuts sit directly above the Kakao control. */
+@media (max-width: 767px) {
+  body .dewford-floating-links {
+    top: auto;
+    bottom: calc(max(12px, env(safe-area-inset-bottom)) + 116px);
+    transform: none;
+    right: 12px;
+  }
+}

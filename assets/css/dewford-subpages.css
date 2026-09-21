@@ -5,6 +5,21 @@
   font-style: normal;
   font-display: swap;
 }
+/* Subpages have no scroll-triggered header JS, so the sticky header (hidden by
+   default until body.dewford-header-ready/dewford-header-scrolled are toggled
+   by that JS) must be forced visible here instead. */
+@media (min-width: 1200px) {
+  body[data-dewford-page="subpage"] #pxl-header-elementor { position: sticky; top: 0; z-index: 1000; }
+  body[data-dewford-page="subpage"] #pxl-header-elementor .pxl-header-elementor-sticky {
+    position: relative !important;
+    top: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+}
+
 /* Main page only: retain the template's image slots after replacing assets. */
 body[data-dewford-page="subpage"] .dewford-mobile-contact {
   display: flex;
@@ -117,14 +132,26 @@ body[data-dewford-page="subpage"] .pxl-progressbar-1 .pxl--item + .pxl--item {
   body[data-dewford-page="subpage"] :is(.elementor-4277, .elementor-191) .elementor-element-51a4010 > .elementor-widget-container {
     margin: 0;
   }
-  body[data-dewford-page="subpage"] :is(.elementor-4277, .elementor-191) .elementor-element-51a4010 .pxl-logo img {
-    width: 145px;
-    height: auto;
-    max-height: none;
+  /* #pxl-header-elementor added for specificity: dewford-home-refinements.css
+     sets a !important width on this same img via an ID selector, which would
+     otherwise win over this un-ID'd rule and make the logo overflow its
+     145px box into the nav next to it. */
+  body[data-dewford-page="subpage"] #pxl-header-elementor :is(.elementor-4277, .elementor-191) .elementor-element-51a4010 .pxl-logo img {
+    width: 145px !important;
+    max-width: 145px !important;
+    height: auto !important;
+    max-height: none !important;
   }
   body[data-dewford-page="subpage"] :is(.elementor-4277, .elementor-191) .elementor-element-abb0524 {
     width: auto;
     flex: 1 1 auto;
+    /* Cancel the site-wide "center nav independently of logo" absolute
+       positioning (dewford-home-rebuild.css) — this fixed-width logo layout
+       expects the nav back in normal flex flow, or it overlaps the logo. */
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
   }
   body[data-dewford-page="subpage"] :is(.elementor-4277, .elementor-191) .pxl-nav-menu .pxl-menu-primary {
     display: flex;

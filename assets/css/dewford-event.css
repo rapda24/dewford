@@ -1,0 +1,25 @@
+/* Event gallery board (event.html): page header only.
+   The card grid itself reuses the theme's own pxl-blog-grid layout/CSS
+   (same markup as blog-grid/index.html), so no grid/card rules here. */
+body[data-page-slug="event"] .dewford-event-header {
+  padding: 140px 0 20px;
+  text-align: center;
+}
+body[data-page-slug="event"] .dewford-event-header .pxl-heading--text {
+  text-transform: lowercase;
+}
+body[data-page-slug="event"] .dewford-event-intro {
+  max-width: 640px;
+  margin: 20px auto 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+body[data-page-slug="event"] .dewford-event-board {
+  padding: 40px 0 120px;
+}
+body[data-page-slug="event"] .pxl-item--category span {
+  color: var(--dewford-purple, #601d7f);
+  font-weight: 600;
+}

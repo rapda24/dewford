@@ -1,0 +1,71 @@
+/* Keep the Blog Grid template layout; normalize only the replacement photo dimensions. */
+.dewford-events-main .pxl-post--featured img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+/* Restore the original Blog Grid surfaces overridden by shared home styles. */
+body .dewford-events-main { background: #f5f5f5; }
+body .dewford-events-main .pxl-post-blog.post-layout-post-1 .pxl-post--inner { gap: 10px; }
+body .dewford-events-main .pxl-post-blog.post-layout-post-1 .pxl-item--holder { padding: 24px; background: #fff; }
+html body .dewford-events-main .pxl-item--holder,
+html body .dewford-events-main .pxl-post--featured,
+html body #pxl-page-title-elementor .elementor-element-8e40857,
+html body #pxl-page-title-elementor .elementor-element-8e40857::before {
+ border-radius: 0 !important;
+ border-start-start-radius: 0 !important;
+ border-start-end-radius: 0 !important;
+ border-end-start-radius: 0 !important;
+ border-end-end-radius: 0 !important;
+}
+body .dewford-events-main .pxl-item--content { display: flex; align-items: center; gap: 20px; }
+body .dewford-events-main .pxl-item--category,
+body .dewford-events-main .pxl-post--date { font-size: 14px; font-weight: 400; line-height: 1; letter-spacing: 0; }
+body .dewford-events-main .pxl-post--date { color: #999; }
+body .dewford-events-main .pxl-post-blog.post-layout-post-1 .pxl-item--title { font-size: 20px; line-height: 1.5; letter-spacing: 0; margin-top: 16px; }
+@layer dewford-typography {
+ body .dewford-events-main .pxl-post-blog.post-layout-post-1 h3.pxl-item--title { font-weight: 400 !important; }
+}
+body #pxl-page-title-elementor { background: #f5f5f5; }
+@media (max-width: 767px) {
+ body .dewford-events-main .pxl-post-blog.post-layout-post-1 .pxl-item--title { font-size: 18px; }
+}
+
+/* Give the Events title clear space below the header and a brand-colored image overlay. */
+body #pxl-page-title-elementor { padding-top: 32px; }
+body #pxl-page-title-elementor .elementor-element.elementor-element-8e40857 {
+  background-image: url('../images/dewford/events-title.jpg');
+  background-position: center 35%;
+  background-size: cover;
+  isolation: isolate;
+  --padding-top: 80px;
+  --padding-bottom: 70px;
+}
+body #pxl-page-title-elementor .elementor-element.elementor-element-8e40857::before {
+  background-color: transparent;
+  background-image: linear-gradient(180deg, rgba(96, 29, 127, 0) 0%, rgba(96, 29, 127, .3) 100%);
+  opacity: 1;
+  --overlay-opacity: 1;
+}
+body #pxl-page-title-elementor .elementor-element-8e40857 > .e-con-inner { position: relative; z-index: 1; }
+body #pxl-page-title-elementor :is(.pxl-item--title, .pxl-heading--text, .pxl-text-editor, .pxl-item--inner, p) {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  opacity: 1;
+}
+body #pxl-page-title-elementor .pxl-item--title { line-height: 1.15; }
+body #pxl-page-title-elementor .pxl-text-editor p { font-size: 20px; line-height: 1.7; font-weight: 500; }
+@media (max-width: 767px) {
+  body #pxl-page-title-elementor { padding-top: 24px; }
+  body #pxl-page-title-elementor .elementor-element.elementor-element-8e40857 { --padding-top: 48px; --padding-bottom: 40px; background-position: 60% center; }
+  body #pxl-page-title-elementor .pxl-text-editor p { font-size: 17px; }
+}
+
+/* Square corners throughout the page content and title. */
+html body :is(.dewford-events-main, #pxl-page-title-elementor),
+html body :is(.dewford-events-main, #pxl-page-title-elementor) *,
+html body :is(.dewford-events-main, #pxl-page-title-elementor) *::before,
+html body :is(.dewford-events-main, #pxl-page-title-elementor) *::after {
+  border-radius: 0 !important;
+  border-start-start-radius: 0 !important;
+  border-start-end-radius: 0 !important;
+  border-end-start-radius: 0 !important;
+  border-end-end-radius: 0 !important;
+}

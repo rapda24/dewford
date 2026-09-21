@@ -61,3 +61,61 @@ body .pxl-hidden-template-1756 .elementor-element-2f0e061 .pxl-item--title { lin
 #pxl-header-elementor .pxl-menu-primary a[lang="ko"],
 #pxl-header-mobile .pxl-menu-primary a[lang="ko"],
 body .pxl-hidden-template-1756 .pxl-popup--conent .dewford-navigation > li > a[lang="ko"] { letter-spacing: -.02em; }
+
+/* Supplied header artwork remains legible on the fixed purple mobile header. */
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img[src="assets/images/dewford/logo-header-purple.svg"] { filter: brightness(0) invert(1) !important; }
+
+/* Keep the supplied mobile wordmark dimensions. */
+body #pxl-header-mobile .pxl-header-branding img {
+  display: block;
+  width: auto;
+  height: 47px;
+  max-width: 100%;
+  object-fit: contain;
+}
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-header-branding img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Mobile header overlays the page and gains the brand surface on scroll. */
+@media (max-width: 1199px) {
+  body #pxl-header-elementor #pxl-header-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #fff;
+    transition: background-color .25s ease;
+  }
+  body.dewford-mobile-scrolled #pxl-header-elementor #pxl-header-mobile {
+    background: var(--dewford-purple, #601d7f) !important;
+  }
+  body #pxl-header-mobile .pxl-header-main { background: transparent !important; }
+  body #pxl-header-mobile .pxl-header-branding img { filter: brightness(0) invert(1) !important; }
+  body #pxl-header-mobile .pxl-nav-mobile-button .pxl-icon-line,
+  body #pxl-header-mobile .pxl-nav-mobile-button .pxl-icon-line::before,
+  body #pxl-header-mobile .pxl-nav-mobile-button .pxl-icon-line::after { background: #fff !important; }
+}
+
+/* Give the SVG an explicit width so the mobile flex item cannot collapse. */
+@media (max-width: 1199px) {
+  body #pxl-header-mobile .pxl-header-mobile-default {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 80px;
+  }
+  body #pxl-header-mobile .pxl-header-branding { flex: 0 0 auto; }
+  body #pxl-header-mobile .pxl-header-branding > a { display: block; width: 160px; }
+  body #pxl-header-mobile .pxl-header-branding img {
+    display: block !important;
+    width: 160px !important;
+    height: 52px !important;
+    max-width: none;
+    opacity: 1;
+    visibility: visible;
+  }
+}
