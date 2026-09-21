@@ -30,7 +30,7 @@
 }
 /* Retain the original Elementor popup layout and its photo proportions. */
 body .pxl-hidden-template-1756 .pxl-popup--conent,
-body .pxl-hidden-template-1756 .elementor-element-b3a562d { background-color: #601d7f !important; }
+body .pxl-hidden-template-1756 .elementor-element-b3a562d { background-color: #52196d !important; }
 body .pxl-hidden-template-1756 .elementor-element-2f0e061 .pxl-heading--text { color: #fff; }
 body .pxl-hidden-template-1756 .elementor-element-d0ba664 img { height: auto; object-fit: contain; }
 body .pxl-hidden-template-1756 .dewford-navigation > li > a { color: #fff; }
@@ -90,7 +90,7 @@ body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-header-branding img {
     transition: background-color .25s ease;
   }
   body.dewford-mobile-scrolled #pxl-header-elementor #pxl-header-mobile {
-    background: var(--dewford-purple, #601d7f) !important;
+    background: var(--dewford-purple, #52196d) !important;
   }
   body #pxl-header-mobile .pxl-header-main { background: transparent !important; }
   body #pxl-header-mobile .pxl-header-branding img { filter: brightness(0) invert(1) !important; }

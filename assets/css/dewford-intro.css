@@ -3,7 +3,7 @@
 html.dewford-intro-active { overflow: hidden; }
 html.dewford-intro-active .dewford-intro {
   display: grid; place-items: center; position: fixed; inset: 0;
-  width: 100%; height: 100dvh; z-index: 99999; overflow: hidden; background: var(--dewford-purple, #601d7f);
+  width: 100%; height: 100dvh; z-index: 99999; overflow: hidden; background: var(--dewford-purple, #52196d);
   -webkit-mask-image: linear-gradient(to bottom, #000 33.333%, transparent 66.667%);
   mask-image: linear-gradient(to bottom, #000 33.333%, transparent 66.667%);
   -webkit-mask-size: 100% 300%;

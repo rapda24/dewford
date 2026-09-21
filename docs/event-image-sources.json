@@ -1,0 +1,101 @@
+[
+  {
+    "id": "event-01",
+    "asset": "assets/images/dewford/events/event-01.png",
+    "file": "/tmp/dewford-event-source/007.png",
+    "source": "dewford_eep_program_안내 프리젠테이션.pptx",
+    "location": "ppt/media/image22.jpeg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": "event-02",
+    "asset": "assets/images/dewford/events/event-02.png",
+    "file": "/tmp/dewford-event-source/013.png",
+    "source": "dewford_eep_program_안내 프리젠테이션.pptx",
+    "location": "ppt/media/image50.jpeg",
+    "size": [
+      1024,
+      768
+    ]
+  },
+  {
+    "id": "event-03",
+    "asset": "assets/images/dewford/events/event-03.png",
+    "file": "/tmp/dewford-event-source/064.png",
+    "source": "2026년 9월 브로셔 _영문버전 (2).pdf",
+    "location": "page 21, xref 891",
+    "size": [
+      640,
+      480
+    ]
+  },
+  {
+    "id": "event-04",
+    "asset": "assets/images/dewford/events/event-04.png",
+    "file": "/tmp/dewford-event-source/047.png",
+    "source": "2026년 9월 브로셔 _영문버전 (2).pdf",
+    "location": "page 13, xref 1287",
+    "size": [
+      605,
+      807
+    ]
+  },
+  {
+    "id": "event-05",
+    "asset": "assets/images/dewford/events/event-05.png",
+    "file": "/tmp/dewford-event-source/035.png",
+    "source": "2026년 9월 브로셔 _영문버전 (2).pdf",
+    "location": "page 4, xref 1133",
+    "size": [
+      1152,
+      865
+    ]
+  },
+  {
+    "id": "event-06",
+    "asset": "assets/images/dewford/events/event-06.png",
+    "file": "/tmp/dewford-event-source/048.png",
+    "source": "2026년 9월 브로셔 _영문버전 (2).pdf",
+    "location": "page 13, xref 1296",
+    "size": [
+      1143,
+      857
+    ]
+  },
+  {
+    "id": "title-36",
+    "asset": "assets/images/dewford/events/title-36.png",
+    "file": "/tmp/dewford-event-source/036.png",
+    "source": "2026년 9월 브로셔 _영문버전 (2).pdf",
+    "location": "page 5, xref 1155",
+    "size": [
+      1296,
+      972
+    ]
+  },
+  {
+    "id": "title-63",
+    "asset": "assets/images/dewford/events/title-63.png",
+    "file": "/tmp/dewford-event-source/063.png",
+    "source": "2026년 9월 브로셔 _영문버전 (2).pdf",
+    "location": "page 20, xref 1420",
+    "size": [
+      432,
+      324
+    ]
+  },
+  {
+    "id": "title-57",
+    "asset": "assets/images/dewford/events/title-57.png",
+    "file": "/tmp/dewford-event-source/057.png",
+    "source": "2026년 9월 브로셔 _영문버전 (2).pdf",
+    "location": "page 18, xref 1370",
+    "size": [
+      605,
+      807
+    ]
+  }
+]

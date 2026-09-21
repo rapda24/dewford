@@ -1,4 +1,4 @@
-:root { --dewford-purple: #601d7f; --dewford-orange: #f5a100; }
+:root { --dewford-purple: #52196d; --dewford-orange: #f5a100; }
 @media (min-width: 1200px){.elementor-3944 .dewford-main-menu{
     position: absolute !important; top: 30px; left: 50%; transform: translateX(-50%);
     width: max-content; min-width: 0; flex: none;
@@ -228,7 +228,7 @@ body #pxl-footer-elementor .elementor-element.elementor-element-eeab512{
 }
 
 /* Subpages place the main header above their content on a purple surface. */
-body[data-page-slug="contact"] .pxl-header-elementor-main { background: #601d7f; }
+body[data-page-slug="contact"] .pxl-header-elementor-main { background: #52196d; }
 body[data-page-slug="contact"] .pxl-header-elementor-main .pxl-logo img { filter: none !important; height: auto; }
 body[data-page-slug="contact"] #pxl-footer-elementor .e-con,
 body[data-page-slug="contact"] #pxl-footer-elementor .e-con::before { border-radius: 0 !important; }

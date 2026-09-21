@@ -1,6 +1,6 @@
 /* Home page brand palette: purple identity, orange accents. */
 :root {
-  --dewford-purple: #601d7f;
+  --dewford-purple: #52196d;
   --dewford-purple-dark: #48165f;
   --dewford-orange: #f5a100;
   --dewford-ink: #000;
@@ -56,7 +56,7 @@ body .pxl-scroll-top:hover {
 }
 body .pxl-scroll-top::before, body .pxl-scroll-top::after { color: inherit !important; }
 body .pxl-scroll-top svg path { stroke: var(--dewford-orange); }
-body .pxl-button--arrow > a { color: #000; border-color: rgb(96 29 127 / 25%); }
+body .pxl-button--arrow > a { color: #000; border-color: rgb(82 25 109 / 25%); }
 body .pxl-button--arrow > a:hover { background: var(--dewford-orange); color: #000; border-color: #000; }
 /* Keep body copy neutral while highlighting titles, labels and navigation. */
 #events .pxl-item--title, #about .pxl-item--title,

@@ -1,6 +1,6 @@
 /* Brand color is reserved for primary inquiry actions and back-to-top controls. */
 body.dewford-site {
- --dewford-purple:#601d7f;
+ --dewford-purple:#52196d;
  --dewford-purple-dark:#48165f;
  --dewford-orange:#f5a100;
 }
@@ -93,7 +93,7 @@ body.dewford-site #pxl-main .pxl-marquee .pxl-item--text {
 }
 body.dewford-site #pxl-main form :is(input,textarea,select):focus {
  border-color:var(--dewford-purple)!important;
- outline:2px solid rgba(96,29,127,.18);outline-offset:2px;
+ outline:2px solid rgba(82,25,109,.18);outline-offset:2px;
 }
 @media(max-width:767px){
  body.dewford-site #pxl-main :is(.dewford-accent-action,.dewford-primary-action){
@@ -104,7 +104,7 @@ body.dewford-site #pxl-main form :is(input,textarea,select):focus {
 /* Shared footer call-to-action uses the Dewford identity color. */
 body.dewford-site .elementor-1199 .elementor-element.elementor-element-55072e4:not(.elementor-motion-effects-element-type-background),
 body.dewford-site .elementor-1199 .elementor-element.elementor-element-55072e4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
- background-color:var(--dewford-purple, #601d7f)!important;
+ background-color:var(--dewford-purple, #52196d)!important;
 }
 
 /* Explicit subtitle color requested across all Dewford pages. */

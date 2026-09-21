@@ -20,6 +20,6 @@ body[data-page-slug="event"] .dewford-event-board {
   padding: 40px 0 120px;
 }
 body[data-page-slug="event"] .pxl-item--category span {
-  color: var(--dewford-purple, #601d7f);
+  color: var(--dewford-purple, #52196d);
   font-weight: 600;
 }

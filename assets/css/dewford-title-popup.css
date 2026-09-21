@@ -1,0 +1,82 @@
+/* Supplied photography and artwork only. Shared subpage hero. */
+html body #pxl-page-title-elementor.dewford-title-hero {
+ position:relative; isolation:isolate; height:50dvh; min-height:0; padding:0; margin:0; overflow:hidden; border-radius:0; background:#52196d;
+ display:flex; align-items:center; justify-content:center;
+}
+.dewford-title-slideshow,.dewford-title-slide {position:absolute;inset:0;pointer-events:none;}
+.dewford-title-slide {opacity:0;transition:opacity 1.2s ease;}
+.dewford-title-slide.is-active {opacity:1;}
+.dewford-title-slide img {width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;}
+.dewford-title-slideshow::after {content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(48,12,67,.62),rgba(48,12,67,.52) 40%,rgba(48,12,67,.72));}
+html body .dewford-title-copy {position:relative;z-index:1;width:min(1200px,100%);padding:16px 24px;text-align:center;color:#fff;}
+html body .dewford-title-copy h1 {margin:0 0 10px;font-size:clamp(28px,3.4vw,56px);line-height:1.12;letter-spacing:.02em;color:#fff;text-shadow:0 2px 14px #23102b80;}
+html body .dewford-title-copy p {margin:0;font-size:clamp(12px,1.1vw,17px);line-height:1.5;letter-spacing:-.02em;color:#fff;text-shadow:0 1px 8px #23102bb0;}
+html body .pxl-hidden-panel-popup .pxl-circle-text-icon img {display:block;width:54px;height:50px;object-fit:contain;}
+html body .pxl-hidden-panel-popup .pxl-item--image.s_img img {object-fit:cover;object-position:center 30%;}
+@media(max-width:1199px){html body .dewford-title-copy {padding-top:70px;}html body #pxl-page-title-elementor.dewford-title-hero {margin-top:0;}}
+@media(max-width:767px){
+ html body .dewford-floating-links {width:136px;gap:4px;}
+ html body .dewford-floating-links a {min-height:36px;padding:7px 10px;font-size:11px;line-height:1.25;gap:6px;}
+ html body .dewford-floating-links a svg {width:14px;height:14px;flex-shrink:0;}
+ html body .dewford-title-copy {padding:12px 18px;}
+ html body .dewford-title-copy h1 {font-size:clamp(25px,6vw,34px);}
+}
+@media(prefers-reduced-motion:reduce){.dewford-title-slide {transition:none;}}
+
+/* Shared brand update: logo proportions and the subpage header surface. */
+html body .pxl-hidden-panel-popup .pxl-circle-text-icon {
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:40%;height:auto;display:block;line-height:0;
+}
+html body .pxl-hidden-panel-popup .pxl-circle-text-icon img {width:100%;height:auto;max-width:100%;object-fit:contain;}
+html body.dewford-subpage-header #pxl-wapper {background:#f5f5f5;}
+html body.dewford-subpage-header #pxl-header-elementor {
+ display:block!important;position:fixed!important;top:0;left:0;width:100%;z-index:1000;
+}
+html body.dewford-subpage-header:not(.dewford-mobile-scrolled) #pxl-header-elementor :is(.pxl-header-elementor-sticky,.elementor-element-4c151ff) {
+ background:transparent!important;
+}
+html body.dewford-subpage-header.dewford-mobile-scrolled #pxl-header-elementor :is(.pxl-header-elementor-sticky,.elementor-element-4c151ff) {
+ background:var(--dewford-purple,#52196d)!important;
+}
+html body.dewford-subpage-header .dewford-title-copy {padding-top:88px;}
+html body.dewford-subpage-header:not(:has(.dewford-title-hero)) #pxl-wapper {padding-top:80px;}
+@media(max-width:1199px){
+ html body.dewford-subpage-header #pxl-header-elementor .pxl-header-elementor-sticky {display:none!important;}
+ html body.dewford-subpage-header .dewford-title-copy {padding-top:80px;}
+}
+
+/* A lightly translucent consultation card and stronger yellow accents. */
+html body #inquiry .elementor-element.elementor-element-9de683c {
+ background:rgba(255,255,255,.70)!important;
+ border-top:3px solid var(--dewford-orange,#f5a100);
+}
+html body #inquiry button.wpcf7-submit {
+ background:var(--dewford-orange,#f5a100)!important;border-color:var(--dewford-orange,#f5a100)!important;color:#291132!important;
+}
+html body #inquiry button.wpcf7-submit:hover {background:#ffd16a!important;border-color:#ffd16a!important;}
+html body .dewford-floating-links a {border-left-width:4px;}
+html body .dewford-navigation > li > a:is(:hover,:focus-visible) {box-shadow:inset 0 -3px var(--dewford-orange,#f5a100);}
+html body :is(#about,#event-list,#location) .pxl-item--subtitle {color:var(--dewford-orange,#f5a100)!important;}
+html body .dewford-native-main .pxl-accordion--title:is(:hover,:focus-visible) .pxl-icon--plus {color:var(--dewford-orange,#f5a100);}
+html body #inquiry :is(input,textarea,select):focus {border-color:var(--dewford-orange,#f5a100)!important;box-shadow:0 2px 0 var(--dewford-orange,#f5a100);}
+/* Mobile outcomes: one icon beside a two-line text group. */
+@media(max-width:767px){
+ html body #about .dewford-outcome-card {padding:20px 16px;}
+ html body #about .dewford-outcome-card .pxl-heading--inner {display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:12px;row-gap:5px;align-items:center;text-align:left;}
+ html body #about .dewford-outcome-card .dewford-outcome-icon {grid-column:1;grid-row:1 / 3;display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0;}
+ html body #about .dewford-outcome-card .dewford-outcome-icon svg {width:26px;height:26px;}
+ html body #about .dewford-outcome-card .pxl-item--subtitle {grid-column:2;grid-row:1;margin:0;padding:0;}
+ html body #about .dewford-outcome-card .pxl-item--subtext strong {display:flex;gap:.28em;align-items:baseline;white-space:nowrap;}
+ html body #about .dewford-outcome-card :is(.dewford-outcome-prefix,.dewford-outcome-role) {display:inline;margin:0;font-size:clamp(15px,4.4vw,19px);line-height:1.25;letter-spacing:.02em;}
+ html body #about .dewford-outcome-card .pxl-item--title {grid-column:2;grid-row:2;margin:0;padding:0;font-size:clamp(11px,3.25vw,14px);line-height:1.5;letter-spacing:-.02em;}
+}
+/* Mobile consultation photo keeps all three people within the frame. */
+@media(max-width:767px){
+ html body #inquiry .elementor-element.elementor-element-8f6c08f {
+  padding-top:66.625vw!important;
+  background-image:linear-gradient(180deg,rgba(48,16,63,0) 65%,#30103f 100%),url('../images/dewford/unique/admissions-inquiry-hero-variety-v4.jpg');
+  background-size:100% 66.625vw,100% auto;
+  background-position:center top,center top;
+  background-repeat:no-repeat;
+ }
+}

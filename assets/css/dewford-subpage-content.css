@@ -8,7 +8,7 @@ body .dewford-content-main :is(h2,h3,h4,p) { word-break: keep-all; overflow-wrap
 body .dewford-content-main h2 { font-size: clamp(26px, 2.7vw, 40px); line-height: 1.35; letter-spacing: -.02em; margin: 0 0 22px; }
 body .dewford-content-main h3 { font-size: 23px; line-height: 1.4; letter-spacing: -.02em; margin: 0 0 14px; }
 body .dewford-content-main p { font-size: 17px; line-height: 1.8; margin: 0 0 20px; }
-body .dewford-content-main .dewford-eyebrow, body .dewford-content-main .pxl-item--subtext { color: #601d7f; font-size: 13px; font-weight: 600; line-height: 1.5; letter-spacing: .08em; margin: 0 0 16px; }
+body .dewford-content-main .dewford-eyebrow, body .dewford-content-main .pxl-item--subtext { color: #52196d; font-size: 13px; font-weight: 600; line-height: 1.5; letter-spacing: .08em; margin: 0 0 16px; }
 body .dewford-content-main .elementor-element-f6f639c, body .dewford-content-main .elementor-element-96fc02e, body .dewford-content-main .elementor-element-8336f3e { --padding-top: 80px; --padding-bottom: 0px; --padding-left: 24px; --padding-right: 24px; --content-width: 1240px; }
 body .dewford-content-main .elementor-element-f6f639c > .e-con-inner { display: flex; flex-direction: column; gap: 40px; }
 body .dewford-content-main .elementor-element-2295b22 { width: 100%; }
@@ -16,29 +16,29 @@ body .dewford-content-main .elementor-element-2295b22 .pxl-heading--inner { max-
 body .dewford-content-main .elementor-element-8a7c622 { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; width: 100%; }
 body .dewford-content-main :is(.elementor-element-717d55b,.elementor-element-f59c97d) { width: 100%; padding: 0; min-width: 0; }
 body .dewford-content-main .elementor-element-f59c97d { display: block; align-self: center; }
-body .dewford-content-main .pxl-feature--card1 .pxl-item--content { padding: 24px; background: #601d7f; }
+body .dewford-content-main .pxl-feature--card1 .pxl-item--content { padding: 24px; background: #52196d; }
 body .dewford-content-main .pxl-feature--card1 .pxl-item--content h3 { color: #fff; font-size: 19px; margin: 0; }
 body .dewford-content-main .pxl-image--feature img { width: 100%; height: 420px; object-fit: cover; object-position: center 30%; }
 body .dewford-content-main .elementor-element-96fc02e > .e-con-inner { display: flex; flex-direction: column; gap: 24px; }
 body .dewford-content-main .elementor-element-4d6909d { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; width: 100%; }
 body .dewford-content-main .elementor-element-a7d2c21 { grid-column: 1 / -1; width: 100%; }
 body .dewford-content-main :is(.elementor-element-40014b5,.elementor-element-588288f,.elementor-element-c5eeddc) { display: block; width: 100%; padding: 28px 0; border-top: 1px solid #d6cbdc; }
-.dewford-process-index { font-size: 40px; font-weight: 400; color: #601d7f; margin-bottom: 24px; }
+.dewford-process-index { font-size: 40px; font-weight: 400; color: #52196d; margin-bottom: 24px; }
 .dewford-content-section { max-width: 1288px; padding: 80px 24px 0; margin: auto; }
 .dewford-section-heading { max-width: 900px; margin-bottom: 32px; }
 .dewford-content-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
 .dewford-content-card { background: #fff; padding: 32px; border: 1px solid #e6e0e9; }
-.dewford-step-number { display: block; color: #601d7f; font-size: 14px; margin-bottom: 30px; }
+.dewford-step-number { display: block; color: #52196d; font-size: 14px; margin-bottom: 30px; }
 body .dewford-content-card p { margin-bottom: 0; }
 .dewford-table-scroll { overflow-x: auto; max-width: 100%; background: #fff; }
 body .dewford-content-main table { width: 100%; margin: 0; border-collapse: collapse; table-layout: auto; }
-body .dewford-content-main caption { text-align: left; padding: 18px 24px; color: #601d7f; font-size: 15px; caption-side: top; background: #eee7f1; }
+body .dewford-content-main caption { text-align: left; padding: 18px 24px; color: #52196d; font-size: 15px; caption-side: top; background: #eee7f1; }
 body .dewford-content-main th, body .dewford-content-main td { padding: 20px 24px; border: 1px solid #e6e0e9; text-align: left; vertical-align: top; font-size: 16px; line-height: 1.65; word-break: keep-all; }
-body .dewford-content-main thead th { background: #601d7f; color: white; font-weight: 500; }
-body .dewford-content-main tbody th { font-weight: 600; color: #601d7f; }
+body .dewford-content-main thead th { background: #52196d; color: white; font-weight: 500; }
+body .dewford-content-main tbody th { font-weight: 600; color: #52196d; }
 body .dewford-content-main .dewford-table-scroll + p { margin-top: 20px; }
-body .dewford-action { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 24px; min-height: 54px; border: 1px solid #601d7f; background: #601d7f; color: #fff; line-height: 1.4; font-size: 16px; text-decoration: none; cursor: pointer; transition: background .2s,color .2s; }
-body .dewford-action-secondary { background: transparent; color: #601d7f; }
+body .dewford-action { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 24px; min-height: 54px; border: 1px solid #52196d; background: #52196d; color: #fff; line-height: 1.4; font-size: 16px; text-decoration: none; cursor: pointer; transition: background .2s,color .2s; }
+body .dewford-action-secondary { background: transparent; color: #52196d; }
 body .dewford-action:hover { color: #25132b; background: #f5a100; border-color: #f5a100; }
 body .dewford-action:focus-visible, .dewford-calendar button:focus-visible, .dewford-faq summary:focus-visible { outline: 3px solid #f5a100; outline-offset: 4px; }
 .dewford-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 40px; }
@@ -56,9 +56,9 @@ body .dewford-content-main .elementor-element-462e0e0 { display: grid; grid-temp
 body .dewford-content-main :is(.elementor-element-2c71ade,.elementor-element-4de8082) { display: block; width: 100%; padding: 0; min-width: 0; }
 .dewford-contact-photo { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .dewford-contact-info { background: #fff; padding: 32px; }
-.dewford-contact-info dt { font-size: 12px; letter-spacing: .06em; color: #601d7f; margin: 24px 0 6px; }
+.dewford-contact-info dt { font-size: 12px; letter-spacing: .06em; color: #52196d; margin: 24px 0 6px; }
 .dewford-contact-info dd { margin: 0; font-size: 18px; line-height: 1.6; overflow-wrap: anywhere; }
-.dewford-contact-info a:not(.dewford-action) { color: #601d7f; }
+.dewford-contact-info a:not(.dewford-action) { color: #52196d; }
 .dewford-apply-form { background: #fff; padding: 36px; }
 .dewford-apply-form label { display: block; font-size: 15px; font-weight: 500; margin-bottom: 20px; }
 body .dewford-apply-form :is(input,select,textarea) { display: block; width: 100%; min-width: 0; margin-top: 8px; background: #f8f6f9; border: 1px solid #d6cbdc; padding: 12px; height: auto; font: inherit; color: #29212f; }
@@ -68,16 +68,16 @@ body .dewford-content-main .dewford-small,body .dewford-content-main .dewford-fo
 .dewford-calendar { background: #fff; padding: 28px; }
 .dewford-calendar-toolbar { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
 body .dewford-calendar-toolbar h3 { margin: 0; font-size: 26px; }
-.dewford-calendar button { background: white; color: #601d7f; border: 1px solid #d6cbdc; min-width: 44px; min-height: 44px; padding: 10px 14px; line-height: 1.2; cursor: pointer; }
+.dewford-calendar button { background: white; color: #52196d; border: 1px solid #d6cbdc; min-width: 44px; min-height: 44px; padding: 10px 14px; line-height: 1.2; cursor: pointer; }
 .dewford-calendar button:hover { background: #eee7f1; }
 .dewford-calendar [data-calendar-today] { margin-left: auto; }
 body .dewford-content-main .dewford-calendar-table { table-layout: fixed; }
 body .dewford-content-main .dewford-calendar-table th { text-align: center; padding: 12px 4px; }
 body .dewford-content-main .dewford-calendar-table td { height: 105px; padding: 10px; vertical-align: top; }
-.dewford-calendar-table td[aria-current="date"] { background: #eee7f1; box-shadow: inset 0 0 0 2px #601d7f; }
+.dewford-calendar-table td[aria-current="date"] { background: #eee7f1; box-shadow: inset 0 0 0 2px #52196d; }
 .dewford-calendar-table td:first-child { color: #b03b3b; }
 .dewford-calendar-table td:last-child { color: #3155a0; }
-.dewford-calendar-event { display: block; font-size: 12px; color: #601d7f; margin-top: 5px; }
+.dewford-calendar-event { display: block; font-size: 12px; color: #52196d; margin-top: 5px; }
 .dewford-calendar-agenda { padding: 24px 0 0; }
 body .dewford-calendar-agenda p { margin-bottom: 0; }
 /* Long programme names use the same title layout without overflowing. */

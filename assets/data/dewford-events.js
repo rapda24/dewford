@@ -1,11 +1,11 @@
-/* Original home event photos are the source for home, gallery and detail. */
+/* Photos extracted from the supplied Dewford presentations and brochure. Shared by home, gallery and detail. */
 window.DEWFORD_EVENTS = [
   {
     "id": "event-01",
     "title": "예술 속에서 발견하는 새로운 시선",
     "category": "FIELD TRIP",
-    "image": "assets/images/dewford/home/shutterstock_432834508.webp",
-    "alt": "박물관에서 작품을 감상하는 아이들",
+    "image": "assets/images/dewford/events/event-01.png",
+    "alt": "교사와 함께 미술 활동에 참여하는 아이들",
     "excerpt": "작품을 자세히 바라보고 느낀 점을 나누며 서로 다른 생각을 만납니다.",
     "gallery": [],
     "headings": [
@@ -29,8 +29,8 @@ window.DEWFORD_EVENTS = [
     "id": "event-02",
     "title": "음악으로 함께 표현하는 시간",
     "category": "MUSIC",
-    "image": "assets/images/dewford/home/shutterstock_2756234023.webp",
-    "alt": "선생님과 함께하는 음악 수업",
+    "image": "assets/images/dewford/events/event-02.png",
+    "alt": "교사와 함께 교실 활동에 참여하는 아이들",
     "excerpt": "리듬과 소리에 귀 기울이며 함께 표현하는 즐거움을 발견합니다.",
     "gallery": [],
     "headings": [
@@ -54,8 +54,8 @@ window.DEWFORD_EVENTS = [
     "id": "event-03",
     "title": "함께 뛰며 자라는 우리",
     "category": "SCHOOL LIFE",
-    "image": "assets/images/dewford/home/shutterstock_2267902645.webp",
-    "alt": "학교에서 함께 뛰어가는 아이들",
+    "image": "assets/images/dewford/events/event-03.png",
+    "alt": "야외 체험 활동에 함께 참여한 아이들과 교사들",
     "excerpt": "친구와 함께 움직이고 어울리며 배움의 즐거움을 나눕니다.",
     "gallery": [],
     "headings": [
@@ -79,8 +79,8 @@ window.DEWFORD_EVENTS = [
     "id": "event-04",
     "title": "스스로 읽고 생각을 쓰는 시간",
     "category": "LITERACY",
-    "image": "assets/images/dewford/home/shutterstock_2776086193.webp",
-    "alt": "스스로 읽고 쓰며 공부하는 학생",
+    "image": "assets/images/dewford/events/event-04.png",
+    "alt": "교실에서 읽고 쓰는 활동을 하는 아이",
     "excerpt": "읽으며 떠오른 생각을 자신의 말과 글로 표현합니다.",
     "gallery": [],
     "headings": [
@@ -104,8 +104,8 @@ window.DEWFORD_EVENTS = [
     "id": "event-05",
     "title": "교실 밖에서 만나는 세상",
     "category": "FIELD TRIP",
-    "image": "assets/images/dewford/home/shutterstock_2757699083.webp",
-    "alt": "역사적인 건물을 탐방하는 아이들",
+    "image": "assets/images/dewford/events/event-05.png",
+    "alt": "교사와 함께 식물을 관찰하는 아이들",
     "excerpt": "새로운 장소를 관찰하고 궁금한 점을 이야기하며 배움의 폭을 넓힙니다.",
     "gallery": [],
     "headings": [
@@ -129,8 +129,8 @@ window.DEWFORD_EVENTS = [
     "id": "event-06",
     "title": "친구와 함께 만드는 즐거운 순간",
     "category": "COMMUNITY",
-    "image": "assets/images/dewford/home/shutterstock_2745758871.webp",
-    "alt": "함께 웃는 친구들",
+    "image": "assets/images/dewford/events/event-06.png",
+    "alt": "교실에서 함께 기념사진을 찍은 아이들과 교사들",
     "excerpt": "서로의 이야기에 귀 기울이고 함께 웃으며 소중한 관계를 만들어 갑니다.",
     "gallery": [],
     "headings": [

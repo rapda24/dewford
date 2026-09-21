@@ -12,11 +12,11 @@ body .dewford-redesigned .dewford-section-heading > h2,body .dewford-redesigned 
 body .dewford-redesigned .dewford-about-intro { padding-top: 110px; }
 body .dewford-redesigned .dewford-about-intro > .e-con-inner { gap: 0; align-items: center; }
 body .dewford-redesigned .elementor-element-4c41d6b { position: relative; inset: auto; margin: 0 auto 32px; width: 132px; height: 132px; }
-body .dewford-redesigned .pxl-circle-text-wrapper { width: 132px; height: 132px; background: #601d7f; color: #fff; }
+body .dewford-redesigned .pxl-circle-text-wrapper { width: 132px; height: 132px; background: #52196d; color: #fff; }
 body .dewford-redesigned .pxl-circle-text-item { font-size: 12px; font-weight: 400; letter-spacing: .1em; }
 body .dewford-redesigned .elementor-element-2295b22 .pxl-heading--inner { max-width: 960px; margin: auto; text-align: center; }
 body .dewford-redesigned .elementor-element-2295b22 h2 { font-size: clamp(34px,4vw,58px); line-height: 1.18; margin: 0; }
-body .dewford-redesigned .elementor-element-2295b22 .pxl-item--subtext { color: #601d7f; }
+body .dewford-redesigned .elementor-element-2295b22 .pxl-item--subtext { color: #52196d; }
 body .dewford-redesigned .elementor-element-8a7c622 { grid-template-columns: 1fr 1fr; gap: 80px; padding-top: 75px; align-items: center; }
 body .dewford-redesigned .pxl-feature--card1 { padding: 12px; background: #fff; }
 body .dewford-redesigned .pxl-feature--card1 .pxl-item--content { background: transparent; padding: 25px 10px 15px; }
@@ -28,7 +28,7 @@ body .dewford-redesigned .dewford-intro-copy h2 { font-size: 28px; margin-bottom
 body .dewford-redesigned .dewford-intro-copy p { font-size: 18px; }
 .dewford-tabs { display: flex; gap: 36px; border-bottom: 1px solid var(--design-line); margin-bottom: 30px; }
 .dewford-tabs [role=tab] { background: transparent; padding: 0 0 20px; color: #8a818f; border: 0; border-bottom: 2px solid transparent; font-size: 24px; line-height: 1.2; cursor: pointer; }
-.dewford-tabs [aria-selected=true] { color: #601d7f; border-color: #601d7f; }
+.dewford-tabs [aria-selected=true] { color: #52196d; border-color: #52196d; }
 .dewford-tabs [role=tab]:focus-visible { outline: 2px solid #f5a100; outline-offset: 4px; }
 body .dewford-redesigned [role=tabpanel][hidden] { display: none; }
 body .dewford-redesigned [role=tabpanel]:not([hidden]) { animation: dewford-panel-in .35s ease both; }
@@ -37,7 +37,7 @@ body .dewford-redesigned .dewford-history-section { margin-top: 110px; padding: 
 body .dewford-redesigned .dewford-history-grid { gap: 24px; align-items: start; }
 body .dewford-redesigned .dewford-history-grid .dewford-content-card { padding: 46px; background: #fff; border-color: #e5e5e5; transition: border-color .3s,background .3s; }
 body .dewford-redesigned .dewford-history-grid .dewford-content-card:nth-child(even) { transform: translateY(40px); }
-body .dewford-redesigned .dewford-history-grid .dewford-content-card:hover { background: #faf7fc; border-color: #601d7f; }
+body .dewford-redesigned .dewford-history-grid .dewford-content-card:hover { background: #faf7fc; border-color: #52196d; }
 body .dewford-redesigned .dewford-step-number { font-size: 80px; font-weight: 400; line-height: 1; letter-spacing: -.04em; margin-bottom: 34px; }
 body .dewford-redesigned .dewford-history-grid h3 { font-size: 26px; }
 body .dewford-redesigned .dewford-template-process .elementor-element-96fc02e { padding-top: 120px; }
@@ -55,13 +55,13 @@ body .dewford-redesigned .dewford-faq-section .dewford-section-heading > p { mar
 .dewford-accordion-item { background: white; margin-bottom: 16px; padding: 0 24px; }
 .dewford-accordion-toggle { display: grid; grid-template-columns: 32px 1fr 30px; gap: 14px; align-items: center; width: 100%; min-height: 86px; padding: 24px 0; border: 0; text-align: left; color: #201724; background: transparent; font-size: 21px; font-weight: 400; line-height: 1.35; cursor: pointer; }
 .dewford-question-number { color: #998d9e; font-size: 13px; }
-.dewford-accordion-toggle .pxl-icon--plus { display: block; position: relative; inset: auto; width: 30px; height: 30px; background: #601d7f; transition: background .25s; }
+.dewford-accordion-toggle .pxl-icon--plus { display: block; position: relative; inset: auto; width: 30px; height: 30px; background: #52196d; transition: background .25s; }
 .dewford-accordion-toggle .pxl-icon--plus::before,.dewford-accordion-toggle .pxl-icon--plus::after { content: ''; position: absolute; top: 50%; left: 50%; width: 12px; height: 1px; background: #fff; transform: translate(-50%,-50%); transition: transform .3s; }
 .dewford-accordion-toggle .pxl-icon--plus::after { transform: translate(-50%,-50%) rotate(90deg); }
 .dewford-accordion-toggle[aria-expanded=true] .pxl-icon--plus::after { transform: translate(-50%,-50%) rotate(0); }
-.dewford-accordion-toggle:hover,.dewford-accordion-toggle[aria-expanded=true] { color: #601d7f; }
+.dewford-accordion-toggle:hover,.dewford-accordion-toggle[aria-expanded=true] { color: #52196d; }
 .dewford-accordion-toggle:hover .pxl-icon--plus { background: #f5a100; }
-.dewford-accordion-toggle:focus-visible { outline: 2px solid #601d7f; outline-offset: 3px; }
+.dewford-accordion-toggle:focus-visible { outline: 2px solid #52196d; outline-offset: 3px; }
 .dewford-accordion-panel { display: block; }
 .dewford-accordion-body { padding: 0 44px 28px 46px; }
 body .dewford-redesigned .dewford-accordion-body p { margin: 0; }
@@ -70,8 +70,8 @@ body .dewford-redesigned .dewford-accordion-body p { margin: 0; }
 .dewford-accordion-enhanced .dewford-accordion-body { min-height: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; transition: padding-bottom .35s; }
 .dewford-accordion-enhanced .active .dewford-accordion-panel { grid-template-rows: 1fr; visibility: visible; }
 .dewford-accordion-enhanced .active .dewford-accordion-body { padding-bottom: 28px; }
-body .dewford-redesigned .dewford-schedule-section .dewford-table-scroll { border-top: 2px solid #601d7f; }
-body .dewford-redesigned .dewford-schedule-section thead th { background: #eee7f1; color: #601d7f; }
+body .dewford-redesigned .dewford-schedule-section .dewford-table-scroll { border-top: 2px solid #52196d; }
+body .dewford-redesigned .dewford-schedule-section thead th { background: #eee7f1; color: #52196d; }
 body .dewford-redesigned .dewford-schedule-section :is(th,td) { border-left: 0; border-right: 0; padding-top: 25px; padding-bottom: 25px; }
 /* Contact Us: wide editorial heading, contact card and minimal field rules. */
 body .dewford-redesigned .dewford-contact-design .elementor-element-8336f3e { padding-top: 95px; }
@@ -84,7 +84,7 @@ body .dewford-redesigned .dewford-contact-info h3 { font-size: 26px; }
 body .dewford-redesigned .dewford-apply-form { background: transparent; padding: 0; }
 body .dewford-redesigned .dewford-apply-form h2 { font-size: 30px; }
 body .dewford-redesigned .dewford-apply-form :is(input,select,textarea) { background: transparent; border: 0; border-bottom: 1px solid #bdb3c4; padding: 14px 0; min-height: 52px; transition: border-color .2s; }
-body .dewford-redesigned .dewford-apply-form :is(input,select,textarea):focus { outline: 0; border-bottom: 2px solid #601d7f; }
+body .dewford-redesigned .dewford-apply-form :is(input,select,textarea):focus { outline: 0; border-bottom: 2px solid #52196d; }
 body .dewford-redesigned .dewford-apply-form label { margin-bottom: 26px; }
 body .dewford-redesigned .dewford-action { padding: 6px 24px 6px 6px; gap: 24px; flex-direction: row-reverse; justify-content: flex-end; }
 body .dewford-redesigned .dewford-action > span { width: 42px; height: 42px; display: grid; place-items: center; background: #f5a100; color: #24112c; font-size: 23px; transition: transform .3s,background .3s; }
@@ -143,12 +143,12 @@ body .dewford-redesigned button.dewford-accordion-toggle {
 }
 body .dewford-redesigned button.dewford-accordion-toggle::before,
 body .dewford-redesigned button.dewford-accordion-toggle::after { display: none !important; }
-body .dewford-redesigned button.dewford-accordion-toggle:is(:hover,[aria-expanded=true]) { color: #601d7f !important; }
+body .dewford-redesigned button.dewford-accordion-toggle:is(:hover,[aria-expanded=true]) { color: #52196d !important; }
 body .dewford-redesigned .pxl-circle-text-item,
 body .dewford-redesigned .pxl-circle-text-item * { color: #fff !important; }
 body .dewford-redesigned .pxl-circle-text-icon svg path { fill: #fff !important; }
 body .dewford-redesigned .dewford-tabs button { background: transparent !important; color: #8a818f !important; padding: 0 0 20px !important; font-size: 24px !important; line-height: 1.2 !important; text-transform: none; }
-body .dewford-redesigned .dewford-tabs button[aria-selected=true] { color: #601d7f !important; }
+body .dewford-redesigned .dewford-tabs button[aria-selected=true] { color: #52196d !important; }
 body .dewford-redesigned .dewford-tabs button::before,body .dewford-redesigned .dewford-tabs button::after { display: none; }
 @media (max-width: 767px) {
  body .dewford-redesigned button.dewford-accordion-toggle { font-size: 18px !important; grid-template-columns: 20px 1fr 28px !important; gap: 10px !important; min-height: 80px; }
