@@ -654,3 +654,16 @@ body #inquiry .elementor-element.elementor-element-8f6c08f::before { background-
     right: 12px;
   }
 }
+
+/* Stack the active event's text below its photo on phones. */
+@media (max-width: 767px) {
+  #event-list .dewford-events-ready .pxl-swiper-wrapper { align-items: flex-start; height: auto; }
+  #event-list .dewford-events-ready .swiper-slide-active { width: var(--event-unit); }
+  #event-list .pxl-post--inner { flex-direction: column; height: auto; min-height: 0; }
+  #event-list .pxl-post--featured { flex: 0 0 auto; width: 100%; height: 300px; }
+  #event-list .pxl-post--holder { display: none !important; flex: 0 0 auto; width: 100%; height: auto; overflow: visible; padding: 24px; }
+  #event-list .swiper-slide-active .pxl-post--holder { display: flex !important; }
+}
+@media (max-width: 767px) {
+  #event-list .pxl-post--holder { position: static !important; inset: auto !important; transform: none !important; }
+}

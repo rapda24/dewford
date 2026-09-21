@@ -39,11 +39,13 @@
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function position() {
       // A photo and its detail panel share one responsive unit.
-      var gap = container.clientWidth < 768 ? 20 : 32;
-      var unit = Math.min(540, (container.clientWidth - 24) / 2);
+      var mobile = window.matchMedia('(max-width: 767px)').matches;
+      var gap = mobile ? 20 : 32;
+      var unit = mobile ? Math.max(1, container.clientWidth - 48) : Math.min(540, (container.clientWidth - 24) / 2);
+      var activeWidth = mobile ? unit : unit * 2;
       container.style.setProperty('--event-gap', gap + 'px');
       container.style.setProperty('--event-unit', unit + 'px');
-      track.style.transform = 'translate3d(' + (container.clientWidth / 2 - current * (unit + gap) - unit) + 'px,0,0)';
+      track.style.transform = 'translate3d(' + (container.clientWidth / 2 - current * (unit + gap) - activeWidth / 2) + 'px,0,0)';
     }
     function paint() {
       slides.forEach(function (slide, index) {
