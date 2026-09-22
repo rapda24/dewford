@@ -422,7 +422,7 @@ body img[src^="assets/images/dewford/logo-"] {
 body .elementor-4277 .pxl-logo img[src^="assets/images/dewford/logo-"] { height: auto !important; }
 
 /* Keep the mobile wordmark readable when its white header becomes purple. */
-body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img[src="assets/images/dewford/logo-purple.svg"] {
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img[src="assets/images/dewford/logo.png"] {
   filter: brightness(0) invert(1) !important;
 }
 

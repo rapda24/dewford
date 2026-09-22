@@ -63,7 +63,7 @@ body .pxl-hidden-template-1756 .elementor-element-2f0e061 .pxl-item--title { lin
 body .pxl-hidden-template-1756 .pxl-popup--conent .dewford-navigation > li > a[lang="ko"] { letter-spacing: -.02em; }
 
 /* Supplied header artwork remains legible on the fixed purple mobile header. */
-body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img[src="assets/images/dewford/logo-header-purple.svg"] { filter: brightness(0) invert(1) !important; }
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img[src="assets/images/dewford/logo.png"] { filter: brightness(0) invert(1) !important; }
 
 /* Keep the supplied mobile wordmark dimensions. */
 body #pxl-header-mobile .pxl-header-branding img {

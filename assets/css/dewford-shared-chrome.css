@@ -106,7 +106,7 @@ body .dewford-main-menu .dewford-navigation > li > a,
   }
 }
 body .elementor-4277 .pxl-logo img[src^="assets/images/dewford/logo-"]{ height: auto !important; }
-body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img[src="assets/images/dewford/logo-purple.svg"]{
+body #pxl-header-mobile.pxl-header-mobile-fixed .pxl-logo-mobile img[src="assets/images/dewford/logo.png"]{
   filter: brightness(0) invert(1) !important;
 }
 #pxl-footer-elementor a.dewford-footer-kakao{
