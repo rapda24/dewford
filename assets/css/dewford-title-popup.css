@@ -82,9 +82,9 @@ html body #inquiry :is(input,textarea,select):focus {border-color:var(--dewford-
 }
 
 /* Larger, crisp home header branding; original proportions remain intact. */
-@media(min-width:1440px){html body.dewford-home-logo-large #pxl-header-elementor .pxl-header-elementor-main .pxl-logo img {width:400px!important;max-width:400px!important;height:auto!important;}}
-@media(min-width:1200px) and (max-width:1439px){html body.dewford-home-logo-large #pxl-header-elementor .pxl-header-elementor-main .pxl-logo img {width:330px!important;max-width:330px!important;height:auto!important;}}
+@media(min-width:1440px){html body.dewford-home-logo-large #pxl-header-elementor .pxl-header-elementor-main .pxl-logo img {width:360px!important;max-width:360px!important;height:auto!important;}}
+@media(min-width:1200px) and (max-width:1439px){html body.dewford-home-logo-large #pxl-header-elementor .pxl-header-elementor-main .pxl-logo img {width:300px!important;max-width:300px!important;height:auto!important;}}
 @media(max-width:1199px){
- html body.dewford-home-logo-large #pxl-header-mobile .pxl-header-branding > a {width:200px;}
- html body.dewford-home-logo-large #pxl-header-mobile .pxl-header-branding img {width:200px!important;height:auto!important;object-fit:contain;}
+ html body.dewford-home-logo-large #pxl-header-mobile .pxl-header-branding > a {width:180px;}
+ html body.dewford-home-logo-large #pxl-header-mobile .pxl-header-branding img {width:180px!important;height:auto!important;object-fit:contain;}
 }

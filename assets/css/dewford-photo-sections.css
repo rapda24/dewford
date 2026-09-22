@@ -1,0 +1,8 @@
+/* Archive photography extends the home page without replacing existing images. */
+#program-overview .dewford-program-card {overflow:hidden;}
+#program-overview .dewford-program-photo {margin:-34px -30px 28px;aspect-ratio:4/3;overflow:hidden;flex-shrink:0;}
+#program-overview .dewford-program-photo img {display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;transition:transform .7s ease;}
+@media(hover:hover){#program-overview .dewford-program-card:hover .dewford-program-photo img {transform:scale(1.035);}}
+@media(max-width:991px){#program-overview .dewford-program-photo{margin:-28px -20px 24px;}}
+@media(max-width:767px){#program-overview .dewford-program-photo{margin:-28px -28px 24px;aspect-ratio:3/2;}}
+@media(prefers-reduced-motion:reduce){#program-overview .dewford-program-photo img{transition:none;}}
