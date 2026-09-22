@@ -1,0 +1,11 @@
+/* Match the home section-label scale; keep editorial headings black. */
+html body #pxl-main .dewford-section-title-black,
+html body #pxl-main .dewford-section-title-black :is(.pxl-heading--text,a),
+html body .dewford-events-main .dewford-section-title-black,
+html body .dewford-events-main .dewford-section-title-black a {color:#111!important;}
+html body #pxl-main .dewford-section-eyebrow,
+html body #pxl-main .dewford-section-eyebrow .pxl-heading--text {font-size:24px!important;font-weight:600!important;line-height:1.35!important;letter-spacing:.02em!important;}
+@media(max-width:767px){
+ html body #pxl-main .dewford-section-eyebrow,
+ html body #pxl-main .dewford-section-eyebrow .pxl-heading--text {font-size:20px!important;}
+}

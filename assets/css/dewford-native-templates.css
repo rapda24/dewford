@@ -32,3 +32,13 @@ body .dewford-native-main [data-native-consultation] .wpcf7-response-output { di
 body .dewford-native-title .pxl-text-editor, body .dewford-native-title .pxl-text-editor :is(p,.pxl-item--inner) { color: #fff !important; }
 body .dewford-native-title .elementor-element-5df3ddd::before { background-image: linear-gradient(180deg,rgba(82,25,109,0),rgba(82,25,109,.3)) !important; }
 body .dewford-native-main [data-native-consultation] .wpcf7-response-output { background: transparent; color: #52196d; }
+
+/* Supplied circular symbol is the exception to square content corners. */
+html body .dewford-native-main .elementor-widget-container:has(.dewford-subpage-symbol),
+html body .dewford-native-main .dewford-subpage-symbol,
+html body .dewford-native-main .dewford-subpage-symbol :is(a,img) {
+ border-radius:50%!important;border-start-start-radius:50%!important;border-start-end-radius:50%!important;border-end-start-radius:50%!important;border-end-end-radius:50%!important;
+}
+html body .dewford-native-main .dewford-subpage-symbol {width:104px;height:104px;margin-inline:auto;background:transparent;overflow:hidden;}
+html body .dewford-native-main .dewford-subpage-symbol a {display:block;width:100%;height:100%;}
+html body .dewford-native-main .dewford-subpage-symbol img {display:block;width:100%;height:100%;object-fit:contain;}

@@ -1,0 +1,393 @@
+{
+  "educational-philosophy": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/sub-21170268.webp",
+      "assets/images/dewford/collections/sub-21362217.webp",
+      "assets/images/dewford/collections/sub-21362222.webp",
+      "assets/images/dewford/collections/sub-22129289.webp",
+      "assets/images/dewford/collections/sub-22444901.webp"
+    ],
+    "content_groups": [
+      {
+        "label": "LEARNING PROCESS",
+        "title": "배움의 과정",
+        "paragraphs": [
+          "아이의 관심과 발달에 맞는 직접적인 경험으로 배움에 참여합니다.",
+          "친구와 협력하고 의견을 나누며 긍정적인 관계 속에서 성장합니다.",
+          "수업에서 배운 내용을 일상과 연결해 배움의 의미를 이해합니다."
+        ]
+      },
+      {
+        "label": "STUDENT OUTCOMES",
+        "title": "Dewford가 바라보는 성장",
+        "paragraphs": [
+          "Confidence",
+          "자신의 생각을 말과 글로 표현하는 자신감",
+          "Curiosity",
+          "스스로 질문하고 새로운 것을 알아보려는 호기심",
+          "Communication",
+          "다른 사람의 생각을 듣고 자신의 의견을 나누는 소통 능력",
+          "Independence",
+          "학습을 계획하고 돌아보며 스스로 이어가는 힘"
+        ]
+      }
+    ]
+  },
+  "rolling-enrollment": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/sub-21362217.webp",
+      "assets/images/dewford/collections/sub-22129227.webp",
+      "assets/images/dewford/collections/sub-22129289.webp",
+      "assets/images/dewford/collections/sub-22444901.webp",
+      "assets/images/dewford/collections/sub-22464741.webp"
+    ],
+    "content_groups": [
+      {
+        "label": "LEARNING PROCESS",
+        "title": "배움의 과정",
+        "paragraphs": [
+          "학부모 연락처, 아이의 연령 또는 학년, 관심 프로그램과 희망 시작 시기를 알려 주세요.",
+          "학습 경험과 생활 적응에 필요한 내용을 나누고, 아이에게 맞는 과정과 반의 모집 상황을 확인합니다.",
+          "시작 일정과 수업 준비 사항을 개별적으로 안내받고 배움을 시작합니다."
+        ]
+      },
+      {
+        "label": "ADMISSIONS FAQ",
+        "title": "입학 전 궁금한 점",
+        "paragraphs": [
+          "입학을 위한 선발 테스트는 진행하지 않습니다. 상담을 통해 아이의 경험과 필요한 지원을 파악합니다. 수업 중 학습 성취도를 살피는 평가는 입학 테스트와 구분됩니다.",
+          "연중 입학 상담이 가능합니다. 실제 시작일은 희망 시기와 프로그램별 모집 상황을 확인한 뒤 안내합니다.",
+          "아이의 연령·학년, 영어를 접한 경험과 학습 목표를 알려 주시면 유치부, 초등 국제반, 초등 ESL 또는 EEP 과정을 함께 살펴봅니다.",
+          "프로그램과 선택 수업, 교재 및 차량 이용 여부에 따라 달라집니다. 상담 시 해당 과정의 비용을 안내받으실 수 있습니다."
+        ]
+      }
+    ]
+  },
+  "international-preschool": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/sub-22129227.webp",
+      "assets/images/dewford/collections/sub-22444901.webp",
+      "assets/images/dewford/collections/sub-22464741.webp",
+      "assets/images/dewford/collections/sub-22483739.webp",
+      "assets/images/dewford/collections/sub-22483744.webp",
+      "assets/images/dewford/collections/sub-22483778.webp",
+      "assets/images/dewford/collections/sub-22483785.webp",
+      "assets/images/dewford/collections/sub-22492839.webp",
+      "assets/images/dewford/collections/sub-22492842.webp"
+    ],
+    "content_groups": [
+      {
+        "label": "CURRICULUM BY STAGE",
+        "title": "아이의 성장에 따라 깊어지는 배움",
+        "paragraphs": [
+          "단계: Toddler-K · 학습 방향: 탐색과 자신감 · 주요 경험: 놀이, 감정 표현, 사회성, 소근육 발달, 듣기·말하기와 초기 문해력",
+          "단계: Pre-K · 학습 방향: 문해력 기초 · 주요 경험: Phonics, 초기 읽기, 어휘, 저널 쓰기, 과학 탐색과 수학적 사고",
+          "단계: Junior-K · 학습 방향: 소통과 학습 확장 · 주요 경험: 읽기 이해, 문장 구성, 발표, 과학 탐구, 수학적 추론과 프로젝트",
+          "단계: Senior-K · 학습 방향: 초등 학습 준비 · 주요 경험: 유창한 읽기, 창의적 글쓰기, 어휘·문법, 토론, 책임감과 발표"
+        ]
+      },
+      {
+        "label": "CORE SUBJECTS",
+        "title": "읽고 표현하는 배움의 기초",
+        "paragraphs": [
+          "글자의 소리와 단어 패턴을 익히고, 읽기 유창성과 내용 이해를 키웁니다.",
+          "읽기와 탐구에서 만난 어휘를 사용하고, 문장 구성에서 창의적인 글쓰기로 확장합니다.",
+          "이야기 나누기, 발표, 토론과 협력 활동으로 생각을 말하는 자신감을 기릅니다.",
+          "관찰과 탐색, 실험을 통해 질문을 풀고 발견한 내용을 표현합니다."
+        ]
+      },
+      {
+        "label": "INQUIRY LEARNING",
+        "title": "질문에서 시작되는 여섯 가지 탐구 주제",
+        "paragraphs": [
+          "IB PYP의 탐구 접근에서 영감을 받아 토론·조사·협력·성찰을 연결합니다.",
+          "자신의 감정, 관계와 책임을 이해합니다.",
+          "공동체, 역사와 문화 속에서 우리의 위치를 탐색합니다.",
+          "언어와 창작으로 생각을 표현합니다.",
+          "과학과 자연, 기술의 원리를 알아봅니다.",
+          "규칙과 체계, 협력의 의미를 배웁니다.",
+          "사람과 환경을 존중하며 함께 살아가는 방법을 생각합니다."
+        ]
+      },
+      {
+        "label": "BEYOND LITERACY",
+        "title": "균형 있는 성장을 위한 특별 과목",
+        "paragraphs": [
+          "미술과 음악으로 상상력, 표현력과 듣는 힘을 키웁니다.",
+          "움직임과 신체 활동으로 협동과 건강한 생활 습관을 배웁니다.",
+          "한국어와 문화를 이해하며 자신과 공동체에 대한 연결을 이어갑니다.",
+          "영어로 문제를 해결하고 수학적으로 추론하며 논리적인 사고를 연습합니다."
+        ]
+      },
+      {
+        "label": "DAILY LEARNING",
+        "title": "수업과 가정으로 이어지는 학습 흐름",
+        "paragraphs": [
+          "반별 상세 등·하원 시간과 시간표는 상담 시 안내합니다.",
+          "학습 영역: 문해력 · 활동: 수준에 맞는 Phonics·Reading과 어휘·글쓰기",
+          "학습 영역: 탐구와 표현 · 활동: 주제 탐색, 이야기 나누기, 협력 활동과 발표",
+          "학습 영역: 특별 과목 · 활동: 미술, 음악, 체육, 한국어와 문제 해결",
+          "학습 영역: 가정 연계 · 활동: Raz-Kids 읽기, 문장 만들기와 교실 학습 복습"
+        ]
+      },
+      {
+        "label": "AFTER-SCHOOL · EEP",
+        "title": "Early English Path",
+        "paragraphs": [
+          "정규 유치부와 별도로, 외부 학생도 참여할 수 있는 방과 후 영어 프로그램입니다. 하루 2교시를 함께 수강하며 1교시는 수준별 Phonics·Reading, 2교시는 요일별 Activity로 구성합니다. 주 3회 이상을 기본으로 하며 주 5회 수강을 권장합니다.",
+          "요일: 월요일 · 1교시: Phonics / Reading · 2교시 Activity: Science · 과학 실험과 탐구",
+          "요일: 화요일 · 1교시: Phonics / Reading · 2교시 Activity: Musical · 영어 노래와 율동",
+          "요일: 수요일 · 1교시: Phonics / Reading · 2교시 Activity: Math · 창의 수학과 교구 활동",
+          "요일: 목요일 · 1교시: Phonics / Reading · 2교시 Activity: Art · 미술 창작과 만들기",
+          "요일: 금요일 · 1교시: Phonics / Reading · 2교시 Activity: P.E. · 신체 활동과 게임",
+          "정규 수업을 담당하는 풀타임 원어민 교사가 지도하며, 분기별 Phonics 성취도 평가로 학습 과정을 확인합니다. 선택 요일과 수강료, 교재 및 차량 이용은 개별 상담으로 안내합니다."
+        ]
+      }
+    ]
+  },
+  "elementary-international": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/primary-shutterstock_2489698131.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2490871681.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2492074095.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2500679803.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2644817201.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2644823085.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2646107545.webp"
+    ],
+    "content_groups": [
+      {
+        "label": "LEARNING PROCESS",
+        "title": "배움의 과정",
+        "paragraphs": [
+          "문장 구조를 이해하고 아이디어를 정확한 문장으로 표현합니다.",
+          "중심 생각과 이를 뒷받침하는 내용을 하나의 단락으로 연결합니다.",
+          "생각을 논리적으로 구성한 글을 쓰고 발표하며 표현을 확장합니다."
+        ]
+      },
+      {
+        "label": "SUBJECT FOCUS",
+        "title": "언어 능력과 학습 능력을 함께",
+        "paragraphs": [
+          "미국 초등 문학 교재와 원서 텍스트를 읽으며 내용 이해와 사고력을 기릅니다.",
+          "문장과 단락을 구성하고 정통 5단락 에세이의 기초를 단계적으로 연습합니다.",
+          "영문 교재와 실제 텍스트를 활용해 읽고 쓰기에 필요한 문장 구조를 익힙니다.",
+          "주제별 어휘를 누적해 학습하고 읽기와 글쓰기에 활용합니다.",
+          "영어로 수학 개념과 문제 해결을 학습합니다. G1–G3 필수, G4–G5 선택 과목으로 안내합니다."
+        ]
+      },
+      {
+        "label": "CLASS SCHEDULE",
+        "title": "학년별 수업 안내",
+        "paragraphs": [
+          "반 편성과 상세 요일은 등록 상담 시 확인해 주세요.",
+          "구분: G1–G3 · 주간 횟수: 주 3회 · 수업 시간: 14:30–16:30 또는 16:30–18:30",
+          "구분: G4–G5 · 주간 횟수: 주 2회 · 수업 시간: 16:30–18:30"
+        ]
+      },
+      {
+        "label": "WEEKLY STRUCTURE",
+        "title": "주간 학습 구성",
+        "paragraphs": [
+          "구분: G1–G3 · Day 1 · 학습 내용: Reading & Grammar",
+          "구분: G1–G3 · Day 2 · 학습 내용: Writing Focus · Paragraph to Essay",
+          "구분: G1–G3 · Day 3 · 학습 내용: Vocabulary & U.S. Math",
+          "구분: G4–G5 · Day A · 학습 내용: Writing & Grammar",
+          "구분: G4–G5 · Day B · 학습 내용: Vocabulary & Reading"
+        ]
+      }
+    ]
+  },
+  "elementary-esl": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/primary-shutterstock_2492054923.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2492074095.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2541038755.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2644817201.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2644823085.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2646107545.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2792766265.webp"
+    ],
+    "content_groups": [
+      {
+        "label": "LEVEL ROADMAP",
+        "title": "세 단계로 이어지는 학습",
+        "paragraphs": [
+          "읽기 지표는 학습 경로를 안내하는 참고 범위입니다. 아이의 이해와 표현, 수업 중 성장 과정을 함께 살핍니다.",
+          "레벨: Level 1 · 반 이름: Keller · 자료 기준 읽기 범위: Lexile 약 100L / AR 1.0–1.9",
+          "레벨: Level 2 · 반 이름: Newton · 자료 기준 읽기 범위: Lexile 약 200L / AR 2.0–2.8",
+          "레벨: Level 3 · 반 이름: Curie · 자료 기준 읽기 범위: Lexile 약 300L / AR 2.9–3.5"
+        ]
+      },
+      {
+        "label": "CORE SUBJECTS",
+        "title": "읽기·쓰기·어휘·문법의 연결",
+        "paragraphs": [
+          "내용을 해석하는 데서 나아가 의미와 맥락을 이해합니다. 분기별 메인 리딩 북을 완성하며 학습을 누적합니다.",
+          "단문과 기본 문장 구조에서 출발해 단락 글쓰기로 발전합니다. 세 개 단락으로 생각을 표현하는 것을 목표로 연습합니다.",
+          "핵심 어휘를 누적하고 읽기와 연계해 실제 문장에서 사용합니다.",
+          "문법의 규칙을 텍스트와 문장 만들기에 적용합니다. 듣기·말하기도 수업 중 자연스러운 소통으로 연결합니다."
+        ]
+      },
+      {
+        "label": "CLASS SCHEDULE",
+        "title": "매주 이어지는 영어 학습",
+        "paragraphs": [
+          "상세 반 배정과 운영 시간은 개별 상담 시 안내합니다.",
+          "운영: 월·수·금 / 주 3회 · 시간: 14:30–16:30 또는 16:30–18:30 · 구성: 레벨별 Reading · Vocabulary · Writing",
+          "운영: 월요일 · 시간: 수업 내 학습 구성 · 구성: 문장 구성 중심 Writing, Reading Comprehension과 연계 어휘",
+          "운영: 수요일 · 시간: 수업 내 학습 구성 · 구성: 핵심 Vocabulary 누적 학습",
+          "운영: 금요일 · 시간: 수업 내 학습 구성 · 구성: Writing 연습과 피드백을 반영한 완성"
+        ]
+      },
+      {
+        "label": "LEARNING SUPPORT",
+        "title": "교실 밖에서도 이어지는 배움",
+        "paragraphs": [
+          "읽기·쓰기의 이해도와 성취도를 살피고 학습 방향을 조정합니다. 학부모와 학습 과정 및 결과물을 공유합니다.",
+          "온라인 읽기와 교실 복습으로 꾸준히 읽고 쓰는 습관을 지원합니다. 스스로 학습을 관리하는 힘을 기릅니다."
+        ]
+      }
+    ]
+  },
+  "preschool-calendar": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/sub-22444901.webp",
+      "assets/images/dewford/collections/sub-22464741.webp",
+      "assets/images/dewford/collections/sub-22483739.webp",
+      "assets/images/dewford/collections/sub-22483744.webp",
+      "assets/images/dewford/collections/sub-22483778.webp",
+      "assets/images/dewford/collections/sub-22483785.webp"
+    ],
+    "content_groups": [
+      {
+        "label": "ACADEMIC CALENDAR",
+        "title": "월별 학사 일정",
+        "paragraphs": [
+          "확정된 학사 일정과 행사, 방학 안내를 이곳에서 확인하실 수 있습니다."
+        ]
+      },
+      {
+        "label": "CALENDAR GUIDE",
+        "title": "학사력 안내 항목",
+        "paragraphs": [
+          "새 학습 과정과 반별 준비 사항",
+          "특별활동, 발표와 학부모 참여 행사",
+          "방학 기간과 수업 일정 변경"
+        ]
+      },
+      {
+        "label": "EVENTS",
+        "title": "Dewford의 행사와 소식",
+        "paragraphs": [
+          "아이들의 활동과 행사 소식은 Events 게시판에서 확인해 주세요. 세부 학사 일정은 확정 후 안내합니다."
+        ]
+      }
+    ]
+  },
+  "elementary-calendar": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/primary-shutterstock_2492054923.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2492074095.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2500679803.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2541038755.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2644823085.webp",
+      "assets/images/dewford/collections/primary-shutterstock_2346810929.webp"
+    ],
+    "content_groups": [
+      {
+        "label": "ACADEMIC CALENDAR",
+        "title": "월별 학사 일정",
+        "paragraphs": [
+          "확정된 학사 일정과 행사, 방학 안내를 이곳에서 확인하실 수 있습니다."
+        ]
+      },
+      {
+        "label": "CALENDAR GUIDE",
+        "title": "학사력 안내 항목",
+        "paragraphs": [
+          "프로그램과 반별 학습 시작 일정",
+          "학습 성취도 확인, 프로젝트와 발표",
+          "방학 일정과 프로그램별 집중 학습 안내"
+        ]
+      },
+      {
+        "label": "EVENTS",
+        "title": "Dewford의 행사와 소식",
+        "paragraphs": [
+          "아이들의 활동과 행사 소식은 Events 게시판에서 확인해 주세요. 세부 학사 일정은 확정 후 안내합니다."
+        ]
+      }
+    ]
+  },
+  "admissions-inquiry": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/sub-22483785.webp",
+      "assets/images/dewford/collections/sub-22492839.webp",
+      "assets/images/dewford/collections/sub-22492842.webp"
+    ],
+    "content_groups": []
+  },
+  "contact": {
+    "sources": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "photos": [
+      "assets/images/dewford/collections/sub-22483785.webp",
+      "assets/images/dewford/collections/sub-22492842.webp",
+      "assets/images/dewford/collections/sub-22569903.webp"
+    ],
+    "content_groups": []
+  }
+}

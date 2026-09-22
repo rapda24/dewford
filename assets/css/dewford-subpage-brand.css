@@ -1,0 +1,23 @@
+/* Shared content accents: purple hierarchy, yellow highlights and actions. */
+html body .dewford-native-main .pxl-heading .pxl-item--title,
+html body .dewford-native-main .dewford-content-title,
+html body .dewford-native-main .pxl-icon-list a span {color:var(--dewford-purple,#52196d)!important;}
+html body .dewford-native-main .pxl-heading .pxl-item--subtitle {color:var(--dewford-purple,#52196d)!important;}
+html body .dewford-native-main .pxl-heading .pxl-item--subtitle::before {background:var(--dewford-orange,#f5a100)!important;}
+html body .dewford-native-main .pxl-icon-list svg path {fill:var(--dewford-purple,#52196d);}
+html body .dewford-native-main .pxl-icon-list svg {background:#f5f5f5;padding:8px;box-sizing:content-box;}
+html body .dewford-native-main .pxl-accordion--title {color:var(--dewford-purple,#52196d)!important;border-left:3px solid var(--dewford-orange,#f5a100);padding-left:20px;}
+html body .dewford-native-main .pxl-accordion--title[aria-expanded="true"] {background:#f5f5f5;}
+html body .dewford-native-main [data-native-consultation] :is(input,textarea,select):focus {border-color:var(--dewford-purple,#52196d)!important;outline:2px solid #f5a100;outline-offset:2px;}
+html body .dewford-native-main .pxl-feature--card .btn-icon {background:var(--dewford-orange,#f5a100)!important;color:var(--dewford-purple,#52196d)!important;}
+html body :is(.dewford-events-main,.dewford-detail-main) :is(.pxl-item--title a,.widget-title) {color:var(--dewford-purple,#52196d);}
+html body :is(.dewford-events-main,.dewford-detail-main) .pxl-item--title a:hover {color:var(--dewford-purple-dark,#48165f);text-decoration:underline;text-decoration-color:var(--dewford-orange,#f5a100);text-decoration-thickness:3px;text-underline-offset:7px;}
+html body .dewford-detail-nav a:hover {background:var(--dewford-orange,#f5a100)!important;color:var(--dewford-purple-dark,#48165f)!important;border-color:var(--dewford-orange,#f5a100)!important;}
+html body .dewford-native-main .pxl-button .btn:hover {background:var(--dewford-orange,#f5a100)!important;color:var(--dewford-purple-dark,#48165f)!important;}
+
+/* Use full brand colors for icon tiles, with white icon artwork. */
+html body .dewford-native-main .pxl-icon-list svg {background:var(--dewford-purple,#52196d);}
+html body .dewford-native-main .pxl-icon-list svg path {fill:#fff;}
+html body .dewford-native-main .pxl-feature--card .btn-icon {color:#fff!important;}
+html body .dewford-native-main .pxl-feature--card .btn-icon .pxl-icon--plus::before,
+html body .dewford-native-main .pxl-feature--card .btn-icon .pxl-icon--plus::after {background:#fff!important;}

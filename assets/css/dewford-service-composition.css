@@ -1,0 +1,53 @@
+/* Native Service 1–4 sections, adapted only for Dewford content and palette. */
+html body .dewford-service-composition {background:#f5f5f5;overflow:clip;}
+html body .dewford-service-composition .dewford-service-source {--e-global-color-primary:#52196d;--e-global-color-secondary:#f5a100;}
+html body .dewford-service-composition :is(h2,h3,p,li) {word-break:keep-all;overflow-wrap:break-word;}
+html body .dewford-service-composition .pxl-text-editor p {font-size:17px;line-height:1.8;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-03db8bf {background:#f5f5f5;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-5174177 {background:#fff;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-ab43d79::before {background:none!important;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-ab43d79 :is(.pxl-item--title,.pxl-heading--text,p) {color:#fff!important;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-c9f3786 {background:#f5f5f5!important;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-c8d157a {background:#52196d!important;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-c8d157a :is(.pxl-item--title,.pxl-heading--text) {color:#fff!important;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-f4318ea img {filter:brightness(0) invert(1);}
+html body .dewford-service-composition .elementor-5333 .elementor-element-03942d2 {background:#f5a100!important;}
+html body .dewford-service-composition .elementor-5333 .elementor-element-7238b1e img {width:100%;height:290px;object-fit:cover;object-position:50% 35%;}
+html body .dewford-service-composition .elementor-5333 :is(.elementor-element-e9e0c32,.elementor-element-c178c82,.elementor-element-797b431,.elementor-element-34b0e71) .pxl-item--title {font-size:28px!important;line-height:1.35!important;font-weight:700!important;}
+html body .dewford-service-composition .elementor-element-40507ca {padding:0!important;margin:0!important;}
+html body .dewford-service-composition .elementor-element-40507ca img {width:100%;height:clamp(340px,44vw,620px);object-fit:cover;object-position:50% 35%;}
+html body .dewford-service-composition .elementor-element-40507ca :is(.pxl-item--image,.pxl-item--inner,.pxl-image-single) {max-height:none;}
+html body .dewford-service-composition .elementor-5296 .pxl-icon-list a span {font-weight:600;line-height:1.4;}
+html body .dewford-service-composition .pxl-scroll-service1 .pxl-post--inner {background:#f5f5f5;}
+html body .dewford-service-composition .pxl-scroll-service1 .pxl-post--inner:nth-child(even) {background:#f5f5f5;}
+html body .dewford-service-composition .pxl-scroll-service1 .pxl-post--title {font-size:clamp(28px,3vw,44px);line-height:1.35;color:#52196d;}
+html body .dewford-service-composition .pxl-scroll-service1 .pxl-number--post {color:#52196d;}
+html body .dewford-service-composition .pxl-scroll-service1 .pxl-post--featured img {width:100%;height:340px;object-fit:cover;object-position:50% 35%;}
+html body .dewford-service-composition .pxl-scroll-service1 .pxl-box--multitext {display:block;columns:1;}
+html body .dewford-service-composition .pxl-scroll-service1 .box-multi {display:block;width:100%;font-size:16px;line-height:1.8;margin:0;padding:12px 0;border-bottom:1px solid #d8cedc;}
+html body .dewford-service-composition .elementor-element-8976b79 {min-height:0;--min-height:0;background:#f5f5f5!important;padding:70px 0!important;}
+html body .dewford-service-composition .pxl-portfolio-accordion1 {width:min(1280px,100%);margin:auto;}
+html body .dewford-service-composition .pxl-portfolio-accordion1 .pxl-accordion-title {cursor:pointer;}
+html body .dewford-service-composition .pxl-portfolio-accordion1 .pxl-accordion--title {font-size:clamp(24px,3vw,40px)!important;line-height:1.35;border-left:0;padding-left:0;}
+html body .dewford-service-composition .pxl-portfolio-accordion1 .pxl-accordion-content {height:auto!important;overflow:hidden;}
+html body .dewford-service-composition .pxl-portfolio-accordion1 .pxl-item--excerpt {font-size:17px;line-height:1.8;}
+html body .dewford-service-composition .pxl-portfolio-accordion1 .pxl-post--featured img {width:100%;height:280px;object-fit:cover;object-position:center 35%;}
+html body .dewford-service-composition .pxl-portfolio-accordion1 .pxl-icon--plus {background:#f5a100;}
+html body .dewford-service-composition .pxl-accordion-title:focus-visible {outline:3px solid #f5a100;outline-offset:6px;}
+html body .dewford-service-composition .dewford-service-cta {display:flex;justify-content:center;padding:70px 20px 0;}
+html body .dewford-service-composition .dewford-service-cta .btn {padding:16px 28px!important;background:#52196d;color:white;min-height:52px;}
+@media(max-width:767px){
+ html body .dewford-service-composition .pxl-text-editor p {font-size:16px;}
+ html body .dewford-service-composition .elementor-5333 :is(.elementor-element-5174177,.elementor-element-ab43d79,.elementor-element-c9f3786,.elementor-element-c8d157a,.elementor-element-03942d2) {width:100%;min-width:0;}
+ html body .dewford-service-composition .elementor-5333 .elementor-element-ab43d79 {min-height:320px;}
+ html body .dewford-service-composition .elementor-5333 .elementor-element-c8d157a {padding:32px 20px;}
+ html body .dewford-service-composition .pxl-scroll-service1 .pxl-post--inner {padding:28px 20px;min-height:0;}
+ html body .dewford-service-composition .pxl-scroll-service1 .pxl-post--featured img {height:250px;}
+ html body .dewford-service-composition .pxl-portfolio-accordion1 .pxl-post--featured img {height:240px;}
+ html body .dewford-service-composition .elementor-element-8976b79 {padding:40px 16px!important;}
+}
+html body .dewford-service-composition :is(.elementor-element-7d50f91,.elementor-element-f4318ea) img {display:block;width:56px!important;height:56px!important;max-width:56px!important;object-fit:contain;}
+html body .dewford-service-composition .pxl-portfolio-accordion1 .pxl-item--excerpt {color:#45384b!important;}
+html body .dewford-service-composition .pxl-scroll-service1 .pxl-post--title {color:#52196d!important;}
+html body .dewford-service-composition .pxl-scroll-service1 .pxl-number--post {opacity:1!important;color:#52196d!important;-webkit-text-stroke:0;}
+html body .dewford-service-composition .elementor-5367 .btn {background:#52196d!important;color:#fff!important;}

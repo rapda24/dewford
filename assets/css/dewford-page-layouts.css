@@ -1,0 +1,54 @@
+/* Page-specific compositions of the existing service sections. */
+html body .dewford-compact-intro .dewford-page-intro-body {display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;width:100%;}
+html body .dewford-compact-intro .dewford-page-intro-copy {display:flex;flex-direction:column;gap:20px;}
+html body .dewford-compact-intro .dewford-page-intro-body > .elementor-widget {width:100%;}
+html body .dewford-compact-intro .elementor-element-7238b1e img {height:380px!important;object-fit:cover;}
+html body [data-page-layout="educational-philosophy"] .dewford-vision-pair {display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+html body [data-page-layout="educational-philosophy"] .dewford-vision-pair > .e-con {width:100%!important;min-height:280px;justify-content:flex-start;}
+html body [data-page-layout="educational-philosophy"] .elementor-element-ab43d79 {background:#f5f5f5!important;}
+html body [data-page-layout="educational-philosophy"] .elementor-element-ab43d79 :is(.pxl-item--title,.pxl-heading--text,p) {color:#52196d!important;}
+html body [data-page-layout="educational-philosophy"] .tabs-content-stacked {display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+html body [data-page-layout="educational-philosophy"] .pxl-scroll-service1 .pxl-post--inner {padding:32px;}
+html body [data-page-layout="educational-philosophy"] .pxl-scroll-service1 .pxl-item--content {display:flex;align-items:flex-start;flex-direction:column;gap:16px;padding:0;}
+html body [data-page-layout="educational-philosophy"] .pxl-scroll-service1 .pxl-number--post {font-size:48px;}
+html body [data-page-layout="educational-philosophy"] .pxl-scroll-service1 .pxl-post--title {font-size:26px;}
+html body [data-page-layout="educational-philosophy"] .pxl-scroll-service1 .pxl-post--featured {margin-left:0;}
+html body [data-page-layout="educational-philosophy"] .pxl-scroll-service1 .pxl-post--featured img {height:270px;}
+html body [data-page-layout="rolling-enrollment"] .dewford-compact-intro .dewford-page-intro-body {grid-template-columns:1.25fr .75fr;}
+html body [data-page-layout="rolling-enrollment"] .elementor-element-865582f {background:#f5f5f5;}
+html body [data-page-layout="international-preschool"] .dewford-compact-intro .dewford-page-intro-body {grid-template-columns:.9fr 1.1fr;}
+html body [data-page-layout="international-preschool"] .pxl-scroll-service1 .pxl-post--inner:nth-child(even) .pxl-post--featured {margin-left:0;margin-right:auto;}
+html body :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) {width:min(1280px,calc(100% - 40px));margin:70px auto;padding:48px;background:#fff;}
+html body :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) h2 {font-size:clamp(28px,3vw,40px);line-height:1.35;color:#52196d;font-weight:700;margin:0 0 24px;}
+html body .dewford-section-label {font-size:15px;letter-spacing:.02em;font-weight:700;color:#52196d;border-left:4px solid #f5a100;padding-left:12px;margin-bottom:16px;}
+html body .dewford-program-schedule h3 {font-size:24px;font-weight:700;color:#52196d;margin-top:36px;}
+html body .dewford-table-scroll {overflow-x:auto;}
+html body .dewford-program-schedule table {border-collapse:collapse;width:100%;margin-top:20px;font-size:16px;}
+html body .dewford-program-schedule :is(th,td) {padding:20px;text-align:left;border:1px solid #dbd2e0;line-height:1.65;}
+html body .dewford-program-schedule th {background:#f5f5f5;color:#52196d;min-width:160px;}
+html body .dewford-esl-levels {background:#f5f5f5;}
+html body .dewford-level-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px;}
+html body .dewford-level-card {padding:32px;background:white;border-top:4px solid #f5a100;}
+html body .dewford-level-number {display:block;color:#52196d;font-size:44px;font-weight:700;margin-bottom:20px;}
+html body .dewford-level-card h3 {color:#52196d;font-size:28px;font-weight:700;margin:0 0 12px;}
+html body .dewford-level-card p {font-size:16px;line-height:1.75;}
+html body .dewford-level-label {font-weight:700;}
+html body [data-page-layout="admissions-inquiry"] > .elementor-6031 {padding-top:40px;}
+html body .dewford-calendar-events {border-left:5px solid #f5a100;background:#f5f5f5;}
+html body .dewford-calendar-events .btn {display:inline-flex;background:#52196d;color:white;padding:14px 24px;margin-top:20px;}
+html body [data-page-layout="preschool-calendar"] .elementor-element-865582f {background:#f5f5f5;}
+html body [data-page-layout="elementary-calendar"] .elementor-element-865582f {background:#f5f5f5;}
+@media(max-width:767px){
+ html body .dewford-compact-intro .dewford-page-intro-body,
+ html body [data-page-layout="rolling-enrollment"] .dewford-page-intro-body,
+ html body [data-page-layout="international-preschool"] .dewford-page-intro-body,
+ html body [data-page-layout="educational-philosophy"] .dewford-vision-pair,
+ html body [data-page-layout="educational-philosophy"] .tabs-content-stacked,
+ html body .dewford-level-grid {grid-template-columns:minmax(0,1fr);gap:24px;}
+ html body .dewford-compact-intro .elementor-element-7238b1e img {height:280px!important;}
+ html body :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) {width:calc(100% - 30px);padding:28px 20px;margin:40px auto;}
+ html body .dewford-program-schedule :is(th,td) {padding:12px;font-size:14px;min-width:120px;}
+ html body .dewford-level-card {padding:24px;}
+}
+html body.dewford-subpage-header .dewford-service-composition[data-page-layout="educational-philosophy"] .elementor-5333 .elementor-element.elementor-element-ab43d79 {background:#f5f5f5!important;}
+html body.dewford-subpage-header .dewford-service-composition[data-page-layout="educational-philosophy"] .elementor-5333 .elementor-element.elementor-element-ab43d79 :is(.pxl-item--title,.pxl-heading--text,p) {color:#52196d!important;}

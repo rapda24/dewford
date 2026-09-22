@@ -1,0 +1,27 @@
+/* Home 4's original portfolio markup, page styling, and tab-scroll motion. */
+body .dewford-native-portfolio #portfolio {background:#f5f5f5;scroll-margin-top:80px;}
+body .dewford-native-portfolio #portfolio :is(.elementor-element-a584fcd,.pxl-post--inner,.pxl-item--category a) {border-radius:0;}
+body .dewford-native-portfolio .elementor-element-b710716 .pxl-heading .pxl-item--title {font-family:inherit;letter-spacing:-.02em;word-break:keep-all;}
+body .dewford-native-portfolio .elementor-element-b710716 .pxl-heading .pxl-title--highlight {color:var(--dewford-purple);}
+body #portfolio .pxl-post--featured {position:relative;}
+body #portfolio .pxl-post--featured img {display:block;aspect-ratio:1840/870;object-fit:cover;object-position:center 35%;}
+body #portfolio .pxl-post--featured::after {content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(48,12,67,0) 35%,rgba(48,12,67,.65));}
+html body #portfolio .pxl-item--content :is(.pxl-post--title,a) {color:#fff!important;}
+html body #portfolio .pxl-post--title {letter-spacing:-.02em;word-break:keep-all;}
+html body #portfolio .pxl-item--category a {color:var(--dewford-orange)!important;border-color:var(--dewford-orange);}
+body #portfolio .elementor-element-d0e92f2 .pxl-text-editor p {font-family:inherit;word-break:keep-all;}
+body #portfolio .btn {background:var(--dewford-purple);color:#fff;border-radius:0;}
+@media(max-width:767px){body #portfolio .pxl-post--featured img {aspect-ratio:4/3;}body #portfolio .pxl-post--title{font-size:30px;line-height:1.25;}}
+/* Full-width photography without the template's background panel. */
+html body .dewford-native-portfolio #portfolio {
+ background:transparent!important;--padding-left:0px;--padding-right:0px;
+}
+html body .dewford-native-portfolio #portfolio .elementor-element.elementor-element-a584fcd {
+ background:transparent!important;--padding-left:0px;--padding-right:0px;--margin-top:0px;
+}
+html body #portfolio .pxl-tabs--scroll .pxl-post--inner {margin-top:0;border-radius:0;}
+html body #portfolio .pxl-post--featured,
+html body #portfolio .pxl-post--featured>a {display:block;width:100%;}
+html body #portfolio .pxl-post--featured img {width:100%;max-width:none;}
+html body #portfolio :is(.elementor-element-b710716,.elementor-element-d0e92f2) {padding-inline:20px;}
+html body.dewford-home-logo-large .pxl-button .btn.pxl-icon--left {padding-left:4px!important;padding-right:24px!important;}

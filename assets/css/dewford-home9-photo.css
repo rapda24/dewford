@@ -1,0 +1,6 @@
+/* Image-only portion of Home 9's 7a8bf10 section, with native parallax. */
+body .dewford-home9-photo {background:#f5f5f5;}
+body .dewford-home9-photo .elementor-element.elementor-element-b96ac9f {border-radius:0;--border-radius:0px;}
+body .dewford-home9-photo .pxl-section-bg-parallax {background-size:cover;background-position:center 35%;background-repeat:no-repeat;}
+@media(max-width:767px){body .dewford-home9-photo .elementor-element.elementor-element-b96ac9f{--min-height:320px;}body .dewford-home9-photo .pxl-section-bg-parallax{background-position:center center;}}
+@media(prefers-reduced-motion:reduce){body .dewford-home9-photo .pxl-section-bg-parallax{transform:none!important;bottom:0!important;}}

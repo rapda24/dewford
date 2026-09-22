@@ -1,6 +1,6 @@
 /* Supplied photography and artwork only. Shared subpage hero. */
 html body #pxl-page-title-elementor.dewford-title-hero {
- position:relative; isolation:isolate; height:50dvh; min-height:0; padding:0; margin:0; overflow:hidden; border-radius:0; background:#52196d;
+ position:relative; isolation:isolate; height:70dvh; min-height:0; padding:0; margin:0; overflow:hidden; border-radius:0; background:#52196d;
  display:flex; align-items:center; justify-content:center;
 }
 .dewford-title-slideshow,.dewford-title-slide {position:absolute;inset:0;pointer-events:none;}
@@ -88,3 +88,57 @@ html body #inquiry :is(input,textarea,select):focus {border-color:var(--dewford-
  html body.dewford-home-logo-large #pxl-header-mobile .pxl-header-branding > a {width:180px;}
  html body.dewford-home-logo-large #pxl-header-mobile .pxl-header-branding img {width:180px!important;height:auto!important;object-fit:contain;}
 }
+/* Give home section labels a clearer hierarchy. */
+html body.dewford-home-logo-large :is(
+ .dewford-program-eyebrow,
+ #events .elementor-element-b80ed4f .pxl-item--title,
+ #about .elementor-element-e1f1d6d .pxl-item--title,
+ #inquiry .elementor-element-d771571 .pxl-item--subtitle,
+ .dewford-location-info > span
+) {font-size:24px!important;line-height:1.35!important;font-weight:600!important;letter-spacing:.02em!important;}
+html body.dewford-home-logo-large :is(#events .elementor-element-b80ed4f,#about .elementor-element-e1f1d6d) .pxl-heading--text {font-size:inherit!important;line-height:inherit!important;}
+@media(max-width:767px){
+ html body.dewford-home-logo-large :is(.dewford-program-eyebrow,#events .elementor-element-b80ed4f .pxl-item--title,#about .elementor-element-e1f1d6d .pxl-item--title,#inquiry .elementor-element-d771571 .pxl-item--subtitle,.dewford-location-info > span) {font-size:20px!important;}
+}
+
+/* Consistent spacing for icon-and-label action buttons. */
+html body :is(.dewford-native-main .btn,.pxl-button > a.btn,#inquiry .wpcf7-submit):has(.pxl--btn-icon) {
+ display:inline-flex!important;align-items:center!important;justify-content:center;
+ min-height:48px;max-width:100%;height:auto;box-sizing:border-box;
+ padding:4px 24px 4px 4px!important;gap:12px!important;line-height:1.4!important;
+ white-space:normal;vertical-align:middle;
+}
+html body :is(.dewford-native-main .btn,.pxl-button > a.btn,#inquiry .wpcf7-submit) .pxl--btn-icon {
+ display:inline-flex;align-items:center;justify-content:center;flex:0 0 40px;
+ width:40px;height:40px;margin:0!important;line-height:1;
+}
+html body :is(.dewford-native-main .btn,.pxl-button > a.btn,#inquiry .wpcf7-submit) .pxl--btn-text {margin:0!important;line-height:1.4;}
+html body .dewford-native-main .btn:not(:has(.pxl--btn-icon)) {padding:12px 20px!important;min-height:48px;line-height:1.4;}
+/* Match learning-journey and admissions labels to the other section titles. */
+html body.dewford-home-logo-large #about .dewford-learning-eyebrow,
+html body.dewford-home-logo-large #inquiry .elementor-element-d771571 :is(.pxl-item--subtitle,.pxl-item--subtext) {
+ font-size:24px!important;line-height:1.35!important;font-weight:600!important;letter-spacing:.02em!important;
+}
+@media(max-width:767px){
+ html body.dewford-home-logo-large #about .dewford-learning-eyebrow,
+ html body.dewford-home-logo-large #inquiry .elementor-element-d771571 :is(.pxl-item--subtitle,.pxl-item--subtext) {font-size:20px!important;}
+}
+
+/* Individual focal points keep faces within the taller subpage hero. */
+html body .dewford-title-slide img {object-position:var(--title-focus,50% 35%);transform-origin:var(--title-focus,50% 35%);}
+html body .dewford-title-slide img[src$="22129289.jpg"] {--title-focus:50% 35%;--title-focus-mobile:54% 35%;}
+html body .dewford-title-slide img[src$="22483744.jpg"] {--title-focus:65% 35%;--title-focus-mobile:76% 35%;}
+html body .dewford-title-slide img[src$="21362222.jpg"] {--title-focus:50% 22%;--title-focus-mobile:54% 25%;}
+html body .dewford-title-slide img[src$="title-36.png"] {--title-focus:50% 38%;--title-focus-mobile:48% 38%;}
+html body .dewford-title-slide img[src$="title-63.png"] {--title-focus:50% 35%;--title-focus-mobile:50% 35%;}
+html body .dewford-title-slide img[src$="title-57.png"] {--title-focus:50% 25%;--title-focus-mobile:50% 35%;}
+html body .dewford-title-slide img[src$="2346810929.webp"] {--title-focus:50% 32%;--title-focus-mobile:55% 32%;}
+html body .dewford-title-slide img[src$="2439954451.webp"] {--title-focus:50% 35%;--title-focus-mobile:55% 35%;}
+html body .dewford-title-slide img[src$="2452912103.webp"] {--title-focus:50% 30%;--title-focus-mobile:47% 30%;}
+html body .dewford-title-slide img[src$="2500679803.webp"] {--title-focus:50% 30%;--title-focus-mobile:30% 30%;}
+html body .dewford-title-slide img[src$="2644817201.webp"] {--title-focus:50% 30%;--title-focus-mobile:55% 30%;}
+html body .dewford-title-slide img[src$="2644823085.webp"] {--title-focus:50% 30%;--title-focus-mobile:48% 30%;}
+html body .dewford-title-slide img[src$="2490871681.webp"] {--title-focus:50% 30%;--title-focus-mobile:50% 30%;}
+html body .dewford-title-slide img[src$="2492054923.webp"] {--title-focus:50% 30%;--title-focus-mobile:55% 30%;}
+html body .dewford-title-slide img[src$="2646107545.webp"] {--title-focus:50% 40%;--title-focus-mobile:50% 40%;}
+@media(max-width:767px){html body .dewford-title-slide img {object-position:var(--title-focus-mobile,50% 35%);transform-origin:var(--title-focus-mobile,50% 35%);}}
