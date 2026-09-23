@@ -2,6 +2,35 @@
 #pxl-header-elementor .pxl-menu-primary > li > a { letter-spacing: .02em; }
 #pxl-header-mobile .pxl-menu-primary > li > a { letter-spacing: .02em; }
 
+/* Align the logo, navigation and actions on a shared vertical centerline. */
+@media (min-width: 1200px) {
+ html body #pxl-header-elementor :is(.elementor-element-422bc32,.elementor-element-4c151ff),
+ html body #pxl-header-elementor .elementor-element-4c151ff > .e-con-inner {
+  align-items:center;--align-items:center;
+ }
+ html body #pxl-header-elementor .elementor-element-4c151ff > .e-con-inner {position:relative;}
+ html body #pxl-header-elementor :is(.elementor-element-422bc32,.elementor-element-4c151ff > .e-con-inner) > .elementor-widget {
+  align-self:center;
+ }
+ html body #pxl-header-elementor :is(.elementor-element-422bc32,.elementor-element-4c151ff > .e-con-inner) > .elementor-widget > .elementor-widget-container {
+  margin-top:0;margin-bottom:0;
+ }
+ html body #pxl-header-elementor :is(.dewford-main-menu,.elementor-element-abb0524) {
+  position:absolute!important;left:50%;top:50%;bottom:auto;transform:translate(-50%,-50%);
+  align-self:center;align-items:center;height:auto;width:max-content;margin:0;
+ }
+ html body #pxl-header-elementor .elementor-element-abb0524 :is(.elementor-widget-container,.pxl-nav-menu,.menu-menu-main-container,.dewford-navigation) {height:auto;}
+ html body #pxl-header-elementor .dewford-navigation {display:flex;align-items:center;margin-top:0;margin-bottom:0;}
+ html body #pxl-header-elementor .dewford-navigation > li > a {display:flex;align-items:center;}
+ html body #pxl-header-elementor .pxl-logo a {display:inline-flex;align-items:center;vertical-align:middle;}
+ html body #pxl-header-elementor .pxl-logo img {display:block;}
+ html body #pxl-header-elementor .pxl-text-editor p {margin-bottom:0;}
+}
+@media (max-width: 1199px) {
+ html body #pxl-header-mobile .pxl-header-mobile-default {align-items:center;}
+ html body #pxl-header-mobile .pxl-header-branding img {vertical-align:middle;}
+}
+
 /* Hide search within the mobile navigation drawer. */
 @media (max-width: 1199px) {
  body .pxl-header-menu-scroll .pxl-header-mobile-search.pxl-hide-xl { display: none !important; }

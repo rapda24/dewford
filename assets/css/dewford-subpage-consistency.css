@@ -1,0 +1,113 @@
+/* Shared editorial roles; page layouts, photography and controls stay local. */
+body.dewford-subpage-header {
+ --sub-heading-size:40px;--sub-card-size:26px;--sub-label-size:24px;--sub-body-size:17px;
+ --sub-heading-color:#111;--sub-copy-color:#45384b;--sub-text-gap:16px;
+ --sub-section-gap:96px;--sub-gutter:24px;--sub-content-gap:32px;--sub-column-gap:48px;--sub-card-padding:32px;
+}
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main h2.dewford-section-title-black:not(.dewford-section-eyebrow) {
+  font-size:var(--sub-heading-size)!important;font-weight:700!important;line-height:1.35!important;letter-spacing:-.025em!important;
+ }
+ html body.dewford-subpage-header #pxl-wapper main :is(h3.dewford-section-title-black:not(.pxl-ctf-title),.dewford-content-title,.pxl-feature--card h3) {
+  font-size:var(--sub-card-size)!important;font-weight:700!important;line-height:1.4!important;letter-spacing:-.02em!important;
+ }
+ html body.dewford-subpage-header #pxl-wapper main :is(.dewford-section-title-black,.dewford-content-title,.pxl-feature--card h3) {
+  color:var(--sub-heading-color)!important;
+ }
+ html body.dewford-subpage-header #pxl-wapper main :is(.dewford-section-title-black,.dewford-content-title) :is(.pxl-heading--text,a) {
+  font-size:inherit!important;font-weight:inherit!important;line-height:inherit!important;letter-spacing:inherit!important;color:inherit!important;
+ }
+ html body.dewford-subpage-header #pxl-wapper main :is(.dewford-section-eyebrow,.dewford-calendar-eyebrow,.dewford-section-label,.elementor-element-2295b22 .pxl-item--subtitle) {
+  font-size:var(--sub-label-size)!important;font-weight:600!important;line-height:1.35!important;letter-spacing:.02em!important;color:var(--sub-heading-color)!important;text-transform:uppercase;
+ }
+ html body.dewford-subpage-header #pxl-wapper main :is(.pxl-text-editor p,.pxl-item--excerpt,.box-multi,.dewford-calendar-intro,.dewford-calendar-details p,.dewford-level-card p,.dewford-calendar-events p) {
+  font-size:var(--sub-body-size)!important;font-weight:400!important;line-height:1.8!important;letter-spacing:-.01em!important;color:var(--sub-copy-color)!important;
+ }
+ html body.dewford-subpage-header #pxl-wapper main .pxl-accordion--title {
+  font-size:var(--sub-label-size)!important;font-weight:600!important;line-height:1.45!important;
+ }
+ html body.dewford-subpage-header #pxl-wapper main .pxl-ctf-title {
+  font-size:16px!important;font-weight:600!important;line-height:1.5!important;
+ }
+ /* Preserve contrast in the purple and photographic feature cards. */
+ html body.dewford-subpage-header #pxl-wapper main .elementor-element-c8d157a :is(.pxl-item--title,.pxl-heading--text,p),
+ html body.dewford-subpage-header #pxl-wapper main:not([data-page-layout="educational-philosophy"]) .elementor-element-ab43d79 :is(.pxl-item--title,.pxl-heading--text,p) {color:#fff!important;}
+}
+
+/* Start headings and paragraphs at the same edge within their content column. */
+html body.dewford-subpage-header main .elementor-widget-pxl_heading {min-width:0;max-width:100%;}
+html body.dewford-subpage-header main :is(.pxl-heading,.pxl-text-editor) {text-align:left!important;justify-content:flex-start!important;}
+html body.dewford-subpage-header main .pxl-heading--inner {width:100%;max-width:100%!important;margin-inline:0!important;}
+html body.dewford-subpage-header main :is(.pxl-heading--text,.pxl-heading .pxl-item--title,.pxl-heading .split-line,.dewford-content-title) {text-align:left!important;}
+html body.dewford-subpage-header main :is(.dewford-section-title-black,.dewford-section-title-black .pxl-heading--text) {white-space:normal!important;word-break:keep-all;overflow-wrap:break-word;}
+html body.dewford-subpage-header main :is(.elementor-widget-pxl_heading,.elementor-widget-pxl_text_editor) > .elementor-widget-container {margin-inline:0!important;padding-inline:0!important;}
+html body.dewford-subpage-header main .pxl-text-editor > .pxl-item--inner {margin-inline:0!important;max-width:100%!important;}
+html body.dewford-subpage-header main :is(.dewford-section-eyebrow,.dewford-calendar-eyebrow,.dewford-section-label) {padding-left:0!important;border-left:0!important;margin-left:0!important;}
+html body.dewford-subpage-header main .pxl-heading--inner > .pxl-item--subtitle {margin-bottom:var(--sub-text-gap);}
+html body.dewford-subpage-header main .pxl-text-editor p {margin-top:0;margin-bottom:var(--sub-text-gap);}
+html body.dewford-subpage-header main .pxl-text-editor p:last-child {margin-bottom:0;}
+html body.dewford-subpage-header main :is(.dewford-calendar-eyebrow,.dewford-section-label) {margin-bottom:var(--sub-text-gap);}
+html body.dewford-subpage-header main .dewford-page-intro-copy {gap:24px;align-items:stretch;}
+html body.dewford-subpage-header main .dewford-page-intro-copy > .elementor-widget {width:100%;margin-inline:0;}
+html body.dewford-subpage-header main .pxl-portfolio-accordion1 .pxl-accordion--title {padding-left:0;border-left:0;}
+html body.dewford-subpage-header main .pxl-icon-list a span {font-size:var(--sub-label-size);font-weight:600;line-height:1.4;letter-spacing:-.02em;}
+
+/* Equivalent boxed sections use the same content width and mobile gutter. */
+html body.dewford-subpage-header main .e-con-boxed {--content-width:1320px;}
+html body.dewford-subpage-header main :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) {padding:40px;}
+html body.dewford-subpage-header main :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) > h2 {margin-bottom:24px;}
+html body.dewford-subpage-header main :is(.dewford-level-card,.pxl-feature--card) h3 {margin-bottom:16px;}
+html body.dewford-subpage-header main :is(.btn,.dewford-consultation-button) {font-size:16px;font-weight:600;line-height:1.4;}
+@media(max-width:767px) {
+ body.dewford-subpage-header {--sub-heading-size:28px;--sub-card-size:22px;--sub-label-size:20px;--sub-body-size:16px;--sub-section-gap:60px;--sub-gutter:20px;--sub-content-gap:24px;--sub-column-gap:24px;--sub-card-padding:24px;}
+ html body.dewford-subpage-header main :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) {padding:24px 20px;}
+}
+
+/* Section boundaries own the vertical gap so nested template padding cannot double it. */
+html body.dewford-subpage-header #pxl-wapper main:not(.dewford-empty-main) {padding-bottom:var(--sub-section-gap)!important;}
+html body.dewford-subpage-header #pxl-wapper main > .elementor {margin-block:0;padding-block:0;}
+html body.dewford-subpage-header #pxl-wapper main > :not(.dewford-subpage-emblem) + .elementor {margin-top:var(--sub-section-gap);}
+html body.dewford-subpage-header #pxl-wapper main > .elementor > .e-con {
+ --margin-top:0px;--margin-bottom:0px;--padding-top:0px;--padding-bottom:0px;
+ margin-block:0!important;padding-block:0!important;
+}
+html body.dewford-subpage-header #pxl-wapper main > .elementor > .e-con + .e-con {margin-top:var(--sub-section-gap)!important;}
+html body.dewford-subpage-header #pxl-wapper main :is(.elementor-element-03db8bf,.elementor-element-7d1ccc9,.elementor-element-8976b79,.elementor-element-d4c9620) {
+ --padding-top:0px;--padding-bottom:0px;padding-block:0!important;
+}
+html body.dewford-subpage-header #pxl-wapper main .e-con-boxed {
+ --padding-left:var(--sub-gutter);--padding-right:var(--sub-gutter);
+ padding-inline:var(--sub-gutter);
+}
+html body.dewford-subpage-header #pxl-wapper main > .elementor > .e-con-full:has(> .e-con-boxed) {padding-inline:0;--padding-left:0px;--padding-right:0px;}
+html body.dewford-subpage-header #pxl-wapper main > .dewford-calendar {
+ width:min(1368px,100%);max-width:1368px;margin:0 auto;padding:0 var(--sub-gutter);
+}
+html body.dewford-subpage-header #pxl-wapper main > :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) {
+ width:min(1320px,calc(100% - 2 * var(--sub-gutter)));margin:var(--sub-section-gap) auto 0;padding:var(--sub-card-padding);
+}
+html body.dewford-subpage-header #pxl-wapper main > .dewford-service-cta {padding:var(--sub-section-gap) var(--sub-gutter) 0;}
+
+/* Consistent gaps within a section, including the two-column Why Dewford layouts. */
+html body.dewford-subpage-header #pxl-wapper main :is(.dewford-page-intro-body,.dewford-journey-layout,.dewford-vision-pair) {column-gap:var(--sub-column-gap);row-gap:var(--sub-content-gap);}
+html body.dewford-subpage-header #pxl-wapper main :is(.dewford-level-grid,.tabs-content-stacked) {gap:var(--sub-content-gap);}
+html body.dewford-subpage-header #pxl-wapper main .dewford-level-card {padding:var(--sub-card-padding);}
+html body.dewford-subpage-header #pxl-wapper main :is(.elementor-element-8a7c622,.elementor-element-ee72387,.elementor-element-f88df18,.elementor-element-00cfee0,.elementor-element-ab57728,.elementor-element-2da1750,.elementor-element-19dc3dd,.elementor-element-462e0e0,.dewford-journey-layout) {
+ --margin-top:var(--sub-content-gap);margin-top:var(--sub-content-gap);column-gap:var(--sub-column-gap);
+}
+html body.dewford-subpage-header #pxl-wapper main .elementor-widget-pxl_divider > .elementor-widget-container {margin-top:var(--sub-text-gap);margin-bottom:0;}
+html body.dewford-subpage-header #pxl-wapper main .elementor-widget-pxl_divider + .elementor-widget-pxl_heading > .elementor-widget-container {margin-top:var(--sub-content-gap);}
+html body.dewford-subpage-header #pxl-wapper main :is(.elementor-element-f59c97d,.dewford-page-intro-copy) {gap:var(--sub-content-gap);}
+html body.dewford-subpage-header #pxl-wapper main .elementor-element-f59c97d .elementor-element-a97ff92 {gap:24px;padding-bottom:var(--sub-content-gap);}
+html body.dewford-subpage-header #pxl-wapper main .elementor-element-4d6909d > :is(.elementor-element-40014b5,.elementor-element-588288f,.elementor-element-c5eeddc) {
+ --padding-top:var(--sub-content-gap);--padding-bottom:var(--sub-content-gap);--margin-top:0px;margin-top:0;padding-block:var(--sub-content-gap);gap:var(--sub-content-gap);
+}
+html body.dewford-subpage-header #pxl-wapper main .elementor-element-4d6909d > .elementor-element-40014b5 {margin-top:var(--sub-content-gap);}
+html body.dewford-subpage-header #pxl-wapper main :is(.dewford-calendar-intro,.dewford-calendar-details) {margin-bottom:0;}
+html body.dewford-subpage-header #pxl-wapper main .dewford-calendar-toolbar {margin-top:var(--sub-content-gap);}
+
+/* The Difference section needs equal spacing inside its background panel. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 {
+ --padding-top:var(--sub-section-gap);--padding-bottom:var(--sub-section-gap);
+ padding-block:var(--sub-section-gap)!important;
+}

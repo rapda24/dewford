@@ -1,4 +1,20 @@
 /* Content-only adaptations to the unmodified About Us section structure. */
+/* Page introduction has its own centered hierarchy above the approach section. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-2295b22 {width:100%;align-self:stretch;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-2295b22 :is(.pxl-heading,.pxl-heading--inner,.pxl-item--subtitle,.pxl-item--title,.pxl-heading--text,.split-line) {text-align:center!important;justify-content:center!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-2295b22 .pxl-item--subtitle {margin:0 0 24px;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-2295b22 .pxl-item--title {margin:0;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-8a7c622 {margin-top:var(--sub-section-gap,96px);--margin-top:var(--sub-section-gap,96px);}
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-2295b22 .pxl-item--subtitle {color:var(--dewford-purple,#52196d)!important;}
+ html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-2295b22 h2.dewford-section-title-black {font-size:48px!important;font-weight:700!important;}
+ @media(max-width:767px){
+  html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-2295b22 h2.dewford-section-title-black {font-size:32px!important;}
+ }
+}
+/* A full-width rule mirrors the Difference section's label and divider. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-1715b89 {width:100%;align-self:stretch;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid #e5e5e5;}
+
 html body .dewford-why-about-template .pxl-heading--text {word-break:keep-all;overflow-wrap:break-word;}
 html body .dewford-why-about-template :is(.elementor-element-c883986,.elementor-element-7b06ad2,.elementor-element-2c34cc6) img {width:56px;height:56px;object-fit:contain;}
 html body .dewford-why-about-template .pxl-feature--card img {object-fit:cover;object-position:center 35%;}
@@ -29,6 +45,14 @@ html body .dewford-why-about-template .elementor-element-6fe3d0a .pxl-marquee .p
 html body .dewford-why-about-template .elementor-element-4d6909d > :is(.elementor-element-40014b5,.elementor-element-588288f,.elementor-element-c5eeddc) {display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr);gap:40px;align-items:start;justify-content:start;}
 html body .dewford-why-about-template .elementor-element-4d6909d > .e-con > .elementor-widget {width:100%;min-width:0;margin-left:0;margin-right:0;}
 html body .dewford-why-about-template .elementor-element-4d6909d .pxl-text-editor .pxl-item--inner {width:100%;max-width:none;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-4d6909d .pxl-icon-list {text-align:left;align-items:flex-start;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-4d6909d .pxl-icon-list a {align-items:flex-start;justify-content:flex-start;text-align:left;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-4d6909d .pxl-icon-list a span {display:block;width:100%;text-align:left!important;}
+@media(max-width:767px){
+ html body #pxl-wapper .dewford-why-about-template .elementor-element-4d6909d .pxl-icon-list a {display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:16px;width:100%;}
+ html body #pxl-wapper .dewford-why-about-template .elementor-element-4d6909d .pxl-icon-list a svg {flex-shrink:0;}
+ html body #pxl-wapper .dewford-why-about-template .elementor-element-4d6909d .pxl-icon-list a span {flex:1;min-width:0;width:auto;margin:0;align-self:center;}
+}
 @media(max-width:767px){
  html body .dewford-why-about-template .elementor-element-4d6909d > :is(.elementor-element-40014b5,.elementor-element-588288f,.elementor-element-c5eeddc) {grid-template-columns:minmax(0,1fr);gap:20px;}
 }
@@ -58,18 +82,6 @@ html body .dewford-why-about-template .elementor-element-016f24e p {font-size:16
 /* Section headings share the left edge of the content rows beneath them. */
 html body .dewford-why-about-template :is(.elementor-element-6fee160,.elementor-element-a7d2c21) {width:100%!important;max-width:none!important;align-self:stretch!important;margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;}
 html body .dewford-why-about-template :is(.elementor-element-6fee160,.elementor-element-a7d2c21) :is(.pxl-heading,.pxl-heading--inner,.pxl-item--title,.split-line) {text-align:left!important;}
-/* Three approach rows: icon beside title, description on the next line. */
-html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e {grid-template-columns:minmax(0,1fr);gap:0;}
-html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e > .e-con {display:grid;grid-template-columns:80px minmax(0,1fr);grid-template-rows:80px auto;column-gap:22px;row-gap:18px;align-items:center;padding:28px 0;border-top:1px solid #dcd2e2;}
-html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e .elementor-widget-pxl_image {grid-column:1;grid-row:1;}
-html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e .elementor-widget-pxl_text_editor,
-html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e .elementor-widget-pxl_text_editor :is(.elementor-widget-container,.pxl-text-editor,.pxl-item--inner) {display:contents;}
-html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e .dewford-content-title {grid-column:2;grid-row:1;align-self:center;min-height:0;margin:0!important;}
-html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e p {grid-column:1 / -1;grid-row:2;margin:0;}
-@media(max-width:767px){
- html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e > .e-con {column-gap:16px;row-gap:16px;padding:24px 0;}
-}
-
 html body .dewford-why-about-template .elementor-element-016f24e .elementor-widget-pxl_image > .elementor-widget-container {background:#52196d;}
 html body .dewford-why-about-template .elementor-element-016f24e .dewford-learning-icon {filter:brightness(0) invert(1);}
 html body .dewford-why-about-template .dewford-subpage-symbol {background:#f5a100;}
@@ -82,3 +94,80 @@ html body .dewford-why-about-template .elementor-element-f59c97d .elementor-elem
 html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-d6849ac p:last-child {margin-bottom:0;}
 html body .dewford-why-about-template .elementor-element-f59c97d {gap:36px;}
 html body .dewford-why-about-template .elementor-element-f59c97d .elementor-element-016f24e > .e-con:first-child {border-top:0;padding-top:0;}
+
+/* Keep the approach photo beside its text while scrolling, below the header. */
+@media(min-width:768px){
+ html body .dewford-why-about-template .elementor-element-717d55b.pxl-column-sticky {top:110px;align-self:flex-start;}
+}
+@media(max-width:767px){
+ html body .dewford-why-about-template .elementor-element-717d55b.pxl-column-sticky {position:relative;top:auto;}
+}
+
+/* The journey photo stretches to the height of the adjacent content. */
+html body .dewford-why-about-template .dewford-journey-layout {
+ display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1fr);gap:48px;align-items:stretch;width:100%;margin-top:30px;
+}
+html body .dewford-why-about-template .dewford-journey-photo {position:relative;min-width:0;min-height:0;margin:0;overflow:hidden;}
+html body .dewford-why-about-template .dewford-journey-photo img {position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:60% 35%;}
+html body .dewford-why-about-template .dewford-journey-layout > .elementor-element-4d6909d {width:100%;--width:100%;min-width:0;align-self:stretch;}
+html body .dewford-why-about-template .dewford-journey-layout .elementor-element-a7d2c21 > .elementor-widget-container {margin-top:0;}
+@media(max-width:1024px){
+ html body .dewford-why-about-template .dewford-journey-layout {grid-template-columns:minmax(0,1fr);gap:32px;}
+ html body .dewford-why-about-template .dewford-journey-photo {aspect-ratio:4/3;}
+ html body .dewford-why-about-template .dewford-journey-photo img {object-position:60% 30%;}
+}
+
+/* The three approach items share a smaller title and a clearer body gap. */
+/* Learning Journey labels and their supporting paragraphs. */
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-4d6909d .pxl-icon-list a span {
+  font-weight:800!important;line-height:1.65!important;
+ }
+ html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-4d6909d .pxl-text-editor p {
+  line-height:1.2!important;
+ }
+}
+
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-016f24e h3.dewford-content-title {font-size:22px!important;line-height:1.4!important;}
+ @media(max-width:767px){
+  html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .elementor-element-016f24e h3.dewford-content-title {font-size:20px!important;}
+ }
+}
+
+/* Approach rows: icon, heading and paragraph use a 1:2:4 ratio. */
+/* Mobile Difference section: label, photo, heading, then the four promises. */
+@media(max-width:767px){
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 > .e-con-inner {display:flex;flex-direction:column;align-items:stretch;gap:24px;}
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 .elementor-element-a971c0d {order:1;}
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 .elementor-element-c93dcb8 {order:2;}
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 .elementor-element-ee72387 {display:contents!important;}
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 .elementor-element-1cd2357 {order:3;position:relative;top:auto;align-self:stretch;width:100%;--width:100%;margin:0;padding:0;}
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 .elementor-element-6fee160 {order:4;}
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 .elementor-element-842d290 {order:5;width:100%;--width:100%;margin:0;}
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 :is(.elementor-element-c93dcb8,.elementor-element-6fee160,.elementor-element-d74090c) > .elementor-widget-container {margin:0!important;}
+ html body #pxl-wapper main.dewford-why-about-template .elementor-element-7d1ccc9 .elementor-element-d74090c img {display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 35%;}
+}
+
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e {
+ display:grid;grid-template-columns:minmax(0,1fr);gap:0;width:100%;min-width:0;
+}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e > .e-con {
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,4fr);
+ grid-template-rows:auto;gap:28px 22px;align-items:start;justify-items:stretch;
+ width:100%;--width:100%;min-width:0;margin:0;padding:28px 0;border-top:1px solid #dcd2e2;
+}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e > .e-con:first-child {padding-top:0;border-top:0;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e .elementor-widget-pxl_image {grid-column:1;grid-row:1;align-self:start;width:100%;max-width:80px;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e .elementor-widget-pxl_image > .elementor-widget-container {width:100%;height:auto;aspect-ratio:1;padding:12px;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e .dewford-learning-icon {width:100%!important;height:auto!important;max-width:46px!important;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e .elementor-widget-pxl_text_editor,
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e .elementor-widget-pxl_text_editor :is(.elementor-widget-container,.pxl-text-editor,.pxl-item--inner) {display:contents!important;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e :is(.dewford-content-title,p) {margin:0!important;min-width:0;min-height:0;width:100%;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e .dewford-content-title {grid-column:2;grid-row:1;}
+html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e p {grid-column:3;grid-row:1;}
+@media(max-width:767px){
+ html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e > .e-con {grid-template-columns:64px minmax(0,1fr);grid-template-rows:auto auto;gap:24px 16px;padding-block:24px;}
+ html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e .dewford-content-title {grid-column:2;grid-row:1;align-self:center;}
+ html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e p {grid-column:1 / -1;grid-row:2;}
+}

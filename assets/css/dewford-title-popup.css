@@ -26,7 +26,30 @@ html body .pxl-hidden-panel-popup .pxl-item--image.s_img img {object-fit:cover;o
 /* Shared brand update: logo proportions and the subpage header surface. */
 @media(min-width:1200px){
  html body #pxl-header-elementor .pxl-header-elementor-sticky .elementor-element.elementor-element-4c151ff {
-  --padding-top:16px;
+  --padding-top:16px;--padding-bottom:16px;padding-block:16px;
+ }
+ /* Put every item in the same grid row instead of centering an absolute menu
+    against a differently padded containing block. */
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .elementor-element-4c151ff > .e-con-inner {
+  display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  align-items:center;min-height:74px;padding-block:0;column-gap:24px;
+ }
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .elementor-element-4c151ff > .e-con-inner > .elementor-widget {
+  grid-row:1;align-self:center;margin-block:0;min-width:0;
+ }
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .elementor-element-51a4010 {grid-column:1;justify-self:start;}
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .elementor-element-abb0524 {
+  grid-column:2;position:static!important;inset:auto;transform:none;
+  width:auto;height:auto;align-self:center;
+ }
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .elementor-element-6eb09a6 {grid-column:3;justify-self:end;margin-right:56px;}
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .elementor-element-2fdce40 {grid-column:3;justify-self:end;}
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .elementor-element-4c151ff > .e-con-inner > .elementor-widget > .elementor-widget-container {
+  margin-block:0;padding-block:0;
+ }
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .pxl-logo img {max-height:none;}
+ html body #pxl-header-elementor .pxl-header-elementor-sticky .dewford-navigation > li > a {
+  min-height:74px;line-height:1.4;align-items:center;
  }
 }
 html body .pxl-hidden-panel-popup .pxl-circle-text-icon {

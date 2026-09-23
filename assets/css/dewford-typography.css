@@ -1,4 +1,17 @@
 /* Pretendard for page text; Min Sans is reserved for the brand wordmark. */
+/* Important line-height rules take priority over page-specific typography. */
+@layer dewford-line-height, dewford-typography;
+@layer dewford-line-height {
+  body {line-height:1.2!important;}
+  body :is(p,li,a,label,input,select,textarea,button,td,th,address,figcaption,
+    .pxl-text-editor,.pxl-item--excerpt,.pxl-item--description,.pxl-item--desc,
+    .pxl-item--subtitle,.pxl-item--subtext,.box-multi,.pxl--btn-text,
+    .dewford-section-eyebrow,.dewford-program-eyebrow,.dewford-program-label,
+    .dewford-learning-eyebrow,.dewford-contact-value,.dewford-contact-label,
+    .pxl-icon-list a span) {line-height:1.2!important;}
+  body :is(h1,h2,h3,h4,h5,h6,.pxl-item--title,.pxl-post--title,.pxl-heading--text,.dewford-content-title),
+  body :is(h1,h2,h3,h4,h5,h6,.pxl-item--title,.pxl-post--title) :is(a,span) {line-height:1.35!important;}
+}
 @font-face {
   font-family: 'Pretendard';
   src: url('../fonts/PretendardVariable.woff2') format('woff2');

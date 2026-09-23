@@ -1,0 +1,25 @@
+/* One shared emblem beneath the title on content-bearing subpages. */
+html body .dewford-subpage-emblem.elementor-element {
+  position:relative;inset:auto;width:100%;height:auto;margin:0;padding:48px 20px 32px;
+}
+html body .dewford-subpage-emblem .dewford-subpage-emblem-link {
+  position:relative;display:block;width:200px;height:200px;margin:0 auto;color:var(--dewford-purple,#52196d);
+}
+html body .dewford-subpage-emblem .dewford-subpage-emblem-ring {
+  display:block;width:100%;height:100%;overflow:visible;fill:currentColor;
+  animation:dewford-subpage-emblem-spin 15s linear infinite;transform-origin:center;
+}
+html body .dewford-subpage-emblem text {font-family:'Pretendard',sans-serif;font-size:18px;font-weight:500;}
+html body .dewford-subpage-emblem .dewford-subpage-emblem-symbol {
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  display:block;width:110px;height:auto;max-width:none;padding:0;background:none;filter:none;
+}
+html body .dewford-subpage-emblem-link:focus-visible {outline:2px solid var(--dewford-purple,#52196d);outline-offset:8px;border-radius:50%;}
+html body .dewford-why-about-template .elementor-element.elementor-element-f6f639c {--margin-top:0px;}
+@keyframes dewford-subpage-emblem-spin {to {transform:rotate(360deg);}}
+@media(max-width:767px) {
+  html body .dewford-subpage-emblem.elementor-element {padding:32px 20px 24px;}
+  html body .dewford-subpage-emblem .dewford-subpage-emblem-link {width:164px;height:164px;}
+  html body .dewford-subpage-emblem .dewford-subpage-emblem-symbol {width:90px;}
+}
+@media(prefers-reduced-motion:reduce) {html body .dewford-subpage-emblem .dewford-subpage-emblem-ring {animation:none;}}
