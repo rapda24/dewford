@@ -111,3 +111,17 @@ html body.dewford-subpage-header #pxl-wapper main.dewford-why-about-template .el
  --padding-top:var(--sub-section-gap);--padding-bottom:var(--sub-section-gap);
  padding-block:var(--sub-section-gap)!important;
 }
+
+/* Shared Q&A title alignment. Contact has no data-page-layout and is excluded. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout]:not([data-page-layout="contact"]) .pxl-portfolio-accordion1 .pxl-accordion-title {
+ display:flex;align-items:center;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout]:not([data-page-layout="contact"]) .pxl-accordion-title > .pxl-icon--plus {
+ position:relative;inset:auto;transform:none;align-self:center;flex-shrink:0;margin:0;display:grid;place-items:center;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout]:not([data-page-layout="contact"]) .pxl-accordion-title > .pxl-post--holder {
+ align-self:center;margin:0;padding:0;min-width:0;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout]:not([data-page-layout="contact"]) .pxl-accordion-title .pxl-accordion--title {
+ margin:0;padding:0;
+}

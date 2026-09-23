@@ -168,7 +168,7 @@ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-
  background:var(--dewford-purple,#52196d)!important;border:0;
 }
 html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .elementor-element-ab43d79 {
- background:#f5a100!important;border:0;
+ background:#f5a100!important;border:0;mix-blend-mode:normal;
 }
 @layer dewford-typography {
  html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .elementor-element-5174177 :is(h2.dewford-section-title-black,.pxl-heading--text,p) {

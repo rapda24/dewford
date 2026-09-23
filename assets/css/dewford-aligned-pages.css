@@ -1,0 +1,277 @@
+/* Match Why Dewford's page introduction and shared section hierarchy. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage :is(.elementor-element-85d1566,.elementor-element-316f67e) {
+ width:100%;max-width:none;align-self:stretch;margin:0;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage :is(.elementor-element-85d1566,.elementor-element-316f67e) :is(.pxl-heading,.pxl-heading--inner,.pxl-item--title,.pxl-heading--text,.split-line) {
+ text-align:center!important;justify-content:center!important;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .elementor-element-4109c18 {display:none;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .elementor-element-03db8bf > .e-con-inner {row-gap:0;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .elementor-element-85d1566 > .elementor-widget-container {margin:0!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .elementor-element-316f67e > .elementor-widget-container {margin:24px 0 0!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage :is(.elementor-element-85d1566,.elementor-element-316f67e) .pxl-item--title {margin:0;}
+
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .elementor-element-85d1566 .dewford-section-eyebrow {color:var(--dewford-purple,#52196d)!important;}
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .elementor-element-316f67e h2.dewford-section-title-black {font-size:48px!important;font-weight:700!important;}
+ 
+ @media(max-width:767px){
+  html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .elementor-element-316f67e h2.dewford-section-title-black {font-size:32px!important;}
+ }
+}
+
+/* Admissions uses the same canvas, spacing and section hierarchy. */
+html body #pxl-wapper main.dewford-aligned-subpage {background:#f5f5f5;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-page-intro-body {margin-top:var(--sub-section-gap);gap:var(--sub-column-gap);grid-template-columns:1fr 1fr;align-items:center;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-page-intro-copy {gap:24px;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-page-intro-copy :is(p,.elementor-widget-container) {margin:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-page-intro-body img {display:block;object-fit:cover;object-position:center 30%;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-panel {background:#fff;border-radius:20px;padding-block:var(--sub-section-gap);margin-block:var(--sub-section-gap);}
+.dewford-enrollment-container {width:100%;max-width:1368px;margin-inline:auto;padding-inline:var(--sub-gutter);box-sizing:border-box;}
+.dewford-enrollment-approach {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--sub-column-gap);align-items:stretch;}
+.dewford-enrollment-approach > * {min-width:0;}
+.dewford-enrollment-approach figure {margin:0;position:relative;}
+.dewford-enrollment-approach figure img {position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;}
+.dewford-enrollment-approach h2 {margin:0 0 32px;}
+.dewford-enrollment-label {padding-bottom:16px;border-bottom:1px solid #e5e5e5;}
+.dewford-enrollment-step {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,4fr);gap:22px;align-items:start;padding:28px 0;border-top:1px solid #e5e5e5;}
+.dewford-enrollment-step > * {min-width:0;margin:0;}
+.dewford-enrollment-icon {display:grid;place-items:center;max-width:64px;aspect-ratio:1;padding:12px;background:#52196d;}
+.dewford-enrollment-icon svg {width:100%;height:auto;}
+.dewford-enrollment-icon path {fill:#fff;}
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-step h3.dewford-content-title {font-size:22px!important;}
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-accordion--title {font-size:26px!important;}
+}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 {width:100%;max-width:none;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl--item {background:#fff;border:0;border-radius:20px;padding:32px;margin-bottom:24px;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-title {padding:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content {padding-top:24px;padding-bottom:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .elementor-element-baaeb98 {padding-bottom:16px;border-bottom:1px solid #e5e5e5;}
+@media(max-width:1024px){
+ .dewford-enrollment-approach {grid-template-columns:minmax(0,1fr);}
+ .dewford-enrollment-approach figure img {position:static;height:auto;aspect-ratio:4/3;max-height:520px;}
+}
+@media(max-width:767px){
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-page-intro-body {grid-template-columns:minmax(0,1fr);}
+ .dewford-enrollment-step {grid-template-columns:64px minmax(0,1fr);gap:24px 16px;padding-block:24px;}
+ .dewford-enrollment-step h3 {align-self:center;}
+ .dewford-enrollment-step p {grid-column:1/-1;}
+ html body #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl--item {padding:20px;}
+ @layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-accordion--title {font-size:22px!important;}
+ }
+}
+@media(max-width:1799px){html body:has(main.dewford-aligned-subpage) .dewford-floating-links {display:none;}}
+html body #pxl-wapper main.dewford-aligned-subpage .elementor-element-8976b79 {padding-inline:0!important;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-title {display:grid;grid-template-columns:40px minmax(0,1fr);gap:24px;align-items:center;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-post--holder {padding:0;margin:0;min-width:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content {padding-left:0;padding-right:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content :is(.pxl-item--description,.pxl-post--featured) {width:100%;max-width:none;margin:0;padding:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content .pxl-item--category {margin-top:16px;}
+@media(max-width:767px){
+ html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content {flex-direction:column;gap:24px;}
+ html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-title {gap:16px;}
+ html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content .pxl-post--featured img {height:220px;}
+}
+
+/* The introduction sits directly on the page canvas. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .dewford-compact-intro,
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .dewford-compact-intro :is(.e-con,.e-con-inner,.dewford-page-intro-body,.dewford-page-intro-copy),
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .dewford-compact-intro .e-con::before {
+ background:none!important;
+}
+
+/* One sticky photograph beside the full FAQ list. */
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-faq-layout {
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--sub-column-gap);align-items:start;
+}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-faq-photo {
+ position:sticky;top:128px;margin:0;min-width:0;
+}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-faq-photo img {
+ display:block;width:100%;height:clamp(300px,50vh,520px);object-fit:cover;object-position:center 35%;
+}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-faq-layout .pxl-portfolio-accordion1 {min-width:0;margin:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl--item.active > .pxl-accordion-content {
+ display:block!important;height:auto!important;overflow:visible;padding:24px 0 0;
+}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content .pxl-item--description {min-width:0;width:100%;max-width:none;padding:0;margin:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content .pxl-item--excerpt,
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content p {margin:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl--item:last-child {margin-bottom:0;}
+@media(max-width:1024px){
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-faq-layout {grid-template-columns:minmax(0,1fr);}
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-faq-photo {position:relative;top:auto;}
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-enrollment-faq-photo img {height:auto;aspect-ratio:4/3;max-height:480px;}
+}
+
+/* Give the admissions introduction its own heading beside the photo. */
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-page-intro-copy .dewford-enrollment-intro-title {
+ margin:0 0 8px;text-align:left;
+}
+
+/* Expanded questions retain the same unfilled title background. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl-accordion-title,
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl-accordion-title[aria-expanded="true"],
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl-accordion--title {
+ background:none!important;
+}
+
+/* Center the icon against the full question, including wrapped titles. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl-accordion-title {
+ align-items:center;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-title > .pxl-icon--plus {
+ position:relative;inset:auto;transform:none;align-self:center;margin:0;display:grid;place-items:center;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-title > .pxl-post--holder {
+ align-self:center;margin:0;padding:0;max-width:none;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-title .pxl-accordion--title {
+ margin:0;padding:0;
+}
+
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:stretch;}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--inner {display:flex;flex-direction:column;position:relative;top:auto;transform:none!important;height:auto;min-height:0;margin:0;padding:32px;gap:24px;}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--featured {width:100%;margin-top:auto;}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-item--content {width:100%;min-width:0;}
+/* Two cards stack as a row on desktop; individual cards stack on mobile. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked {
+ display:block;isolation:isolate;padding-bottom:20vh;
+}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair {
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;
+ position:sticky;top:128px;margin-bottom:48px;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--inner {
+ background:#fff!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--featured img {
+ width:100%;height:clamp(180px,30vh,320px);object-fit:cover;
+}
+@media(max-width:767px){
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair {display:contents;}
+ html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--inner {
+  position:sticky;top:104px;margin-bottom:32px;
+ }
+ html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--featured img {height:clamp(160px,28vh,240px);}
+}
+@media(prefers-reduced-motion:reduce), (max-height:600px){
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair,
+ html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--inner {position:relative;top:auto;}
+}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair:first-child {z-index:1;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair:last-child {z-index:2;}
+@media(max-width:767px){
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair:first-child > .pxl-post--inner:first-child {z-index:1;}
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair:first-child > .pxl-post--inner:last-child {z-index:2;}
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair:last-child > .pxl-post--inner:first-child {z-index:3;}
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair:last-child > .pxl-post--inner:last-child {z-index:4;}
+}
+
+/* Equal insets override the source theme's forced zero top padding. */
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--inner {
+ padding:32px!important;
+}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .dewford-journey-description {
+ margin:0;font-size:var(--sub-body-size);color:var(--sub-copy-color);word-break:keep-all;overflow-wrap:break-word;
+}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--featured > a,
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--featured img {display:block;}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-box--multitext:empty {display:none;margin:0;padding:0;}
+@media(max-width:767px){
+ html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--inner {padding:20px!important;}
+}
+
+
+/* Shared panels, labels and body copy for this six-page update only. */
+html body #pxl-wapper main.dewford-aligned-subpage :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) {width:calc(100% - 2 * var(--sub-gutter));max-width:1320px;margin:var(--sub-section-gap) auto;padding:var(--sub-card-padding);background:#fff;border:0;border-radius:20px;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-level-card {border:1px solid #e5e5e5;background:#fff;border-radius:20px;padding:var(--sub-card-padding);}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-program-schedule th {background:#52196d;color:#fff;border-color:#e5e5e5;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-program-schedule td {background:#fff;border-color:#e5e5e5;}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-item--content {display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-number--post {font-size:48px;}
+html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--featured {margin-left:0;max-width:none;}
+html body #pxl-wapper main.dewford-aligned-subpage :is(.elementor-element-cdd630e,.elementor-element-baaeb98) {width:100%;padding-bottom:16px;border-bottom:1px solid #e5e5e5;}
+html body #pxl-wapper main.dewford-aligned-subpage .elementor-element-3b71588 {display:none;}
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage :is(.dewford-enrollment-step p,.dewford-program-schedule p,.dewford-program-schedule td,.dewford-contact-details-note) {font-size:var(--sub-body-size)!important;font-weight:400!important;color:var(--sub-copy-color)!important;}
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage .pxl-post--title {font-size:var(--sub-card-size)!important;}
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage :is(.dewford-calendar > h2,.elementor-element-98df9da h2) {font-size:48px!important;font-weight:700!important;}
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage :is(.dewford-calendar-eyebrow,.elementor-element-9286abd h2) {color:#52196d!important;}
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage :is(.elementor-element-9286abd,.elementor-element-98df9da) :is(.pxl-heading,.pxl-heading--text,.pxl-item--title,.split-line) {text-align:center!important;justify-content:center!important;}
+html body #pxl-wapper main.dewford-aligned-subpage .elementor-element-dc6c119 {display:none;}
+html body #pxl-wapper main.dewford-aligned-subpage :is(.elementor-element-9286abd,.elementor-element-98df9da) {width:100%;margin:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .elementor-element-462e0e0 {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--sub-column-gap);margin-top:var(--sub-section-gap);width:100%;}
+html body #pxl-wapper main.dewford-aligned-subpage .elementor-element-462e0e0 > .e-con {width:100%;min-width:0;padding:var(--sub-card-padding);background:#fff;mix-blend-mode:normal;border-radius:20px;}
+html body #pxl-wapper main.dewford-aligned-subpage .elementor-element-4de8082::before {background:none!important;}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-contact-form {padding:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .contact--form {margin:0;row-gap:20px;}
+html body #pxl-wapper main.dewford-aligned-subpage .contact--form .pxl-col {padding-inline:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .contact--form p {margin:0;}
+html body #pxl-wapper main.dewford-aligned-subpage form :is(input,select,textarea,.nice-select) {background:#fff;color:#111;border:1px solid #ddd;border-radius:8px;padding:14px 16px;font-size:16px;width:100%;min-height:52px;box-sizing:border-box;}
+html body #pxl-wapper main.dewford-aligned-subpage form textarea {height:160px;min-height:160px;}
+html body #pxl-wapper main.dewford-aligned-subpage form .wpcf7-btn-abs {position:relative;inset:auto;width:100%;margin:0;background:#52196d;color:#fff;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-calendar > :is(h2,.dewford-calendar-eyebrow,.dewford-calendar-intro) {text-align:center;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-calendar-toolbar {margin-top:var(--sub-section-gap);}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-calendar-details {background:#fff;border:0;border-radius:20px;padding:var(--sub-card-padding);}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-calendar-weekdays {background:#fff;}
+@media(max-width:767px){
+ html body #pxl-wapper main.dewford-aligned-subpage .elementor-element-462e0e0 {grid-template-columns:minmax(0,1fr);}
+ html body #pxl-wapper main.dewford-aligned-subpage .tabs-content-stacked .pxl-post--inner {padding:20px!important;}
+ @layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage :is(.dewford-calendar > h2,.elementor-element-98df9da h2) {font-size:32px!important;}
+ }
+}
+
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-accordion-content p + p,
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-description p + p {margin-top:16px;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-description p {margin-bottom:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-journey-pair:has(> .pxl-post--inner:only-child) {grid-template-columns:minmax(0,1fr);}
+html body #pxl-wapper main.dewford-aligned-subpage .contact--form :is(input,select,.nice-select,.wpcf7-form-control-wrap) {margin-bottom:0;}
+html body #pxl-wapper main.dewford-aligned-subpage .contact--form .wpcf7-form-control-wrap {display:block;}
+@media(max-width:767px){
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-program-schedule :is(table,tbody) {display:block;width:100%;}
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-program-schedule tr {display:grid;grid-template-columns:minmax(0,1fr);margin-bottom:16px;}
+ html body #pxl-wapper main.dewford-aligned-subpage .dewford-program-schedule :is(th,td) {display:block;min-width:0;width:100%;padding:16px;box-sizing:border-box;}
+}
+html body #pxl-wapper main.dewford-aligned-subpage .pxl-portfolio-accordion1 .pxl--item.active .pxl-icon--plus {background:#52196d!important;}
+
+/* Campus contact details sit on the gray page canvas; the form stays boxed. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage[data-page-layout="admissions-inquiry"] .elementor-element-462e0e0 > .elementor-element-2c71ade,
+html body.dewford-subpage-header #pxl-wapper main.dewford-aligned-subpage[data-page-layout="admissions-inquiry"] .elementor-element-2c71ade::before {
+ background:none!important;
+}
+
+/* Inquiry form: use the shared inline CTA and give writing space priority. */
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] .elementor-element-4de8082 {align-self:start;}
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] :is(.elementor-element-12142af > .elementor-widget-container,.pxl-contact-form,.wpcf7,form) {padding-bottom:0;margin-bottom:0;}
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] form textarea {height:280px;min-height:280px;resize:vertical;display:block;}
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] .contact--form > .pxl-col:last-child {text-align:left;}
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] form .dewford-inquiry-submit {
+ position:relative;inset:auto;display:inline-flex;align-items:center;justify-content:center;gap:12px;
+ width:auto;min-height:52px;height:auto;margin:0;padding:14px 26px;background:#52196d;color:#fff;border:0;border-radius:0;
+}
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] .dewford-inquiry-submit .dewford-inquiry-icon {
+ position:static;transform:none;background:none;width:auto;height:auto;margin:0;padding:0;display:inline-flex;align-items:center;
+}
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] .dewford-inquiry-submit:hover {background:#f5a100;color:#000;}
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] .dewford-inquiry-submit svg path {fill:currentColor;}
+html body #pxl-wapper main[data-page-layout="admissions-inquiry"] .wpcf7-response-output:empty {display:none;margin:0;padding:0;}
+@media(max-width:767px){
+ html body #pxl-wapper main[data-page-layout="admissions-inquiry"] form textarea {height:240px;min-height:240px;}
+}
+
+/* Parent name and email use the original underlined field style. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="admissions-inquiry"] form :is(input[name="parent"],input[name="email"]) {
+ background:transparent;border:0;border-bottom:1px solid #ddd;border-radius:0;box-shadow:none;padding:14px 0;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="admissions-inquiry"] form :is(input[name="parent"],input[name="email"]):focus {
+ border-bottom-color:#52196d;
+}
+
+html body #pxl-wapper main.dewford-aligned-subpage .dewford-page-intro-copy .dewford-program-intro-title {
+ margin:0 0 8px;text-align:left;
+}

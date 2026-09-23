@@ -1,0 +1,53 @@
+/* Authoritative roles for the revised subpages. Contact does not load this file. */
+main.dewford-section-layout {
+ --ui-section:96px;--ui-content:32px;--ui-column:48px;--ui-card:32px;
+ --ui-page-title:48px;--ui-section-title:40px;--ui-card-title:26px;--ui-label:24px;--ui-body:17px;
+ --sub-section-gap:var(--ui-section);--sub-content-gap:var(--ui-content);--sub-column-gap:var(--ui-column);--sub-card-padding:var(--ui-card);
+}
+@layer dewford-typography {
+ #pxl-main#pxl-main.dewford-section-layout [data-ui-role] {font-family:var(--font-heading)!important;letter-spacing:-.025em!important;color:#111!important;font-weight:700!important;}
+ #pxl-main#pxl-main.dewford-section-layout [data-ui-role="page-title"] {font-size:var(--ui-page-title)!important;}
+ #pxl-main#pxl-main.dewford-section-layout [data-ui-role="section-title"] {font-size:var(--ui-section-title)!important;}
+ #pxl-main#pxl-main.dewford-section-layout [data-ui-role="card-title"] {font-size:var(--ui-card-title)!important;}
+ #pxl-main#pxl-main.dewford-section-layout :is([data-ui-role="page-label"],[data-ui-role="section-label"]) {font-size:var(--ui-label)!important;font-weight:600!important;letter-spacing:.02em!important;}
+ #pxl-main#pxl-main.dewford-section-layout [data-ui-role="page-label"] {color:#52196d!important;}
+ #pxl-main#pxl-main.dewford-section-layout [data-ui-role] :is(span,a) {font-size:inherit!important;font-weight:inherit!important;color:inherit!important;letter-spacing:inherit!important;}
+ #pxl-main#pxl-main.dewford-section-layout :is(.pxl-text-editor p,.dewford-page-intro-copy p,.dewford-enrollment-step p,.pxl-item--excerpt p,.dewford-journey-description p,.dewford-program-learning-copy p,.dewford-esl-levels > p:not([data-ui-role]),.dewford-calendar-intro) {font-size:var(--ui-body)!important;font-weight:400!important;color:#45384b!important;}
+ #pxl-main#pxl-main[data-page-layout="educational-philosophy"] .elementor-element-5174177 :is([data-ui-role],p) {color:#fff!important;}
+ #pxl-main#pxl-main[data-page-layout="educational-philosophy"] .elementor-element-ab43d79 :is([data-ui-role],p) {color:#111!important;}
+}
+#pxl-main#pxl-main.dewford-section-layout [data-ui-role] {margin:0!important;}
+#pxl-main#pxl-main.dewford-section-layout :is([data-ui-role="page-title"],[data-ui-role="page-label"]),
+#pxl-main#pxl-main.dewford-section-layout :is([data-ui-role="page-title"],[data-ui-role="page-label"]) :is(span,.split-line) {text-align:center!important;}
+#pxl-main#pxl-main.dewford-section-layout :is([data-ui-role="section-title"],[data-ui-role="card-title"],[data-ui-role="section-label"]) {text-align:left!important;}
+/* One spacing system for the eight rebuilt pages; Why keeps its reference structure. */
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) > :is(.elementor,section,aside) {margin-block:0!important;padding-block:var(--ui-section)!important;}
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) > .dewford-subpage-emblem + :is(.elementor,section) {padding-top:0!important;}
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) {padding-bottom:0!important;}
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) > .elementor > .e-con {padding-block:0!important;margin-block:0!important;}
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) .dewford-service-source .e-con-inner {padding-block:0!important;row-gap:var(--ui-content);}
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) .elementor-widget > .elementor-widget-container {margin-block:0!important;}
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) :is(.elementor-element-03db8bf,.elementor-element-8976b79) {padding-block:0!important;}
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) :is(.dewford-page-intro-body,.dewford-vision-pair,.elementor-element-462e0e0,.elementor-element-19dc3dd,.elementor-element-f9f0125) {margin-block:0!important;gap:var(--ui-content) var(--ui-column);}
+#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) .elementor-element-316f67e {margin:24px 0 var(--ui-content)!important;}
+#pxl-main#pxl-main.dewford-section-layout .dewford-page-intro-copy {gap:24px;}
+#pxl-main#pxl-main.dewford-section-layout :is(.dewford-enrollment-approach,.dewford-philosophy-approach) [data-ui-role="section-label"] {padding-bottom:16px;margin-bottom:var(--ui-content)!important;border-bottom:1px solid #e5e5e5;}
+#pxl-main#pxl-main.dewford-section-layout :is(.dewford-enrollment-approach,.dewford-philosophy-approach) [data-ui-role="section-title"] {margin-bottom:var(--ui-content)!important;}
+#pxl-main#pxl-main.dewford-section-layout .dewford-program-learning-copy > [data-ui-role="card-title"] {margin-bottom:24px!important;}
+#pxl-main#pxl-main.dewford-section-layout :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) > [data-ui-role="section-label"] {margin-bottom:16px!important;}
+#pxl-main#pxl-main.dewford-section-layout :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) > [data-ui-role="section-title"] {margin-bottom:var(--ui-content)!important;}
+#pxl-main#pxl-main.dewford-section-layout .dewford-program-schedule > [data-ui-role="card-title"] {margin:var(--ui-content) 0 16px!important;}
+#pxl-main#pxl-main.dewford-section-layout .dewford-calendar > [data-ui-role="page-label"] {margin-bottom:24px!important;}
+#pxl-main#pxl-main.dewford-section-layout .dewford-calendar > [data-ui-role="page-title"] {margin-bottom:var(--ui-content)!important;}
+/* Keep the philosophy's white section background at the band level. */
+#pxl-main#pxl-main[data-page-layout="educational-philosophy"] > .elementor-5296 {background:#fff;}
+@media(max-width:767px){
+ main.dewford-section-layout {--ui-section:60px;--ui-content:24px;--ui-column:24px;--ui-card:20px;--ui-page-title:32px;--ui-section-title:28px;--ui-card-title:22px;--ui-label:20px;--ui-body:16px;}
+}
+/* Intro labels, titles and copy share exact gaps rather than flex-gap + margin. */
+#pxl-main#pxl-main.dewford-section-layout :is(.elementor-element-03db8bf,.elementor-element-8336f3e) > .e-con-inner {row-gap:0!important;}
+#pxl-main#pxl-main.dewford-section-layout .elementor-element-98df9da {margin:24px 0 var(--ui-content)!important;}
+/* Every section label uses one rule, owned by the heading itself. */
+#pxl-main#pxl-main.dewford-section-layout [data-ui-role="section-label"] {display:block;width:100%;padding-bottom:16px;border-bottom:1px solid #e5e5e5;}
+#pxl-main#pxl-main.dewford-section-layout .elementor-widget:has([data-ui-role="section-label"]) {border-bottom:0;padding-bottom:0;}
+#pxl-main#pxl-main.dewford-section-layout .elementor-widget:has([data-ui-role="section-label"]) + .elementor-widget-pxl_divider {display:none;}

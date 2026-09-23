@@ -1,0 +1,133 @@
+/* Match Why Dewford's page introduction and shared section hierarchy. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] :is(.elementor-element-85d1566,.elementor-element-316f67e) {
+ width:100%;max-width:none;align-self:stretch;margin:0;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] :is(.elementor-element-85d1566,.elementor-element-316f67e) :is(.pxl-heading,.pxl-heading--inner,.pxl-item--title,.pxl-heading--text,.split-line) {
+ text-align:center!important;justify-content:center!important;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-4109c18 {display:none;}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-03db8bf > .e-con-inner {row-gap:0;}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-85d1566 > .elementor-widget-container {margin:0!important;}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-316f67e > .elementor-widget-container {margin:24px 0 0!important;}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] :is(.elementor-element-85d1566,.elementor-element-316f67e) .pxl-item--title {margin:0;}
+
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-85d1566 .dewford-section-eyebrow {color:var(--dewford-purple,#52196d)!important;}
+ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-316f67e h2.dewford-section-title-black {font-size:48px!important;font-weight:700!important;}
+ 
+ @media(max-width:767px){
+  html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-316f67e h2.dewford-section-title-black {font-size:32px!important;}
+ }
+}
+
+/* Admissions uses the same canvas, spacing and section hierarchy. */
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] {background:#f5f5f5;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-page-intro-body {margin-top:var(--sub-section-gap);gap:var(--sub-column-gap);grid-template-columns:1fr 1fr;align-items:center;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-page-intro-copy {gap:24px;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-page-intro-copy :is(p,.elementor-widget-container) {margin:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-page-intro-body img {display:block;object-fit:cover;object-position:center 30%;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-panel {background:#fff;border-radius:20px;padding-block:var(--sub-section-gap);margin-block:var(--sub-section-gap);}
+.dewford-enrollment-container {width:100%;max-width:1368px;margin-inline:auto;padding-inline:var(--sub-gutter);box-sizing:border-box;}
+.dewford-enrollment-approach {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--sub-column-gap);align-items:stretch;}
+.dewford-enrollment-approach > * {min-width:0;}
+.dewford-enrollment-approach figure {margin:0;position:relative;}
+.dewford-enrollment-approach figure img {position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;}
+.dewford-enrollment-approach h2 {margin:0 0 32px;}
+.dewford-enrollment-label {padding-bottom:16px;border-bottom:1px solid #e5e5e5;}
+.dewford-enrollment-step {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,4fr);gap:22px;align-items:start;padding:28px 0;border-top:1px solid #e5e5e5;}
+.dewford-enrollment-step > * {min-width:0;margin:0;}
+.dewford-enrollment-icon {display:grid;place-items:center;max-width:64px;aspect-ratio:1;padding:12px;background:#52196d;}
+.dewford-enrollment-icon svg {width:100%;height:auto;}
+.dewford-enrollment-icon path {fill:#fff;}
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-step h3.dewford-content-title {font-size:22px!important;}
+ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion--title {font-size:26px!important;}
+}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 {width:100%;max-width:none;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 .pxl--item {background:#fff;border:0;border-radius:20px;padding:32px;margin-bottom:24px;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-title {padding:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content {padding-top:24px;padding-bottom:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-baaeb98 {padding-bottom:16px;border-bottom:1px solid #e5e5e5;}
+@media(max-width:1024px){
+ .dewford-enrollment-approach {grid-template-columns:minmax(0,1fr);}
+ .dewford-enrollment-approach figure img {position:static;height:auto;aspect-ratio:4/3;max-height:520px;}
+}
+@media(max-width:767px){
+ html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-page-intro-body {grid-template-columns:minmax(0,1fr);}
+ .dewford-enrollment-step {grid-template-columns:64px minmax(0,1fr);gap:24px 16px;padding-block:24px;}
+ .dewford-enrollment-step h3 {align-self:center;}
+ .dewford-enrollment-step p {grid-column:1/-1;}
+ html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 .pxl--item {padding:20px;}
+ @layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion--title {font-size:22px!important;}
+ }
+}
+@media(max-width:1799px){html body:has(main[data-page-layout="rolling-enrollment"]) .dewford-floating-links {display:none;}}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .elementor-element-8976b79 {padding-inline:0!important;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-title {display:grid;grid-template-columns:40px minmax(0,1fr);gap:24px;align-items:center;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-post--holder {padding:0;margin:0;min-width:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content {padding-left:0;padding-right:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content :is(.pxl-item--description,.pxl-post--featured) {width:100%;max-width:none;margin:0;padding:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content .pxl-item--category {margin-top:16px;}
+@media(max-width:767px){
+ html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content {flex-direction:column;gap:24px;}
+ html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-title {gap:16px;}
+ html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content .pxl-post--featured img {height:220px;}
+}
+
+/* The introduction sits directly on the page canvas. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-compact-intro,
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-compact-intro :is(.e-con,.e-con-inner,.dewford-page-intro-body,.dewford-page-intro-copy),
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-compact-intro .e-con::before {
+ background:none!important;
+}
+
+/* One sticky photograph beside the full FAQ list. */
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-faq-layout {
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--sub-column-gap);align-items:start;
+}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-faq-photo {
+ position:sticky;top:128px;margin:0;min-width:0;
+}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-faq-photo img {
+ display:block;width:100%;height:clamp(300px,50vh,520px);object-fit:cover;object-position:center 35%;
+}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-faq-layout .pxl-portfolio-accordion1 {min-width:0;margin:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 .pxl--item.active > .pxl-accordion-content {
+ display:block!important;height:auto!important;overflow:visible;padding:24px 0 0;
+}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content .pxl-item--description {min-width:0;width:100%;max-width:none;padding:0;margin:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content .pxl-item--excerpt,
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-content p {margin:0;}
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 .pxl--item:last-child {margin-bottom:0;}
+@media(max-width:1024px){
+ html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-faq-layout {grid-template-columns:minmax(0,1fr);}
+ html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-faq-photo {position:relative;top:auto;}
+ html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-enrollment-faq-photo img {height:auto;aspect-ratio:4/3;max-height:480px;}
+}
+
+/* Give the admissions introduction its own heading beside the photo. */
+html body #pxl-wapper main[data-page-layout="rolling-enrollment"] .dewford-page-intro-copy .dewford-enrollment-intro-title {
+ margin:0 0 8px;text-align:left;
+}
+
+/* Expanded questions retain the same unfilled title background. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 .pxl-accordion-title,
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 .pxl-accordion-title[aria-expanded="true"],
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 .pxl-accordion--title {
+ background:none!important;
+}
+
+/* Center the icon against the full question, including wrapped titles. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-portfolio-accordion1 .pxl-accordion-title {
+ align-items:center;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-title > .pxl-icon--plus {
+ position:relative;inset:auto;transform:none;align-self:center;margin:0;display:grid;place-items:center;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-title > .pxl-post--holder {
+ align-self:center;margin:0;padding:0;max-width:none;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="rolling-enrollment"] .pxl-accordion-title .pxl-accordion--title {
+ margin:0;padding:0;
+}

@@ -1,0 +1,107 @@
+/* Final section geometry shared by the revised subpages, never Contact. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout {
+ --sub-section-gap:96px;
+ --section-inset: max(var(--sub-gutter), calc((100% - 1320px) / 2));
+}
+/* One section boundary owns the gap: avoid adding two adjacent margins. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout > :is(.elementor,section,aside) {
+ margin-block:0!important;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout > :not(.dewford-subpage-emblem) + :is(.elementor,section,aside) {
+ margin-top:var(--sub-section-gap)!important;
+}
+/* Standalone white sections span the page; inset only their content. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout > :is(.dewford-program-schedule,.dewford-esl-levels,.dewford-calendar-events) {
+ width:100%;max-width:none;box-sizing:border-box;border:0;border-radius:0;
+ padding:var(--sub-section-gap) var(--section-inset)!important;background:#fff;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout .dewford-enrollment-panel {
+ width:100%;max-width:none;border-radius:0;padding-block:var(--sub-section-gap)!important;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout > .elementor-5367 {
+ background:#fff;padding-block:var(--sub-section-gap)!important;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout .elementor-5367 :is(.elementor-element-09170dd,.elementor-element-8976b79) {
+ background:transparent!important;padding-block:0!important;margin-block:0!important;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout .elementor-5367 .pxl--item {
+ border-radius:0;border:0;border-bottom:1px solid #e5e5e5;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout :is(.elementor-element-865582f,.elementor-element-7d1ccc9) {border-radius:0;}
+/* Use matching internal gaps; remove the old extra tail after stacked cards. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout .tabs-content-stacked {padding-bottom:0;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout .dewford-journey-pair:last-child {margin-bottom:0;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout .dewford-page-intro-body {margin-top:var(--sub-section-gap);}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout .dewford-calendar-events > :last-child {margin-bottom:0;}
+@media(max-width:767px){
+ html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout {--sub-section-gap:60px;}
+ html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout .dewford-journey-pair:last-child > .pxl-post--inner:last-child {margin-bottom:0;}
+}
+
+/* Program pages use full-width bands. Spacing belongs inside each band,
+   rather than accumulating an outer gap and an inner inset. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page > :is(.elementor,section,aside) {
+ margin-block:0!important;padding-block:var(--sub-section-gap)!important;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page > .dewford-compact-intro {padding-top:0!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page > .elementor-5356 {background:#f5f5f5;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page > :is(.elementor-5367,.dewford-enrollment-panel,.dewford-program-schedule,.dewford-esl-levels) {background:#fff!important;border-radius:0;}
+/* Consecutive white sections form one band with one content gap. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page > .dewford-esl-levels + .elementor-5367 {padding-top:0!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page {padding-bottom:0!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page .elementor-5367 .elementor-element-f59d74e > .e-con-inner {padding-block:0!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout.dewford-program-page > :not(.dewford-subpage-emblem) + :is(.elementor,section,aside) {margin-top:0!important;}
+
+/* Alternate the program content bands: journey white, details gray. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout.dewford-program-page > .elementor-5367 {
+ background:transparent!important;padding-top:var(--sub-section-gap)!important;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout.dewford-program-page > .elementor-5356 {background:#fff!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-section-layout.dewford-program-page > .dewford-program-schedule {background:transparent!important;}
+/* A single learning item is an editorial image/copy section, not a numbered stack. */
+.dewford-program-learning {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--sub-column-gap);align-items:stretch;}
+.dewford-program-learning figure {margin:0;position:relative;min-width:0;min-height:320px;}
+.dewford-program-learning figure img {display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;}
+.dewford-program-learning-copy {min-width:0;}
+.dewford-program-learning-copy h3 {margin:0 0 24px;}
+.dewford-program-learning-copy p {margin:0 0 16px;font-size:var(--sub-body-size);font-weight:400;color:var(--sub-copy-color);}
+.dewford-program-learning-copy p:last-child {margin-bottom:0;}
+@media(max-width:767px){
+ .dewford-program-learning {grid-template-columns:minmax(0,1fr);}
+ .dewford-program-learning figure {min-height:0;}
+ .dewford-program-learning figure img {position:static;height:auto;aspect-ratio:4/3;}
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page[data-page-layout="elementary-international"] > .dewford-enrollment-panel {background:transparent!important;}
+
+/* Remove inherited widget/container spacing inside program sections.
+   The outer band owns 96/60px; each content group owns one 32/24px gap. */
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page .dewford-service-source .e-con {
+ margin-block:0!important;padding-block:0!important;--padding-top:0px;--padding-bottom:0px;--margin-top:0px;--margin-bottom:0px;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page .dewford-service-source .e-con-inner {
+ padding-block:0!important;row-gap:var(--sub-content-gap);
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page .dewford-service-source .elementor-widget > .elementor-widget-container {
+ margin-block:0!important;padding-block:0!important;
+}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page .dewford-service-source .pxl-heading .pxl-item--title {margin-block:0;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page :is(.dewford-page-intro-body,.elementor-element-19dc3dd,.elementor-element-f9f0125) {margin-block:0!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page .elementor-element-316f67e {margin-top:24px!important;margin-bottom:var(--sub-content-gap)!important;}
+html body.dewford-subpage-header #pxl-wapper main.dewford-program-page .elementor-element-19dc3dd {gap:var(--sub-content-gap);}
+/* Weekly schedule: overview first, followed by a readable day-by-day sequence. */
+.dewford-esl-schedule-summary {display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:24px;background:#52196d;color:#fff;}
+.dewford-esl-schedule-summary span {display:block;font-size:15px;margin-bottom:12px;}
+.dewford-esl-schedule-summary strong {display:block;font-size:22px;line-height:1.4;}
+.dewford-esl-schedule-summary small {font-size:16px;font-weight:400;}
+.dewford-program-learning-copy .dewford-esl-subjects {margin:20px 0 24px;font-weight:600;color:#52196d;}
+.dewford-esl-week {list-style:none;margin:0;padding:0;}
+.dewford-esl-week li {display:grid;grid-template-columns:80px minmax(0,1fr);gap:20px;align-items:start;padding:20px 0;border-top:1px solid #e5e5e5;}
+.dewford-esl-day {display:block;padding:10px 4px;text-align:center;background:#f5a100;color:#111;font-weight:700;}
+.dewford-esl-week h4 {font-size:22px;line-height:1.35;margin:0 0 12px;font-weight:700;color:#111;}
+.dewford-esl-week p {margin:0;}
+.dewford-program-learning-copy .dewford-esl-schedule-note {margin:24px 0 0;font-size:15px;}
+@media(max-width:767px){
+ .dewford-esl-schedule-summary {grid-template-columns:1fr;padding:20px;gap:20px;}
+ .dewford-esl-week li {grid-template-columns:64px minmax(0,1fr);gap:16px;}
+ .dewford-esl-week h4 {font-size:20px;}
+}
