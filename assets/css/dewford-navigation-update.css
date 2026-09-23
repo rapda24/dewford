@@ -2,6 +2,11 @@
 #pxl-header-elementor .pxl-menu-primary > li > a { letter-spacing: .02em; }
 #pxl-header-mobile .pxl-menu-primary > li > a { letter-spacing: .02em; }
 
+/* Hide search within the mobile navigation drawer. */
+@media (max-width: 1199px) {
+ body .pxl-header-menu-scroll .pxl-header-mobile-search.pxl-hide-xl { display: none !important; }
+}
+
 /* Only the main, pre-scroll desktop header gets the larger wordmark. */
 @media (min-width: 1200px) {
  body #pxl-header-elementor .pxl-header-elementor-main .elementor-element-422bc32 {

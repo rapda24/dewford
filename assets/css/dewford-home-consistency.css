@@ -1,0 +1,70 @@
+/* Shared type and spacing for equivalent roles on the home page. */
+body.dewford-home-logo-large {
+  --home-label-size: 24px;
+  --home-heading-size: 44px;
+  --home-copy-size: 18px;
+  --home-label-gap: 16px;
+  --home-content-gap: 24px;
+  --home-heading-gap: 40px;
+}
+
+/* This layer also overrides the template's important heading weights. */
+@layer dewford-typography {
+  body.dewford-home-logo-large :is(
+    .dewford-program-eyebrow,
+    #events .elementor-element-b80ed4f .pxl-item--title,
+    #events .elementor-element-b80ed4f .pxl-heading--text,
+    #about .elementor-element-e1f1d6d .pxl-item--title,
+    #about .elementor-element-e1f1d6d .pxl-heading--text,
+    #about .dewford-learning-eyebrow,
+    #inquiry .elementor-element-d771571 .pxl-item--subtitle,
+    #inquiry .elementor-element-d771571 .pxl-item--subtext,
+    #location .dewford-location-info > span
+  ) {
+    color: #000 !important;
+    font-size: var(--home-label-size) !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    letter-spacing: .02em !important;
+    text-transform: uppercase;
+  }
+  body.dewford-home-logo-large #inquiry .elementor-element-d771571 :is(.pxl-item--subtitle,.pxl-item--subtext) {
+    color: #fff !important;
+  }
+}
+
+body.dewford-home-logo-large .dewford-program-eyebrow {margin:0 0 var(--home-label-gap);}
+body.dewford-home-logo-large .dewford-program-heading {margin-bottom:var(--home-heading-gap);}
+body.dewford-home-logo-large :is(#program-overview-title,#dewford-learning-title,#location-title) {
+  font-size:var(--home-heading-size);line-height:1.35;letter-spacing:-.025em;color:#000;
+}
+body.dewford-home-logo-large #program-overview-title {margin-bottom:var(--home-label-gap);}
+body.dewford-home-logo-large :is(.dewford-program-heading > p,.dewford-learning-description,.dewford-about-description) {
+  font-size:var(--home-copy-size);font-weight:400;line-height:1.75;letter-spacing:-.01em;color:#000;
+}
+body.dewford-home-logo-large :is(#events .elementor-element-b80ed4f,#about .elementor-element-e1f1d6d) .pxl-item--title {margin:0;}
+body.dewford-home-logo-large :is(#events .elementor-element-2c44b7c,#about .elementor-element-229af25) > .elementor-widget-container {
+  margin-top:var(--home-label-gap);
+}
+body.dewford-home-logo-large #about .dewford-learning-intro {row-gap:var(--home-label-gap);}
+body.dewford-home-logo-large #inquiry .elementor-element-d771571 .pxl-item--subtitle {margin:0 0 var(--home-label-gap);padding:0;}
+body.dewford-home-logo-large #location .dewford-location-info {gap:var(--home-label-gap);}
+body.dewford-home-logo-large #location .dewford-location-info > span {margin:0;}
+
+/* Program cards share one rhythm at every screen width. */
+body.dewford-home-logo-large #program-overview .dewford-program-grid {gap:var(--home-content-gap);}
+body.dewford-home-logo-large #program-overview .dewford-program-photo {margin-bottom:var(--home-content-gap);}
+body.dewford-home-logo-large #program-overview .dewford-program-number {margin-bottom:var(--home-content-gap);}
+body.dewford-home-logo-large #program-overview .dewford-program-label {font-size:12px;font-weight:600;line-height:1.5;letter-spacing:.02em;margin-bottom:12px;color:var(--dewford-orange);}
+body.dewford-home-logo-large #program-overview .dewford-program-card h3 {font-size:30px;line-height:1.35;margin-bottom:var(--home-label-gap);color:#fff;}
+body.dewford-home-logo-large #program-overview .dewford-program-description {font-size:16px;font-weight:400;line-height:1.75;margin-bottom:var(--home-content-gap);color:#fff;}
+
+@media(max-width:767px) {
+  body.dewford-home-logo-large {
+    --home-label-size:20px;
+    --home-heading-size:28px;
+    --home-copy-size:16px;
+    --home-heading-gap:32px;
+  }
+  body.dewford-home-logo-large #program-overview .dewford-program-card h3 {font-size:26px;}
+}
