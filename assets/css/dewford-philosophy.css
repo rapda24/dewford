@@ -30,25 +30,151 @@ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-
 html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .e-con {gap:24px;padding:var(--sub-card-padding);}
 html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair :is(.pxl-item--title,p) {margin:0;}
 
-/* Match the Why Dewford approach's image/copy arrangement and item columns. */
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--sub-column-gap);align-items:start;width:100%;}
+
+/* Explicit page-local layout; no flattened Elementor widget wrappers. */
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .e-con {min-height:0;--min-height:0;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:start;width:100%;}
 html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-photo {position:sticky;top:110px;margin:0;min-width:0;}
 html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-photo img {display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-copy {min-width:0;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 {width:100%;--width:100%;gap:0;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-17fba66 {width:100%;--width:100%;margin-bottom:var(--sub-content-gap);}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 > .e-con {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,4fr);gap:28px 22px;align-items:start;width:100%;--width:100%;margin:0;padding:28px 0;border-top:1px solid #dcd2e2;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 > .e-con :is(.elementor-widget,.elementor-widget-container,.pxl-icon-list,.pxl-icon-list a,.pxl-text-editor,.pxl-item--inner) {display:contents!important;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 .pxl-icon-list svg {grid-column:1;grid-row:1;width:100%;max-width:64px;height:auto;box-sizing:border-box;padding:12px;aspect-ratio:1;background:#52196d;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 .pxl-icon-list a span {grid-column:2;grid-row:1;min-width:0;text-align:left;font-size:22px;font-weight:700;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 p {grid-column:3;grid-row:1;margin:0;min-width:0;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked {align-items:stretch;}
-html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--inner {height:100%;padding:var(--sub-card-padding);}
-@media(max-width:767px){
- html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach {grid-template-columns:minmax(0,1fr);gap:var(--sub-content-gap);}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-copy {min-width:0;width:100%;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-heading {display:block;position:static;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-heading h2 {margin:0 0 32px;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-heading .dewford-section-eyebrow {padding:0 0 16px;border-bottom:1px solid #e5e5e5;margin-bottom:32px;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-row {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,4fr);gap:22px;align-items:start;padding:28px 0;border-top:1px solid #dcd2e2;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-row > * {min-width:0;margin:0;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-icon {display:grid;place-items:center;aspect-ratio:1;max-width:64px;background:#52196d;padding:12px;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-icon svg {width:100%;height:auto;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-icon path {fill:white;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-row p {font-size:var(--sub-body-size);color:var(--sub-copy-color);word-break:keep-all;overflow-wrap:break-word;}
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-row h3.dewford-content-title {font-size:22px!important;}
+}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:stretch;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--inner {display:flex;flex-direction:column;position:relative;top:auto;transform:none!important;height:auto;min-height:0;margin:0;padding:32px;gap:24px;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--featured {width:100%;margin-top:auto;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-item--content {width:100%;min-width:0;}
+@media(max-width:1024px){
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach {grid-template-columns:minmax(0,1fr);gap:32px;}
  html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-photo {position:relative;top:auto;}
- html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-photo img {aspect-ratio:4/3;}
- html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 > .e-con {grid-template-columns:64px minmax(0,1fr);gap:24px 16px;padding-block:24px;}
- html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 .pxl-icon-list a span {font-size:20px;align-self:center;}
- html body #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-2da1750 p {grid-column:1 / -1;grid-row:2;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-photo img {aspect-ratio:4/3;max-height:520px;}
+}
+@media(max-width:767px){
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-row {grid-template-columns:64px minmax(0,1fr);gap:24px 16px;padding:24px 0;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-row h3 {align-self:center;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-approach-row p {grid-column:1 / -1;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked {grid-template-columns:minmax(0,1fr);gap:24px;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--inner {padding:24px 20px;}
+}
+
+/* Keep the fixed quick links out of the reading area when no side rail fits. */
+@media(max-width:1799px){
+ html body:has(main[data-page-layout="educational-philosophy"]) .dewford-floating-links {display:none;}
+}
+
+/* Let the page surface show through the content sections. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"],
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] :is(.e-con,.e-con-inner,.pxl-post--inner) {
+ background-color:transparent!important;
+}
+
+/* Full-width section panel, with content aligned to the shared page container. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .elementor-element-865582f {
+ background-color:#fff!important;
+ border-radius:20px;
+ padding-block:var(--sub-section-gap)!important;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach {
+ box-sizing:border-box;
+ padding:0;
+ align-items:stretch;
+}
+@media(min-width:1025px){
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-photo {
+  position:relative;top:auto;align-self:stretch;min-height:0;
+ }
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-philosophy-approach-photo img {
+  position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;
+ }
+}
+
+/* Vision and Mission share one card treatment. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .e-con {
+ background:#fff!important;
+ border:1px solid #e5e5e5;
+ border-radius:20px;
+ padding:var(--sub-card-padding);
+ gap:24px;
+ justify-content:flex-start;
+ align-self:stretch;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .e-con::before {background:none!important;}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair .elementor-widget-container {margin:0!important;}
+
+/* Keep the original gray page canvas; boxed content uses the brand palette or white. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] {
+ background-color:#f5f5f5!important;
+}
+
+/* Two cards stack as a row on desktop; individual cards stack on mobile. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked {
+ display:block;isolation:isolate;padding-bottom:20vh;
+}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair {
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;
+ position:sticky;top:128px;margin-bottom:48px;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--inner {
+ background:#fff!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--featured img {
+ width:100%;height:clamp(180px,30vh,320px);object-fit:cover;
+}
+@media(max-width:767px){
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair {display:contents;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--inner {
+  position:sticky;top:104px;margin-bottom:32px;
+ }
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--featured img {height:clamp(160px,28vh,240px);}
+}
+@media(prefers-reduced-motion:reduce), (max-height:600px){
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair,
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--inner {position:relative;top:auto;}
+}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair:first-child {z-index:1;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair:last-child {z-index:2;}
+@media(max-width:767px){
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair:first-child > .pxl-post--inner:first-child {z-index:1;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair:first-child > .pxl-post--inner:last-child {z-index:2;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair:last-child > .pxl-post--inner:first-child {z-index:3;}
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-journey-pair:last-child > .pxl-post--inner:last-child {z-index:4;}
+}
+
+/* Equal insets override the source theme's forced zero top padding. */
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--inner {
+ padding:32px!important;
+}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .dewford-journey-description {
+ margin:0;font-size:var(--sub-body-size);color:var(--sub-copy-color);word-break:keep-all;overflow-wrap:break-word;
+}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--featured > a,
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--featured img {display:block;}
+html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-box--multitext:empty {display:none;margin:0;padding:0;}
+@media(max-width:767px){
+ html body #pxl-wapper main[data-page-layout="educational-philosophy"] .tabs-content-stacked .pxl-post--inner {padding:20px!important;}
+}
+
+/* Brand-colored Vision and Mission cards. */
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .elementor-element-5174177 {
+ background:var(--dewford-purple,#52196d)!important;border:0;
+}
+html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .elementor-element-ab43d79 {
+ background:#f5a100!important;border:0;
+}
+@layer dewford-typography {
+ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .elementor-element-5174177 :is(h2.dewford-section-title-black,.pxl-heading--text,p) {
+  color:#fff!important;-webkit-text-fill-color:#fff!important;
+ }
+ html body.dewford-subpage-header #pxl-wapper main[data-page-layout="educational-philosophy"] .dewford-vision-pair > .elementor-element-ab43d79 :is(h2.dewford-section-title-black,.pxl-heading--text,p) {
+  color:#000!important;-webkit-text-fill-color:#000!important;
+ }
 }

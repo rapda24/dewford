@@ -5,7 +5,7 @@ html body .dewford-compact-intro .dewford-page-intro-body > .elementor-widget {w
 html body .dewford-compact-intro .elementor-element-7238b1e img {height:380px!important;object-fit:cover;}
 html body [data-page-layout="educational-philosophy"] .dewford-vision-pair {display:grid;grid-template-columns:1fr 1fr;gap:28px;}
 html body [data-page-layout="educational-philosophy"] .dewford-vision-pair > .e-con {width:100%!important;min-height:280px;justify-content:flex-start;}
-html body [data-page-layout="educational-philosophy"] .elementor-element-ab43d79 {background:#f5f5f5!important;}
+html body [data-page-layout="educational-philosophy"] .elementor-element-ab43d79 {background:#f5a100!important;}
 html body [data-page-layout="educational-philosophy"] .elementor-element-ab43d79 :is(.pxl-item--title,.pxl-heading--text,p) {color:#52196d!important;}
 html body [data-page-layout="educational-philosophy"] .tabs-content-stacked {display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 html body [data-page-layout="educational-philosophy"] .pxl-scroll-service1 .pxl-post--inner {padding:32px;}
@@ -50,5 +50,5 @@ html body [data-page-layout="elementary-calendar"] .elementor-element-865582f {b
  html body .dewford-program-schedule :is(th,td) {padding:12px;font-size:14px;min-width:120px;}
  html body .dewford-level-card {padding:24px;}
 }
-html body.dewford-subpage-header .dewford-service-composition[data-page-layout="educational-philosophy"] .elementor-5333 .elementor-element.elementor-element-ab43d79 {background:#f5f5f5!important;}
+html body.dewford-subpage-header .dewford-service-composition[data-page-layout="educational-philosophy"] .elementor-5333 .elementor-element.elementor-element-ab43d79 {background:#f5a100!important;}
 html body.dewford-subpage-header .dewford-service-composition[data-page-layout="educational-philosophy"] .elementor-5333 .elementor-element.elementor-element-ab43d79 :is(.pxl-item--title,.pxl-heading--text,p) {color:#52196d!important;}
