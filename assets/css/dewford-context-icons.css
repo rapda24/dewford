@@ -1,0 +1,27 @@
+/* Small contextual cues, without changing the established content hierarchy. */
+html body .dewford-context-icon {display:inline-block;width:24px;height:24px;flex-shrink:0;vertical-align:-4px;margin-right:12px;color:#52196d;}
+html body main [data-ui-role="page-label"] > .dewford-context-icon {width:22px;height:22px;}
+html body .pxl-item--category > .dewford-context-icon {width:18px;height:18px;margin-right:8px;vertical-align:-3px;}
+html body #pxl-main#pxl-main .dewford-level-visual {display:flex;flex-direction:column;gap:0;padding:32px!important;}
+#pxl-main .dewford-level-top {display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
+#pxl-main .dewford-level-top .dewford-context-icon {margin:0;width:30px;height:30px;}
+#pxl-main .dewford-level-badge {display:inline-flex;padding:8px 12px;background:#52196d;color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;}
+html body #pxl-main#pxl-main .dewford-level-visual h3 {margin:0 0 24px!important;}
+#pxl-main .dewford-level-track {display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:20px;margin-bottom:28px;}
+#pxl-main .dewford-level-track span {height:6px;background:#dedede;}
+#pxl-main .dewford-level-track .is-reached {background:#52196d;}
+#pxl-main .dewford-level-metrics {display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0;padding-top:24px;border-top:1px solid #dedede;}
+#pxl-main .dewford-level-metrics > div {min-width:0;}
+#pxl-main .dewford-level-metrics dt {margin-bottom:10px;font-size:13px;font-weight:500;color:#666;}
+#pxl-main .dewford-level-metrics dd {margin:0;font-size:23px;font-weight:700;white-space:nowrap;color:#111;}
+#pxl-main .dewford-level-metrics small {font-size:14px;font-weight:400;}
+@layer dewford-typography {
+ #pxl-main#pxl-main#pxl-main .dewford-level-visual h3 {font-size:32px!important;font-weight:700!important;}
+}
+@media(max-width:767px){
+ html body .dewford-context-icon {width:20px;height:20px;margin-right:8px;vertical-align:-3px;}
+ html body #pxl-main#pxl-main .dewford-level-visual {padding:24px!important;}
+ #pxl-main .dewford-level-top {margin-bottom:20px;}
+ #pxl-main .dewford-level-metrics dd {font-size:22px;}
+ @layer dewford-typography {#pxl-main#pxl-main#pxl-main .dewford-level-visual h3 {font-size:28px!important;}}
+}

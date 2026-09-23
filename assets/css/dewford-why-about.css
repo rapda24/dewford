@@ -171,3 +171,25 @@ html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e p {
  html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e .dewford-content-title {grid-column:2;grid-row:1;align-self:center;}
  html body #pxl-wapper .dewford-why-about-template .elementor-element-016f24e p {grid-column:1 / -1;grid-row:2;}
 }
+
+/* Why Dewford only: one content gap after each section heading. */
+#pxl-main#pxl-main.dewford-why-about-template :is(.elementor-element-a97ff92,.elementor-element-ffaa449,.elementor-element-4d6909d) {row-gap:var(--ui-content,32px);}
+#pxl-main#pxl-main.dewford-why-about-template :is(.elementor-element-7d1ccc9,.elementor-element-96fc02e) > .e-con-inner {row-gap:var(--ui-content,32px);}
+#pxl-main#pxl-main.dewford-why-about-template :is(.elementor-element-1715b89,.elementor-element-a1d64de,.elementor-element-a971c0d,.elementor-element-6fee160,.elementor-element-430b07c,.elementor-element-a7d2c21) {
+ margin-block:0!important;
+}
+#pxl-main#pxl-main.dewford-why-about-template :is(.elementor-element-1715b89,.elementor-element-a1d64de,.elementor-element-a971c0d,.elementor-element-6fee160,.elementor-element-430b07c,.elementor-element-a7d2c21) > .elementor-widget-container {
+ margin-block:0!important;padding-block:0!important;
+}
+#pxl-main#pxl-main.dewford-why-about-template :is(.elementor-element-ee72387,.dewford-journey-layout) {margin-top:0!important;}
+#pxl-main#pxl-main.dewford-why-about-template .elementor-element-4d6909d > .elementor-element-40014b5 {margin-top:0!important;padding-top:0!important;--padding-top:0px;}
+
+/* Neutral gray cards on the white Difference section. */
+#pxl-main#pxl-main.dewford-why-about-template .elementor-element-842d290 > :is(.elementor-element-1d74174,.elementor-element-14ed559,.elementor-element-bb0a0e2,.elementor-element-1f66f23) {
+ background:#f5f5f5!important;background-image:none!important;mix-blend-mode:normal;
+ border:0;box-shadow:none;padding:var(--ui-card,32px);border-radius:0;
+}
+#pxl-main#pxl-main.dewford-why-about-template .elementor-element-842d290 > .e-con::before {background:none!important;}
+@layer dewford-typography {
+ #pxl-main#pxl-main.dewford-why-about-template .elementor-element-842d290 p {color:#111!important;}
+}

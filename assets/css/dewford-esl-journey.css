@@ -1,0 +1,58 @@
+/* A weekly learning sequence, scoped to the ESL page. */
+#pxl-main .dewford-esl-journey {width:100%;}
+#pxl-main .dewford-esl-journey-overview {display:grid;grid-template-columns:1fr 1fr;gap:0;}
+#pxl-main .dewford-esl-journey-photo {position:relative;margin:0;min-height:360px;overflow:hidden;}
+#pxl-main .dewford-esl-journey-photo img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;}
+#pxl-main .dewford-esl-journey-info {padding:40px;background:#52196d;color:#fff;}
+#pxl-main .dewford-esl-journey-eyebrow {display:block;font-size:13px;font-weight:600;letter-spacing:.12em;margin-bottom:20px;}
+#pxl-main .dewford-esl-journey-info h3 {margin:0 0 20px;}
+#pxl-main .dewford-esl-journey-info > p {margin:0;}
+#pxl-main .dewford-esl-journey-facts {display:grid;grid-template-columns:1fr 1.25fr;gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid #ffffff40;}
+#pxl-main .dewford-esl-journey-facts > div {position:relative;}
+#pxl-main .dewford-esl-journey-facts span {display:block;font-size:14px;margin-bottom:12px;}
+#pxl-main .dewford-esl-journey-facts strong {display:block;font-size:22px;font-weight:700;}
+#pxl-main .dewford-esl-journey-facts small {display:block;font-size:15px;margin-top:8px;}
+#pxl-main .dewford-esl-journey-facts svg {position:absolute;right:0;top:0;width:20px;height:20px;}
+#pxl-main .dewford-esl-journey-steps {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;margin:32px 0 0;padding:0;}
+#pxl-main .dewford-esl-journey-steps li {position:relative;padding:32px;background:#f5f5f5;min-width:0;}
+#pxl-main .dewford-esl-step-top {display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;}
+#pxl-main .dewford-esl-step-day {font-size:17px;font-weight:700;color:#52196d;}
+#pxl-main .dewford-esl-step-number {font-size:14px;color:#777;}
+#pxl-main .dewford-esl-step-icon {display:flex;align-items:center;justify-content:center;width:56px;height:56px;background:#fff;color:#52196d;margin-bottom:24px;}
+#pxl-main .dewford-esl-step-icon svg {width:30px;height:30px;}
+#pxl-main .dewford-esl-step-label {display:block;font-size:12px;font-weight:600;letter-spacing:.06em;color:#52196d;margin-bottom:10px;}
+#pxl-main .dewford-esl-journey-steps h4 {margin:0 0 20px;}
+#pxl-main .dewford-esl-journey-steps p {margin:0;}
+#pxl-main .dewford-esl-journey-note {margin:24px 0 0;padding-left:16px;border-left:2px solid #dedede;}
+@layer dewford-typography {
+ #pxl-main#pxl-main .dewford-esl-journey-info :is(h3,p,span,strong,small) {color:#fff!important;-webkit-text-fill-color:#fff!important;}
+ #pxl-main#pxl-main .dewford-esl-journey-info h3 {font-size:32px!important;font-weight:700!important;}
+ #pxl-main#pxl-main .dewford-esl-journey-steps h4 {font-size:26px!important;font-weight:700!important;color:#111!important;}
+ #pxl-main#pxl-main .dewford-esl-journey-steps p {font-size:17px!important;font-weight:400!important;color:#45384b!important;}
+ #pxl-main#pxl-main .dewford-esl-journey-note {font-size:15px!important;color:#666!important;}
+}
+@media(max-width:991px){
+ #pxl-main .dewford-esl-journey-info {padding:28px;}
+ #pxl-main .dewford-esl-journey-steps {gap:16px;}
+ #pxl-main .dewford-esl-journey-steps li {padding:24px;}
+}
+@media(max-width:767px){
+ #pxl-main .dewford-esl-journey-overview {grid-template-columns:1fr;}
+ #pxl-main .dewford-esl-journey-photo {min-height:0;aspect-ratio:3/2;}
+ #pxl-main .dewford-esl-journey-info {padding:24px;}
+ #pxl-main .dewford-esl-journey-facts {gap:16px;}
+ #pxl-main .dewford-esl-journey-facts strong {font-size:18px;}
+ #pxl-main .dewford-esl-journey-facts svg {display:none;}
+ #pxl-main .dewford-esl-journey-steps {grid-template-columns:1fr;margin-top:24px;}
+ #pxl-main .dewford-esl-journey-steps li {display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:16px;padding:24px;}
+ #pxl-main .dewford-esl-step-top {grid-column:1 / -1;margin-bottom:24px;}
+ #pxl-main .dewford-esl-step-icon {grid-column:1;grid-row:2 / 4;width:48px;height:48px;margin:0;}
+ #pxl-main .dewford-esl-step-label {grid-column:2;margin-bottom:6px;}
+ #pxl-main .dewford-esl-journey-steps h4 {grid-column:2;margin:0;align-self:center;}
+ #pxl-main .dewford-esl-journey-steps p {grid-column:1 / -1;margin-top:20px;}
+ @layer dewford-typography {
+  #pxl-main#pxl-main .dewford-esl-journey-info h3 {font-size:28px!important;}
+  #pxl-main#pxl-main .dewford-esl-journey-steps h4 {font-size:22px!important;}
+  #pxl-main#pxl-main .dewford-esl-journey-steps p {font-size:16px!important;}
+ }
+}

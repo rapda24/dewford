@@ -69,3 +69,20 @@ html body :is(.dewford-events-main, #pxl-page-title-elementor) *::after {
   border-end-start-radius: 0 !important;
   border-end-end-radius: 0 !important;
 }
+
+/* A centered editorial introduction beneath the shared emblem. */
+html body .dewford-events-main .dewford-events-intro {max-width:900px;margin:0 auto;padding:0 24px 64px;text-align:center;}
+html body .dewford-events-main .dewford-events-intro h2 {margin:0 0 24px;word-break:keep-all;}
+html body .dewford-events-main .dewford-events-intro p {margin:0;word-break:keep-all;}
+html body .dewford-events-main .elementor-element-d4c9620 {padding-top:0!important;--padding-top:0px;}
+@layer dewford-typography {
+ html body #pxl-content-main.dewford-events-main .dewford-events-intro h2 {font-size:48px!important;font-weight:700!important;color:#111!important;line-height:1.35!important;letter-spacing:-.025em!important;}
+ html body #pxl-content-main.dewford-events-main .dewford-events-intro p {font-size:17px!important;font-weight:400!important;color:#45384b!important;}
+}
+@media(max-width:767px){
+ html body .dewford-events-main .dewford-events-intro {padding-bottom:40px;}
+ @layer dewford-typography {
+  html body #pxl-content-main.dewford-events-main .dewford-events-intro h2 {font-size:32px!important;}
+  html body #pxl-content-main.dewford-events-main .dewford-events-intro p {font-size:16px!important;}
+ }
+}

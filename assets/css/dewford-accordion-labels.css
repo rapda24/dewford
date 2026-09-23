@@ -1,0 +1,16 @@
+/* These are content subheadings, not actions or category buttons. */
+html body #pxl-main#pxl-main .pxl-portfolio-accordion1 .dewford-accordion-content-heading {
+ display:block;margin:0 0 20px;padding:0;background:none;border:0;box-shadow:none;
+ cursor:default;text-align:left;
+}
+@layer dewford-typography {
+ html body #pxl-main#pxl-main .pxl-portfolio-accordion1 h4.dewford-accordion-content-heading {
+  font-size:20px!important;font-weight:700!important;color:#52196d!important;
+  -webkit-text-fill-color:#52196d!important;letter-spacing:-.02em!important;
+ }
+}
+@media(max-width:767px){
+ @layer dewford-typography {
+  html body #pxl-main#pxl-main .pxl-portfolio-accordion1 h4.dewford-accordion-content-heading {font-size:18px!important;}
+ }
+}

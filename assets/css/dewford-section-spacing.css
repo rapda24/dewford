@@ -96,7 +96,7 @@ html body.dewford-subpage-header #pxl-wapper main.dewford-program-page .elemento
 .dewford-program-learning-copy .dewford-esl-subjects {margin:20px 0 24px;font-weight:600;color:#52196d;}
 .dewford-esl-week {list-style:none;margin:0;padding:0;}
 .dewford-esl-week li {display:grid;grid-template-columns:80px minmax(0,1fr);gap:20px;align-items:start;padding:20px 0;border-top:1px solid #e5e5e5;}
-.dewford-esl-day {display:block;padding:10px 4px;text-align:center;background:#f5a100;color:#111;font-weight:700;}
+.dewford-esl-day {display:block;padding:10px 4px;text-align:center;background:#52196d;color:#fff;font-weight:700;}
 .dewford-esl-week h4 {font-size:22px;line-height:1.35;margin:0 0 12px;font-weight:700;color:#111;}
 .dewford-esl-week p {margin:0;}
 .dewford-program-learning-copy .dewford-esl-schedule-note {margin:24px 0 0;font-size:15px;}

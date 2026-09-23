@@ -44,3 +44,20 @@ html body .dewford-contact-details a:hover .dewford-contact-value {text-decorati
 html body .dewford-contact-details a:focus-visible {outline:2px solid var(--dewford-purple);outline-offset:4px;}
 html body .dewford-contact-details-note {margin:4px 0 0;font-size:13px;line-height:1.7;color:#706276;word-break:keep-all;}
 @media(max-width:767px){html body .dewford-contact-details .dewford-contact-row{gap:12px;padding:18px 0;}html body .dewford-contact-details .dewford-contact-value{font-size:16px;}}
+
+/* Welcome copy between the emblem and the campus map. */
+html body #pxl-main .dewford-contact-intro {max-width:900px;margin:0 auto;padding:0 24px 64px;text-align:center;}
+html body #pxl-main .dewford-contact-intro h2 {margin:0 0 24px;word-break:keep-all;}
+html body #pxl-main .dewford-contact-intro p {margin:0;word-break:keep-all;}
+html body #pxl-main#pxl-main.dewford-section-layout > .dewford-contact-intro + .elementor {padding-top:0!important;}
+@layer dewford-typography {
+ html body #pxl-main#pxl-main .dewford-contact-intro h2 {font-size:48px!important;font-weight:700!important;color:#111!important;line-height:1.35!important;letter-spacing:-.025em!important;}
+ html body #pxl-main#pxl-main .dewford-contact-intro p {font-size:17px!important;font-weight:400!important;color:#45384b!important;}
+}
+@media(max-width:767px){
+ html body #pxl-main .dewford-contact-intro {padding-bottom:40px;}
+ @layer dewford-typography {
+  html body #pxl-main#pxl-main .dewford-contact-intro h2 {font-size:32px!important;}
+  html body #pxl-main#pxl-main .dewford-contact-intro p {font-size:16px!important;}
+ }
+}

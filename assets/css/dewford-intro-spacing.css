@@ -1,0 +1,25 @@
+/* Match the measured title-to-content gap on Why Dewford: 96 / 60px. */
+body {--dewford-intro-content-gap:96px;}
+@media(max-width:767px){body {--dewford-intro-content-gap:60px;}}
+html body #pxl-main#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) :is(.elementor-element-316f67e,.elementor-element-98df9da) {margin-bottom:var(--dewford-intro-content-gap)!important;}
+html body #pxl-main#pxl-main#pxl-main.dewford-section-layout:not(.dewford-why-about-template) :is(.elementor-element-316f67e,.elementor-element-98df9da) + :is(.dewford-page-intro-body,.dewford-vision-pair,.elementor-element-462e0e0) {margin-top:0!important;}
+html body #pxl-main#pxl-main#pxl-main .dewford-contact-intro,
+html body #pxl-content-main#pxl-content-main .dewford-events-intro {padding-bottom:var(--dewford-intro-content-gap)!important;}
+html body #pxl-main#pxl-main#pxl-main .dewford-contact-intro + .elementor {padding-top:0!important;}
+html body #pxl-main#pxl-main#pxl-main .dewford-contact-intro + .elementor > .elementor-element-6dc4f0a {padding-top:0!important;margin-top:0!important;}
+html body #pxl-content-main#pxl-content-main .dewford-events-intro + article,
+html body #pxl-content-main#pxl-content-main .elementor-element-d4c9620,
+html body #pxl-content-main#pxl-content-main .elementor-element-d4c9620 > .e-con-inner {margin-top:0!important;padding-top:0!important;}
+html body #pxl-main#pxl-main#pxl-main .dewford-calendar-intro {margin-bottom:0!important;}
+html body #pxl-main#pxl-main#pxl-main .dewford-calendar-toolbar {margin-top:var(--dewford-intro-content-gap)!important;}
+
+/* Introduction copy starts at the photograph's top edge. */
+html body #pxl-main#pxl-main#pxl-main .dewford-page-intro-body {align-items:start!important;}
+html body #pxl-main#pxl-main#pxl-main .dewford-page-intro-copy {align-self:start!important;justify-content:flex-start!important;}
+html body #pxl-main .dewford-intro-accent {display:flex;align-items:center;gap:16px;width:100%;color:#52196d;}
+html body #pxl-main .dewford-intro-accent svg {display:block;width:32px;height:32px;flex-shrink:0;}
+html body #pxl-main .dewford-intro-accent span {display:block;width:64px;height:3px;background:#52196d;}
+@media(max-width:767px){
+ html body #pxl-main .dewford-intro-accent svg {width:28px;height:28px;}
+ html body #pxl-main .dewford-intro-accent span {width:48px;}
+}

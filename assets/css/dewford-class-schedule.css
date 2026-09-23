@@ -1,0 +1,38 @@
+/* Group timetable information by grade, rather than repeating grades in table rows. */
+#pxl-main .dewford-class-intro {margin:0 0 32px;}
+#pxl-main .dewford-class-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;}
+#pxl-main .dewford-class-card {background:#f5f5f5;padding:32px;min-width:0;}
+#pxl-main .dewford-class-card header {display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px;}
+#pxl-main .dewford-class-card h3 {margin:0;}
+#pxl-main .dewford-class-frequency {display:inline-flex;align-items:center;padding:8px 14px;background:#52196d;color:#fff;font-size:15px;font-weight:600;white-space:nowrap;}
+#pxl-main .dewford-class-time {display:flex;align-items:flex-start;gap:12px;padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid #dedede;min-height:88px;}
+#pxl-main .dewford-class-time svg {width:22px;height:22px;flex-shrink:0;color:#52196d;}
+#pxl-main .dewford-class-time span {display:block;font-size:14px;color:#666;margin-bottom:12px;}
+#pxl-main .dewford-class-time strong {display:block;font-size:20px;font-weight:600;}
+#pxl-main .dewford-class-time small {font-size:14px;font-weight:400;margin-inline:6px;}
+#pxl-main .dewford-class-card h4 {margin:0 0 20px;}
+#pxl-main .dewford-class-card ol {list-style:none;padding:0;margin:0;}
+#pxl-main .dewford-class-card li {display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;align-items:start;padding:20px 0;border-top:1px solid #dedede;}
+#pxl-main .dewford-class-card li:first-child {border-top:0;padding-top:0;}
+#pxl-main .dewford-class-card li:last-child {padding-bottom:0;}
+#pxl-main .dewford-class-day {color:#52196d;font-size:15px;font-weight:700;padding-top:3px;}
+#pxl-main .dewford-class-card li strong {font-size:20px;font-weight:600;}
+#pxl-main .dewford-class-card li p {margin:10px 0 0;}
+#pxl-main .dewford-class-note {margin:24px 0 0;padding-left:16px;border-left:2px solid #dedede;}
+@layer dewford-typography {
+ #pxl-main#pxl-main .dewford-class-card h3 {font-size:32px!important;color:#52196d!important;font-weight:700!important;}
+ #pxl-main#pxl-main .dewford-class-card h4 {font-size:20px!important;color:#111!important;font-weight:700!important;}
+ #pxl-main#pxl-main .dewford-class-card li p {font-size:16px!important;color:#666!important;}
+ #pxl-main#pxl-main .dewford-class-note {font-size:15px!important;color:#666!important;}
+}
+@media(max-width:767px){
+ #pxl-main .dewford-class-grid {grid-template-columns:1fr;gap:24px;}
+ #pxl-main .dewford-class-card {padding:24px;}
+ #pxl-main .dewford-class-card header {margin-bottom:24px;}
+ #pxl-main .dewford-class-time {min-height:0;padding-bottom:24px;margin-bottom:24px;}
+ #pxl-main .dewford-class-time strong {font-size:18px;}
+ #pxl-main .dewford-class-time small {display:block;margin:8px 0;}
+ #pxl-main .dewford-class-card li {grid-template-columns:52px minmax(0,1fr);gap:12px;}
+ #pxl-main .dewford-class-card li strong {font-size:18px;}
+ @layer dewford-typography {#pxl-main#pxl-main .dewford-class-card h3 {font-size:28px!important;}}
+}
