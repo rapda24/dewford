@@ -1,6 +1,6 @@
 /* Authoritative roles for the revised subpages. Contact does not load this file. */
 main.dewford-section-layout {
- --ui-section:96px;--ui-content:32px;--ui-column:48px;--ui-card:32px;
+ --ui-section:96px;--ui-content:32px;--ui-column:48px;--ui-card:32px;--ui-title-extra-space:12px;
  --ui-page-title:48px;--ui-section-title:40px;--ui-card-title:26px;--ui-label:24px;--ui-body:17px;
  --sub-section-gap:var(--ui-section);--sub-content-gap:var(--ui-content);--sub-column-gap:var(--ui-column);--sub-card-padding:var(--ui-card);
 }
@@ -17,6 +17,10 @@ main.dewford-section-layout {
  #pxl-main#pxl-main[data-page-layout="educational-philosophy"] .elementor-element-ab43d79 :is([data-ui-role],p) {color:#fff!important;-webkit-text-fill-color:#fff!important;}
 }
 #pxl-main#pxl-main.dewford-section-layout [data-ui-role] {margin:0!important;}
+/* Add breathing room below section titles without widening gaps between content rows. */
+#pxl-main#pxl-main.dewford-section-layout [data-ui-role="section-title"] {
+ padding-bottom:var(--ui-title-extra-space)!important;
+}
 #pxl-main#pxl-main.dewford-section-layout :is([data-ui-role="page-title"],[data-ui-role="page-label"]),
 #pxl-main#pxl-main.dewford-section-layout :is([data-ui-role="page-title"],[data-ui-role="page-label"]) :is(span,.split-line) {text-align:center!important;}
 #pxl-main#pxl-main.dewford-section-layout :is([data-ui-role="section-title"],[data-ui-role="card-title"],[data-ui-role="section-label"]) {text-align:left!important;}
@@ -42,7 +46,7 @@ main.dewford-section-layout {
 /* Keep the philosophy's white section background at the band level. */
 #pxl-main#pxl-main[data-page-layout="educational-philosophy"] > .elementor-5296 {background:#fff;}
 @media(max-width:767px){
- main.dewford-section-layout {--ui-section:60px;--ui-content:24px;--ui-column:24px;--ui-card:20px;--ui-page-title:32px;--ui-section-title:28px;--ui-card-title:22px;--ui-label:20px;--ui-body:16px;}
+ main.dewford-section-layout {--ui-title-extra-space:8px;--ui-section:60px;--ui-content:24px;--ui-column:24px;--ui-card:20px;--ui-page-title:32px;--ui-section-title:28px;--ui-card-title:22px;--ui-label:20px;--ui-body:16px;}
 }
 /* Intro labels, titles and copy share exact gaps rather than flex-gap + margin. */
 #pxl-main#pxl-main.dewford-section-layout :is(.elementor-element-03db8bf,.elementor-element-8336f3e) > .e-con-inner {row-gap:0!important;}
@@ -93,4 +97,69 @@ main.dewford-section-layout {
 
 @layer dewford-typography {
  #pxl-main#pxl-main#pxl-main[data-page-layout="educational-philosophy"] :is(.elementor-element-5174177,.elementor-element-ab43d79) :is(h2,p,span) {color:#fff!important;-webkit-text-fill-color:#fff!important;}
+}
+
+/* One component for icon + heading + supporting copy on every subpage. */
+#pxl-main#pxl-main .dewford-icon-copy-row {
+ /* Cap the title column so wide rows do not leave a large empty space before the copy. */
+ display:grid;grid-template-columns:56px minmax(0,min(160px,calc((100% - 88px) / 3))) minmax(0,1fr);
+ gap:16px;align-items:start;width:100%;min-width:0;margin:0;padding:28px 0;
+ border:0;box-sizing:border-box;
+}
+/* Center the icon and title together, independently of the copy height. */
+#pxl-main#pxl-main .dewford-icon-copy-heading {
+ display:grid;grid-column:1 / span 2;grid-template-columns:subgrid;
+ align-items:center;align-self:start;min-width:0;
+}
+#pxl-main#pxl-main .dewford-icon-copy-row + .dewford-icon-copy-row {border-top:1px solid #dcd2e2;}
+#pxl-main#pxl-main .dewford-icon-copy-row:first-of-type {padding-top:0;}
+#pxl-main#pxl-main .dewford-icon-copy-icon {
+ display:flex;align-items:center;justify-content:center;align-self:center;width:56px;height:56px;
+ padding:12px;background:var(--dewford-purple,#52196d);box-sizing:border-box;
+}
+#pxl-main#pxl-main .dewford-icon-copy-icon :is(svg,img) {
+ display:block;width:100%!important;height:100%!important;max-width:none!important;
+ margin:0;padding:0;object-fit:contain;background:none;box-sizing:border-box;
+}
+#pxl-main#pxl-main .dewford-icon-copy-icon svg path {fill:#fff;}
+#pxl-main#pxl-main .dewford-icon-copy-icon img {filter:brightness(0) invert(1);}
+#pxl-main#pxl-main .dewford-icon-copy-title {
+ align-self:center;min-width:0;margin:0!important;padding:0;word-break:keep-all;overflow-wrap:break-word;
+}
+#pxl-main#pxl-main .dewford-icon-copy-text {min-width:0;align-self:start;}
+#pxl-main#pxl-main .dewford-icon-copy-text p {margin:0 0 14px!important;word-break:keep-all;overflow-wrap:break-word;}
+#pxl-main#pxl-main .dewford-icon-copy-text p:last-child {margin-bottom:0!important;}
+#pxl-main#pxl-main :is(.e-con,.dewford-approach-rows):has(> .dewford-icon-copy-row) {row-gap:0!important;}
+#pxl-main#pxl-main .elementor-widget-pxl_heading:has(+ .dewford-icon-copy-row) {margin-bottom:32px!important;}
+@layer dewford-typography {
+ /* Internal labels (Independent Reader/Writer/Learner) and copy share the body font. */
+ #pxl-main#pxl-main#pxl-main :is(.dewford-icon-copy-title,.dewford-icon-copy-text),
+ #pxl-main#pxl-main#pxl-main :is(.dewford-icon-copy-title,.dewford-icon-copy-text) :is(p,span,a,strong,b,em) {
+  font-family:'Pretendard',sans-serif!important;
+ }
+ #pxl-main#pxl-main#pxl-main .dewford-icon-copy-title {
+  font-size:22px!important;font-weight:700!important;color:var(--dewford-purple,#52196d)!important;
+  -webkit-text-fill-color:var(--dewford-purple,#52196d)!important;
+ }
+ #pxl-main#pxl-main#pxl-main .dewford-icon-copy-title[lang="en"] {letter-spacing:0.01em!important;}
+ #pxl-main#pxl-main#pxl-main .dewford-icon-copy-text p {font-size:17px!important;font-weight:400!important;color:#45384b!important;}
+}
+@layer dewford-line-height {
+ #pxl-main#pxl-main .dewford-icon-copy-title {line-height:1.4!important;}
+ #pxl-main#pxl-main .dewford-icon-copy-text p {line-height:1.3!important;}
+}
+#pxl-main#pxl-main .dewford-icon-copy-text .dewford-consultation-button {
+ display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;
+ margin-top:28px;padding:14px 26px;background:var(--dewford-purple,#52196d);color:#fff;
+ text-decoration:none;font-size:16px;font-weight:600;border:1px solid var(--dewford-purple,#52196d);
+}
+#pxl-main#pxl-main .dewford-icon-copy-text .dewford-consultation-button:hover {background:#f5a100;border-color:#f5a100;color:#30103f;}
+#pxl-main#pxl-main .dewford-icon-copy-text .dewford-consultation-button:focus-visible {outline:3px solid #f5a100;outline-offset:4px;}
+@media(max-width:767px){
+ #pxl-main#pxl-main .dewford-icon-copy-row {grid-template-columns:56px minmax(0,1fr);gap:20px 16px;padding-block:24px;}
+ #pxl-main#pxl-main .dewford-icon-copy-text {grid-column:1 / -1;}
+ @layer dewford-typography {
+  #pxl-main#pxl-main#pxl-main .dewford-icon-copy-title {font-size:20px!important;}
+  #pxl-main#pxl-main#pxl-main .dewford-icon-copy-text p {font-size:16px!important;}
+ }
 }

@@ -4,6 +4,8 @@
  if(!root)return;
  const today=new Date();today.setHours(0,0,0,0);
  let displayed=new Date(today.getFullYear(),today.getMonth(),1),selected=new Date(today),events=[];
+ const requested=new URLSearchParams(location.search).get('date');
+ if(/^\d{4}-\d{2}-\d{2}$/.test(requested||'')){const d=new Date(requested+'T00:00:00');if(!Number.isNaN(d.getTime())){selected=d;displayed=new Date(d.getFullYear(),d.getMonth(),1);}}
  const grid=root.querySelector('.dewford-calendar-days'),heading=root.querySelector('[data-calendar-month]'),picker=root.querySelector('[data-calendar-picker]'),details=root.querySelector('[data-calendar-details]');
  const key=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
  const label=d=>new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(d);
@@ -11,7 +13,7 @@
   details.replaceChildren();const title=document.createElement('h3');title.textContent=label(selected);details.append(title);
   const matches=events.filter(e=>e.date===key(selected));
   if(!matches.length){const p=document.createElement('p');p.textContent='등록된 일정이 없습니다. 확정된 학사 일정은 추후 안내합니다.';details.append(p);return;}
-  const list=document.createElement('ul');matches.forEach(event=>{const li=document.createElement('li'),strong=document.createElement('strong');strong.textContent=event.title;li.append(strong);if(event.description){const p=document.createElement('p');p.textContent=event.description;li.append(p);}list.append(li);});details.append(list);
+  const list=document.createElement('ul');matches.forEach(event=>{const li=document.createElement('li'),strong=document.createElement('strong');strong.textContent=event.title;li.dataset.calendarId=event.id||'';li.append(strong);if(event.description){const p=document.createElement('p');p.textContent=event.description;li.append(p);}list.append(li);});details.append(list);
  }
  function render(focus=false){
   heading.textContent=`${displayed.getFullYear()}년 ${displayed.getMonth()+1}월`;

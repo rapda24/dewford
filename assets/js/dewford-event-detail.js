@@ -17,10 +17,16 @@
   root.dataset.eventId = post.id;
   root.querySelector('[data-detail-category]').textContent = post.category;
   root.querySelectorAll('[data-detail-heading]').forEach(function (node) {
-    node.textContent = post.headings[Number(node.dataset.detailHeading)] || post.title;
+    var text = (post.headings || [])[Number(node.dataset.detailHeading)];
+    node.textContent = text || '';
+    if (!text) node.closest('.elementor-widget').hidden = true;
   });
   root.querySelectorAll('[data-detail-paragraph]').forEach(function (node) {
-    node.textContent = post.paragraphs[Number(node.dataset.detailParagraph)] || post.excerpt;
+    var index = Number(node.dataset.detailParagraph);
+    var text = index === 7 ? (post.paragraphs || []).slice(7).join('\n\n') : (post.paragraphs || [])[index];
+    node.textContent = text || '';
+    node.style.whiteSpace = 'pre-wrap';
+    if (!text) node.closest('.elementor-widget').hidden = true;
   });
   var images = [post.image].concat(post.gallery || []);
   if (!post.gallery || !post.gallery.length) {
@@ -34,6 +40,13 @@
     node.src = images[n];
     node.alt = n === 0 ? post.alt : post.title + ' — 배움의 순간 ' + n;
   });
+  if (images.length > 3) {
+    var anchor = root.querySelector('[data-detail-image="0"]');
+    var gallery = document.createElement('div');
+    gallery.style.cssText = 'display:grid;gap:20px;margin-top:24px';
+    images.slice(3).forEach(function (src) { var img = document.createElement('img'); img.src=src; img.alt=post.title; img.loading='lazy'; img.style.width='100%'; gallery.append(img); });
+    anchor.parentElement.append(gallery);
+  }
   function nav(selector, nextIndex) {
     var link = root.querySelector(selector);
     var next = posts[nextIndex];

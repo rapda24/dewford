@@ -51,6 +51,7 @@
       grid.replaceChildren();
       posts.forEach(function (post) { grid.appendChild(fill(cardTemplate.cloneNode(true), post, false)); });
       if (sizer) grid.appendChild(sizer);
+      if (!posts.length) { var empty = document.createElement('p'); empty.textContent = '등록된 이벤트가 없습니다.'; empty.style.cssText = 'padding:60px 20px;text-align:center;width:100%'; grid.appendChild(empty); }
       var widget = grid.closest('.pxl-grid');
       if (widget) {
         widget.dataset.total = String(posts.length);
