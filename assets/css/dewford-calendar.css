@@ -25,7 +25,8 @@ html body .dewford-calendar-details {border-left:4px solid #f5a100;background:#f
 html body .dewford-calendar-details h3 {font-size:20px;line-height:1.4;margin:0 0 12px;font-weight:700;color:#52196d;}
 html body .dewford-calendar-details p {font-size:15px;line-height:1.8;margin:0;}
 html body .dewford-calendar-details li {margin-bottom:16px;}
-html body .dewford-calendar-details > ul > li > strong {display:block;margin-bottom:20px;}
+html body .dewford-calendar-details > ul > li > strong {display:inline;margin:0;}
+html body .dewford-calendar-details > ul > li > strong + :is(p,.df-rich-content) {margin-top:20px;}
 @media(max-width:767px){
  html body .dewford-calendar {padding:45px 15px 20px;}
  html body .dewford-calendar-toolbar {padding:16px 12px;gap:16px;justify-content:center;}
