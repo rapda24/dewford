@@ -1,0 +1,13 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+  X-Frame-Options: SAMEORIGIN
+
+/admin
+  Cache-Control: no-store
+/admin.html
+  Cache-Control: no-store
+/admin-login
+  Cache-Control: no-store
+/admin-login.html
+  Cache-Control: no-store

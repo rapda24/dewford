@@ -3,6 +3,21 @@
   "name": "dewford",
   "compatibility_date": "2026-09-26",
   "assets": {
-    "directory": "."
-  }
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*",
+      "/assets/data/dewford-events.js",
+      "/assets/data/dewford-calendar.json"
+    ]
+  },
+  "main": "cloudflare/worker.mjs",
+  "keep_vars": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dewford-db",
+      "database_id": "9cc5189d-cfc9-4efb-aebf-9b94a4519f87"
+    }
+  ]
 }

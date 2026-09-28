@@ -16,13 +16,13 @@
     let response;
     try { response=await fetch('/api/'+path,{method,headers:{'Content-Type':'application/json','X-CSRF-Token':session?.csrf||''},body:data===undefined?undefined:JSON.stringify(data),cache:'no-store'}); }
     catch { throw Error('서버에 연결할 수 없습니다. 연결 상태를 확인해 주세요.'); }
-    let result;try {result=await response.json();}catch {throw Error('관리 서버에 연결할 수 없습니다. Dewford 서버로 접속해 주세요.');}
-    if(!response.ok){if(response.status===401 && path!=='login'){location.href='admin-login.html';}throw Error(result.error||'요청을 처리하지 못했습니다.');}return result;
+    let result;try {result=await response.json();}catch {const error=Error('관리 서버에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요.');error.previewAllowed=response.status===404;throw error;}
+    if(!response.ok){if(response.status===401 && path!=='login'){location.href='admin-login.html';}const error=Error(result.error||'요청을 처리하지 못했습니다.');error.previewAllowed=response.status===404;throw error;}return result;
   }
   function action(text, fn, cls) {const b=node('button',text,cls);b.type='button';b.addEventListener('click',async()=>{b.disabled=true;try{await fn();}catch(e){$('#df-status').textContent=e.message;}finally{b.disabled=false;}});return b;}
   function returnPath(){const raw=params.get('next');return raw && /^admin\.html(?:\?[^#]*)?$/.test(raw)?raw:'admin.html';}
   try {session=await api('session');} catch(e){
-    if($('#df-dashboard')&&window.DEWFORD_ADMIN_PREVIEW){preview=true;session=await api('session');}
+    if(e.previewAllowed&&$('#df-dashboard')&&window.DEWFORD_ADMIN_PREVIEW){preview=true;session=await api('session');}
     else {($('#df-login-status')||$('#df-auth-loading')).textContent=e.message;return;}
   }
   if($('#df-login-form')){

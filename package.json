@@ -1,0 +1,16 @@
+{
+  "name": "dewford-site",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node --test cloudflare/worker.test.mjs",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev --local"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "miniflare": "5.20260926.0-alpha",
+    "wrangler": "4.142.0"
+  }
+}

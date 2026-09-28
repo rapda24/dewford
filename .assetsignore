@@ -27,3 +27,9 @@
 **/.env.*
 **/.dev.vars
 **/.dev.vars.*
+
+# Cloudflare API implementation and developer-only files.
+/cloudflare/
+/package.json
+/package-lock.json
+/wrangler.local.jsonc
