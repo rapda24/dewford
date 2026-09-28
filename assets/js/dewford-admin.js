@@ -8,19 +8,23 @@
   const urls = {event:'event.html', preschool:'preschool-calendar.html', elementary:'elementary-calendar.html'};
   let session, allPosts = [], inquiries = [], activePost = null;
   const params = new URLSearchParams(location.search);
+  const embedded=params.get('embed')==='1'&&window.parent!==window;
+  if(embedded)document.body.classList.add('df-embedded');
+  function tellParent(type){if(embedded)window.parent.postMessage({type},location.origin);}
   let preview = !!window.DEWFORD_ADMIN_PREVIEW && (location.protocol==='file:' || params.get('preview')==='1');
   const board = Object.hasOwn(labels, params.get('board')) ? params.get('board') : 'event';
   function node(tag, text, cls) { const n=document.createElement(tag); if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n; }
   async function api(path, method='GET', data) {
     if(preview)return window.DEWFORD_ADMIN_PREVIEW.request(path,method,data);
-    let response;
     const controller=new AbortController();
-    const timeout=setTimeout(()=>controller.abort(),15000);
+    const timeout=setTimeout(()=>controller.abort(),path==='media'?60000:15000);
+    try {
+    let response;
     try { response=await fetch('/api/'+path,{method,headers:{'Content-Type':'application/json','X-CSRF-Token':session?.csrf||''},body:data===undefined?undefined:JSON.stringify(data),cache:'no-store',signal:controller.signal}); }
     catch { throw Error(controller.signal.aborted?'서버 응답이 지연되고 있습니다. 잠시 후 다시 시도해 주세요.':'서버에 연결할 수 없습니다. 연결 상태를 확인해 주세요.'); }
-    finally {clearTimeout(timeout);}
     let result;try {result=await response.json();}catch {const error=Error('관리 서버에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요.');error.previewAllowed=response.status===404;throw error;}
-    if(!response.ok){if(response.status===401 && path!=='login'){location.href='admin-login.html';}const error=Error(result.error||'요청을 처리하지 못했습니다.');error.previewAllowed=response.status===404;throw error;}return result;
+    if(!response.ok){if(response.status===401 && path!=='login'){if(embedded)tellParent('dewford-editor-expired');else location.href='admin-login.html';}const error=Error(result.error||'요청을 처리하지 못했습니다.');error.previewAllowed=response.status===404;throw error;}return result;
+    }finally {clearTimeout(timeout);}
   }
   function action(text, fn, cls) {const b=node('button',text,cls);b.type='button';b.addEventListener('click',async()=>{b.disabled=true;try{await fn();}catch(e){$('#df-status').textContent=e.message;}finally{b.disabled=false;}});return b;}
   function returnPath(){const raw=params.get('next');return raw && /^admin\.html(?:\?[^#]*)?$/.test(raw)?raw:'admin.html';}
@@ -36,7 +40,7 @@
     if(e.previewAllowed&&$('#df-dashboard')&&window.DEWFORD_ADMIN_PREVIEW){preview=true;session=await api('session');}
     else {($('#df-login-status')||$('#df-auth-loading')).textContent=e.message;return;}
   }
-  if(!session.authenticated){location.replace('admin-login.html?next='+encodeURIComponent('admin.html'+location.search));return;}
+  if(!session.authenticated){if(embedded){tellParent('dewford-editor-expired');return;}location.replace('admin-login.html?next='+encodeURIComponent('admin.html'+location.search));return;}
   $('#df-auth-loading').hidden=true;$('#df-dashboard').hidden=false;
   $('#df-admin-name').textContent=preview?'PREVIEW · 샘플 데이터':session.username+' 님';
   if(preview){
@@ -77,17 +81,22 @@
     ['id','board','date','title','category','alt','image','excerpt'].forEach(key=>{form.elements[key].value=values[key]||'';});
     form.elements.description.value=values.board==='event'?(values.paragraphs?.join('\n\n')||values.description||''):(values.description||'');
     ['headings','gallery'].forEach(key=>{form.elements[key].value=(values[key]||[]).join('\n');});
+    window.DEWFORD_ADMIN_IMAGES.reset();
+    window.DEWFORD_EDITOR.load(values);
     $('#df-editor-title').textContent=move?'게시판 이동':post?'게시글 수정':'글쓰기';$('#df-editor-status').textContent=move?'이동할 게시판을 선택하고 저장해 주세요. 캘린더로 이동할 때는 날짜가 필요합니다.':'';updateFields();$('#df-editor').showModal();if(move)form.elements.board.focus();
   }
+  $('#df-editor').addEventListener('close',()=>tellParent('dewford-editor-close'));
   $('#df-create').addEventListener('click',()=>edit());$('#df-editor-form').elements.board.addEventListener('change',updateFields);
+  $('#df-editor').addEventListener('cancel',e=>{if($('#df-editor-form').inert)e.preventDefault();});
   $('#df-editor-form').addEventListener('submit',async e=>{
     e.preventDefault();const form=e.target,button=form.querySelector('[type=submit]'),data=Object.fromEntries(new FormData(form));
-    data.headings=data.headings.split('\n').map(s=>s.trim()).filter(Boolean);data.gallery=data.gallery.split('\n').map(s=>s.trim()).filter(Boolean);
-    data.paragraphs=data.description.split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean);
+    const rich=window.DEWFORD_EDITOR.read();data.content=rich.content;data.description=rich.text;
+    data.headings=[data.title];data.gallery=data.gallery.split('\n').map(s=>s.trim()).filter(Boolean);
+    data.paragraphs=data.description?[data.description]:[];
     if(!data.headings.length)data.headings=[data.title];if(!data.excerpt)data.excerpt=data.description.slice(0,200);
-    button.disabled=true;$('#df-editor-status').textContent='저장 중입니다.';
-    try{await api('posts'+(activePost?'/'+activePost.id:''),activePost?'PUT':'POST',data);$('#df-editor').close();if(data.board!==board){location.href='admin.html?board='+data.board+(preview?'&preview=1':'');}else{await refresh();$('#df-status').textContent=preview?'미리보기에 반영했습니다. 실제 사이트에는 저장되지 않습니다.':'저장했습니다.';}}
-    catch(error){$('#df-editor-status').textContent=error.message;}finally{button.disabled=false;}
+    button.disabled=true;form.inert=true;$('#df-editor-status').textContent='저장 중입니다.';
+    try{await window.DEWFORD_ADMIN_IMAGES.upload(api,preview);data.image=form.elements.image.value;data.gallery=form.elements.gallery.value.split('\n').filter(Boolean);await api('posts'+(activePost?'/'+activePost.id:''),activePost?'PUT':'POST',data);if(embedded){tellParent('dewford-editor-saved');return;}$('#df-editor').close();if(data.board!==board){location.href='admin.html?board='+data.board+(preview?'&preview=1':'');}else{await refresh();$('#df-status').textContent=preview?'미리보기에 반영했습니다. 실제 사이트에는 저장되지 않습니다.':'저장했습니다.';}}
+    catch(error){$('#df-editor-status').textContent=error.message;}finally{button.disabled=false;form.inert=false;}
   });
   function showInquiry(p){
     const box=$('#df-inquiry-body');box.replaceChildren();const dl=node('dl');
@@ -98,5 +107,5 @@
     const remove=action('상담 내역 삭제',async()=>{if(!confirm('상담 내역을 영구 삭제할까요?'))return;try{await api('inquiries/'+p.id,'DELETE',{});$('#df-inquiry-detail').close();await refresh();}catch(e){status.textContent=e.message;}},'df-danger');box.append(remove);$('#df-inquiry-detail').showModal();
   }
   $('#df-search').addEventListener('input',render);$('#df-status-filter').addEventListener('change',render);
-  try{await refresh();if(params.get('edit')){const p=allPosts.find(p=>p.id===params.get('edit'));if(p)edit(p,params.has('move'));else $('#df-status').textContent='게시글을 찾을 수 없습니다.';}else if(params.has('new'))edit();}catch(e){$('#df-status').textContent=e.message;}
+  try{if(embedded){allPosts=await api('posts');}else await refresh();if(params.get('edit')){const p=allPosts.find(p=>p.id===params.get('edit'));if(p)edit(p,params.has('move'));else $('#df-status').textContent='게시글을 찾을 수 없습니다.';}else if(params.has('new'))edit();}catch(e){const target=embedded?$('#df-auth-loading'):$('#df-status');target.hidden=false;target.textContent=e.message;}
 })();

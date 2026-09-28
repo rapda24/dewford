@@ -28,6 +28,13 @@
     node.style.whiteSpace = 'pre-wrap';
     if (!text) node.closest('.elementor-widget').hidden = true;
   });
+  if(post.content?.ops && window.DEWFORD_RICH_TEXT){
+    const first=root.querySelector('[data-detail-paragraph="0"]');
+    root.querySelectorAll('[data-detail-paragraph],[data-detail-heading]').forEach(node=>{node.closest('.elementor-widget').hidden=true;});
+    const widget=first.closest('.elementor-widget');widget.hidden=false;
+    const body=document.createElement('div');first.replaceWith(body);window.DEWFORD_RICH_TEXT.render(body,post.content);
+    const title=root.querySelector('[data-detail-heading="0"]');title.textContent=post.title;title.closest('.elementor-widget').hidden=false;
+  }
   var images = [post.image].concat(post.gallery || []);
   if (!post.gallery || !post.gallery.length) {
     root.classList.add('dewford-detail-single-image');

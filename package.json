@@ -7,10 +7,13 @@
     "deploy": "wrangler deploy",
     "dev": "wrangler dev --local"
   },
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "devDependencies": {
     "esbuild": "0.28.1",
     "miniflare": "5.20260926.0-alpha",
+    "quill": "^2.0.3",
     "wrangler": "4.142.0"
   }
 }

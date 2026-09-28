@@ -6,15 +6,29 @@
     if(!session.authenticated)return;
     const root=document.querySelector('[data-dewford-calendar],.dewford-events-main,.dewford-detail-main');if(!root)return;
     const board=root.dataset.dewfordCalendar||'event';
+    let popup;
+    function openEditor(query){
+      popup=document.createElement('dialog');popup.className='df-compose-popup';popup.setAttribute('aria-label','게시글 편집');
+      const frame=document.createElement('iframe');frame.title='게시글 작성 및 수정';frame.src='admin.html?embed=1&board='+board+'&'+query;
+      popup.append(frame);document.body.append(popup);popup.showModal();
+      popup.addEventListener('close',()=>{popup.remove();popup=null;},{once:true});
+    }
+    window.addEventListener('message',event=>{
+      if(!popup||event.origin!==location.origin||event.source!==popup.querySelector('iframe').contentWindow)return;
+      if(event.data?.type==='dewford-editor-expired'){popup.close();alert('로그인이 만료되었습니다. 다시 로그인해 주세요.');location.reload();}
+      if(event.data?.type==='dewford-editor-close')popup.close();
+      if(event.data?.type==='dewford-editor-saved'){popup.close();location.reload();}
+    });
+    function compose(text,query){const button=document.createElement('button');button.type='button';button.textContent=text;button.onclick=e=>{e.preventDefault();e.stopPropagation();openEditor(query);};return button;}
     function link(text,href){const a=document.createElement('a');a.textContent=text;a.href=href;return a;}
-    const bar=document.createElement('div');bar.className='df-public-tools df-public-toolbar';const label=document.createElement('strong');label.textContent='관리자 모드';bar.append(label,link('+ 글쓰기','admin.html?board='+board+'&new=1'),link('관리자 페이지','admin.html?board='+board));
+    const bar=document.createElement('div');bar.className='df-public-tools df-public-toolbar';const label=document.createElement('strong');label.textContent='관리자 모드';bar.append(label,compose('+ 글쓰기','new=1'),link('관리자 페이지','admin.html?board='+board));
     const logout=document.createElement('button');logout.type='button';logout.textContent='로그아웃';logout.onclick=async()=>{logout.disabled=true;try{const r=await fetch('/api/logout',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':session.csrf},body:'{}'});if(!r.ok)throw Error();location.reload();}catch{alert('로그아웃하지 못했습니다. 다시 시도해 주세요.');logout.disabled=false;}};bar.append(logout);root.prepend(bar);
     function decorate(){root.querySelectorAll('[data-event-id], [data-calendar-id]').forEach(add);if(root.dataset.eventId)add(root);}
     function add(item){
       if(item.querySelector(':scope > .df-post-tools'))return;
       const id=item.dataset.eventId||item.dataset.calendarId;if(!id)return;
       const tools=document.createElement('div');tools.className='df-public-tools df-post-tools';
-      tools.append(link('수정','admin.html?board='+board+'&edit='+encodeURIComponent(id)),link('이동','admin.html?board='+board+'&edit='+encodeURIComponent(id)+'&move=1'));
+      tools.append(compose('수정','edit='+encodeURIComponent(id)),compose('이동','edit='+encodeURIComponent(id)+'&move=1'));
       const del=document.createElement('button');del.type='button';del.dataset.delete='';del.textContent='삭제';
       del.addEventListener('click',async e=>{e.preventDefault();e.stopPropagation();if(!confirm('이 게시글을 삭제할까요? 삭제 후 복구할 수 없습니다.'))return;del.disabled=true;try{const r=await fetch('/api/posts/'+encodeURIComponent(id),{method:'DELETE',headers:{'Content-Type':'application/json','X-CSRF-Token':session.csrf},body:'{}'});if(!r.ok){const data=await r.json();throw Error(data.error);}location.href=root.matches('.dewford-detail-main')?'event.html':location.href;}catch(error){alert(error.message||'삭제하지 못했습니다.');del.disabled=false;}});tools.append(del);item.append(tools);
     }

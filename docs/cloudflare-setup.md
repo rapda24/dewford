@@ -89,3 +89,20 @@ npx wrangler deploy --dry-run
 - https://developers.cloudflare.com/workers/configuration/secrets/
 - https://developers.cloudflare.com/workers/static-assets/binding/
 - https://developers.cloudflare.com/d1/worker-api/d1-database/
+
+
+## 게시글 이미지 첨부
+
+관리자 글쓰기·수정 화면에서 대표 이미지와 추가 사진을 파일로 선택합니다. JPG/PNG/WebP, 원본 파일당 최대 20MB, 추가 사진 최대 30장입니다. 선택한 사진은 미리보기에서 제거할 수 있고, 저장하기를 누르기 전에는 서버에 업로드하지 않습니다. 저장 시 브라우저에서 최대 1920px, 1MB 이하로 변환하므로 원본 보관용 기능은 아닙니다.
+
+Cloudflare Worker의 인증 및 CSRF 검사를 통과한 요청만 `/api/media`로 업로드할 수 있습니다. 이미지 바이너리는 기존 D1의 `media` 테이블에 저장되며, 별도 바인딩이나 R2 가입은 필요 없습니다. 테이블은 자동 생성됩니다. SHA-256 키로 같은 이미지의 중복 저장을 방지합니다. 공개 게시글에 사용하는 이미지 URL은 공개적으로 조회할 수 있습니다. 게시글에서 사진을 제거해도 공유 참조가 깨지지 않도록 저장된 바이너리는 유지됩니다. 대량의 사진을 장기간 운영할 경우 별도 객체 저장소로 이전하는 것이 적합합니다.
+
+D1 무료 DB 크기 한도는 [공식 제한 안내](https://developers.cloudflare.com/d1/platform/limits/)를 참고하세요. 관리자 권한 확인은 계속 수행하되 페이지 전환 시 확인 문구는 표시하지 않습니다. 인증 오류가 발생할 경우에만 안내를 표시합니다.
+
+## Popup editor and rich content
+
+Public write/edit/move controls open the shared admin form in a same-origin modal iframe. Only messages from that iframe and the same origin can close or refresh the page. Successful saves refresh the public board.
+
+Quill 2.0.3 is vendored in assets/vendor/quill (BSD license included). Content is stored as a server-validated Delta with text and allowlisted formatting only. Public rendering creates text nodes and fixed semantic elements; it never inserts submitted HTML. The HTML export API affected by the Quill 2.0.3 advisory is not used. Legacy posts retain their original layout until edited; editing preserves their text and attachments and converts the body to rich content.
+
+Validation: 16 automated tests, local browser popup save with bold text persisted in D1 and displayed on the detail page, and Wrangler deployment dry-run.

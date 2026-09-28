@@ -164,3 +164,39 @@ test('production config routes API and live data through Worker; source and DB a
   const ignored = await readFile('.assetsignore', 'utf8');
   for (const path of ['/cloudflare/', '/server/', '/.dewford-data/', '/node_modules/', '/package-lock.json']) assert.ok(ignored.includes(path));
 });
+
+test('image attachments require admin and CSRF, persist bytes, and appear in public post data', async () => {
+  const auth=await login();
+  const content='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a9xkAAAAASUVORK5CYII=';
+  assert.equal((await request('/api/media',{method:'POST',data:{content}})).status,401);
+  assert.equal((await request('/api/media',{method:'POST',cookie:auth.cookie,data:{content}})).status,403);
+  assert.equal((await request('/api/media',{method:'POST',...auth,data:{content:btoa('<svg onload="alert(1)"></svg>')}})).status,400);
+  assert.equal((await request('/api/media',{method:'POST',...auth,data:{content},headers:{Origin:'https://other.test'}})).status,403);
+  const upload=await request('/api/media',{method:'POST',...auth,data:{content}});
+  assert.equal(upload.status,201,JSON.stringify(upload.value));
+  const media=await mf.dispatchFetch(base+upload.value.url);
+  assert.equal(media.headers.get('Content-Type'),'image/png');
+  assert.deepEqual(Buffer.from(await media.arrayBuffer()),Buffer.from(content,'base64'));
+  const duplicate=await request('/api/media',{method:'POST',...auth,data:{content}});
+  assert.equal(duplicate.value.url,upload.value.url);
+  const post=await request('/api/posts',{method:'POST',...auth,data:{...postData,image:upload.value.url,gallery:[upload.value.url]}});
+  assert.equal(post.status,201);
+  assert.ok((await request('/assets/data/dewford-events.js')).value.includes(upload.value.url));
+  const moved=await request('/api/posts/'+post.value.id,{method:'PUT',...auth,data:{...post.value,board:'preschool'}});
+  assert.equal(moved.status,200);
+  assert.ok((await request('/assets/data/dewford-calendar.json')).value.preschool.some(p=>p.image===upload.value.url));
+  assert.equal((await request('/api/media/'+'0'.repeat(64))).status,404);
+  const oversized=Buffer.alloc(1000001);oversized.set([255,216,255]);
+  assert.equal((await request('/api/media',{method:'POST',...auth,data:{content:oversized.toString('base64')}})).status,413);
+});
+
+test('rich text formatting persists and unsafe embeds or arbitrary attributes are rejected',async()=>{
+  const auth=await login();
+  const content={ops:[{insert:'작은 발견',attributes:{bold:true}},{insert:'\n',attributes:{header:2}},{insert:'오늘의 소식',attributes:{size:'large'}},{insert:'\n',attributes:{list:'bullet'}}]};
+  const post=await request('/api/posts',{method:'POST',...auth,data:{...postData,content}});
+  assert.equal(post.status,201);assert.deepEqual(post.value.content,content);
+  assert.deepEqual((await request('/api/posts')).value.find(p=>p.id===post.value.id).content,content);
+  for(const invalid of [{ops:[{insert:{image:'javascript:alert(1)'}}]},{ops:[{insert:'bad',attributes:{onclick:'alert(1)'}}]},{ops:[{insert:'bad',attributes:{size:'url(bad)'}}]},{ops:[{insert:'x'.repeat(20002)}]}]){
+    assert.equal((await request('/api/posts',{method:'POST',...auth,data:{...postData,content:invalid}})).status,400);
+  }
+});

@@ -30,6 +30,7 @@ async function initialize(db) {
   if (initialized.has(db)) return initialized.get(db);
   const ready = (async () => {
     await db.batch([
+      db.prepare('CREATE TABLE IF NOT EXISTS media (id TEXT PRIMARY KEY, data BLOB NOT NULL, mime TEXT NOT NULL)'),
       db.prepare('CREATE TABLE IF NOT EXISTS metadata (key TEXT PRIMARY KEY)'),
       db.prepare('CREATE TABLE IF NOT EXISTS posts (id TEXT PRIMARY KEY, board TEXT NOT NULL, position INTEGER NOT NULL, data TEXT NOT NULL)'),
       db.prepare('CREATE INDEX IF NOT EXISTS posts_board_position ON posts(board, position, id)'),
@@ -93,14 +94,14 @@ async function limit(db, request, scope, cap, seconds) {
   if (row.hits > cap) throw new HttpError(429, '요청이 많습니다. 잠시 후 다시 시도해 주세요.');
   await statement(db, 'DELETE FROM rate_limits WHERE expires<=?', now).run();
 }
-async function readBody(request) {
+async function readBody(request, maximum = MAX_BODY) {
   if (request.headers.get('Origin') && request.headers.get('Origin') !== new URL(request.url).origin || request.headers.get('Sec-Fetch-Site') === 'cross-site') {
     throw new HttpError(403, '허용되지 않은 요청입니다.');
   }
   if ((request.headers.get('Content-Type') || '').split(';')[0].trim() !== 'application/json') {
     throw new HttpError(415, 'JSON 요청이 필요합니다.');
   }
-  if (Number(request.headers.get('Content-Length')) > MAX_BODY) throw new HttpError(413, '입력 내용이 너무 큽니다.');
+  if (Number(request.headers.get('Content-Length')) > maximum) throw new HttpError(413, '입력 내용이 너무 큽니다.');
   const reader = request.body?.getReader();
   const chunks = []; let total = 0;
   if (reader) {
@@ -108,7 +109,7 @@ async function readBody(request) {
       const {done, value} = await reader.read();
       if (done) break;
       total += value.byteLength;
-      if (total > MAX_BODY) { await reader.cancel(); throw new HttpError(413, '입력 내용이 너무 큽니다.'); }
+      if (total > maximum) { await reader.cancel(); throw new HttpError(413, '입력 내용이 너무 큽니다.'); }
       chunks.push(value);
     }
   }
@@ -126,12 +127,34 @@ function textField(data, field, max = 400) {
 }
 function safeImage(value) {
   if (!value) return true;
+  if (/^\/api\/media\/[a-f0-9]{64}$/.test(value)) return true;
   if (/^assets\/[\w./% -]+\.(png|jpe?g|webp|gif)$/i.test(value) && !value.includes('..')) return true;
   try { const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password; } catch { return false; }
 }
+function validateContent(content) {
+  if (content == null) return null;
+  if (!content || !Array.isArray(content.ops) || content.ops.length > 2000) throw new HttpError(400, '본문 형식을 확인해 주세요.');
+  let length=0;
+  const allowed={bold:[true],italic:[true],underline:[true],blockquote:[true],header:[2,3],size:['small','large','huge'],list:['ordered','bullet'],align:['center','right','justify']};
+  const ops=content.ops.map(op=>{
+    if (!op || typeof op.insert!=='string' || Object.keys(op).some(k=>!['insert','attributes'].includes(k))) throw new HttpError(400, '본문 형식을 확인해 주세요.');
+    length+=op.insert.length;
+    if(length>20001)throw new HttpError(400, '본문은 20,000자 이내로 입력해 주세요.');
+    const attributes={};
+    if(op.attributes!=null){
+      if(typeof op.attributes!=='object'||Array.isArray(op.attributes))throw new HttpError(400, '서식 형식을 확인해 주세요.');
+      for(const [key,value] of Object.entries(op.attributes)){
+        if(!Object.hasOwn(allowed,key)||!allowed[key].includes(value))throw new HttpError(400, '지원하지 않는 본문 서식입니다.');
+        attributes[key]=value;
+      }
+    }
+    return {insert:op.insert,...(Object.keys(attributes).length?{attributes}:{})};
+  });
+  return {ops};
+}
 function validatePost(data) {
   if (!BOARDS.includes(data.board)) throw new HttpError(400, '게시판을 선택해 주세요.');
-  const post = {board: data.board};
+  const post = {board: data.board, content: validateContent(data.content)};
   for (const [field, max] of Object.entries({title: 200, description: 20000, excerpt: 1000, category: 100, alt: 300, date: 10, image: 2000})) {
     post[field] = textField(data, field, max);
   }
@@ -158,6 +181,30 @@ async function handle(request, env) {
   const dynamic = path.startsWith('/api/') || path === '/assets/data/dewford-events.js' || path === '/assets/data/dewford-calendar.json';
   if (!dynamic) return env.ASSETS.fetch(request);
   await initialize(env.DB);
+  const mediaMatch = path.match(/^\/api\/media\/([a-f0-9]{64})$/);
+  if (mediaMatch && request.method === 'GET') {
+    const media = await statement(env.DB, 'SELECT data,mime FROM media WHERE id=?', mediaMatch[1]).first();
+    if (!media) throw new HttpError(404, '이미지를 찾을 수 없습니다.');
+    return new Response(new Uint8Array(media.data), {headers: {'Content-Type': media.mime, 'Cache-Control': 'public, max-age=31536000, immutable', 'X-Content-Type-Options': 'nosniff'}});
+  }
+  if (path === '/api/media' && request.method === 'POST') {
+    const session = await getSession(request, env);
+    if (!session) throw new HttpError(401, '관리자 로그인이 필요합니다.');
+    if (!await equalText(request.headers.get('X-CSRF-Token') || '', session.csrf)) throw new HttpError(403, '페이지를 새로고침한 후 다시 시도해 주세요.');
+    const data = await readBody(request, 1400000);
+    if (typeof data.content !== 'string' || !/^[A-Za-z0-9+/]+={0,2}$/.test(data.content)) throw new HttpError(400, '이미지 파일을 확인해 주세요.');
+    let bytes;
+    try {bytes = Uint8Array.from(atob(data.content), c => c.charCodeAt(0));} catch {throw new HttpError(400, '이미지 파일을 확인해 주세요.');}
+    if (bytes.length > 1000000) throw new HttpError(413, '이미지 용량을 줄여 다시 선택해 주세요.');
+    const signature = String.fromCharCode(...bytes.slice(0, 12));
+    const mime = bytes[0]===255 && bytes[1]===216 && bytes[2]===255 ? 'image/jpeg' :
+      signature.startsWith('\x89PNG\r\n\x1a\n') ? 'image/png' :
+      signature.startsWith('RIFF') && signature.slice(8)==='WEBP' ? 'image/webp' : null;
+    if (!mime || bytes.length < 16) throw new HttpError(400, 'JPG, PNG, WebP 이미지 파일을 선택해 주세요.');
+    const id = hex(await crypto.subtle.digest('SHA-256', bytes));
+    await statement(env.DB, 'INSERT OR IGNORE INTO media(id,data,mime) VALUES (?,?,?)', id, bytes.buffer, mime).run();
+    return reply({url: '/api/media/' + id}, 201);
+  }
   if (request.method === 'GET') {
     if (path === '/api/session') {
       credentials(env);
