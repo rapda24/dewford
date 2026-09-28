@@ -1,0 +1,29 @@
+# Cloudflare Workers static asset upload exclusions (not Git exclusions).
+# The website uses collections/sub-*.webp; retain the large JPG originals locally.
+/assets/images/dewford/attached/22483739.jpg
+/assets/images/dewford/attached/22483744.jpg
+
+# Local data, tooling and project documentation are not public website assets.
+/.git/
+/.github/
+/.dewford-data/
+/.wrangler/
+/node_modules/
+/server/
+/scripts/
+/docs/
+/dewford-backups/
+/assets/reports/
+/assets/scripts/
+/partials/
+/index_bu.html
+/.gitignore
+/.assetsignore
+/wrangler.jsonc
+**/.DS_Store
+**/__pycache__/
+**/*.pyc
+**/.env
+**/.env.*
+**/.dev.vars
+**/.dev.vars.*
