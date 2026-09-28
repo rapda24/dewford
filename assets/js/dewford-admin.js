@@ -14,21 +14,27 @@
   async function api(path, method='GET', data) {
     if(preview)return window.DEWFORD_ADMIN_PREVIEW.request(path,method,data);
     let response;
-    try { response=await fetch('/api/'+path,{method,headers:{'Content-Type':'application/json','X-CSRF-Token':session?.csrf||''},body:data===undefined?undefined:JSON.stringify(data),cache:'no-store'}); }
-    catch { throw Error('서버에 연결할 수 없습니다. 연결 상태를 확인해 주세요.'); }
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),15000);
+    try { response=await fetch('/api/'+path,{method,headers:{'Content-Type':'application/json','X-CSRF-Token':session?.csrf||''},body:data===undefined?undefined:JSON.stringify(data),cache:'no-store',signal:controller.signal}); }
+    catch { throw Error(controller.signal.aborted?'서버 응답이 지연되고 있습니다. 잠시 후 다시 시도해 주세요.':'서버에 연결할 수 없습니다. 연결 상태를 확인해 주세요.'); }
+    finally {clearTimeout(timeout);}
     let result;try {result=await response.json();}catch {const error=Error('관리 서버에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요.');error.previewAllowed=response.status===404;throw error;}
     if(!response.ok){if(response.status===401 && path!=='login'){location.href='admin-login.html';}const error=Error(result.error||'요청을 처리하지 못했습니다.');error.previewAllowed=response.status===404;throw error;}return result;
   }
   function action(text, fn, cls) {const b=node('button',text,cls);b.type='button';b.addEventListener('click',async()=>{b.disabled=true;try{await fn();}catch(e){$('#df-status').textContent=e.message;}finally{b.disabled=false;}});return b;}
   function returnPath(){const raw=params.get('next');return raw && /^admin\.html(?:\?[^#]*)?$/.test(raw)?raw:'admin.html';}
+  if($('#df-login-form')){
+    $('#df-password-toggle').addEventListener('click',e=>{const input=$('[name=password]');const show=input.type==='password';input.type=show?'text':'password';e.currentTarget.textContent=show?'숨기기':'표시';e.currentTarget.setAttribute('aria-pressed',String(show));});
+    $('#df-login-form').addEventListener('submit',async e=>{e.preventDefault();const button=e.target.querySelector('[type=submit]');button.disabled=true;$('#df-login-status').textContent='로그인 중입니다.';try{await api('login','POST',Object.fromEntries(new FormData(e.target)));location.replace(returnPath());}catch(error){$('#df-login-status').textContent=error.message;button.disabled=false;}});
+    // Register controls before contacting the server so a slow API cannot freeze the form.
+    try {session=await api('session');if(session.authenticated)location.replace(returnPath());}
+    catch(error){if(!$('#df-login-form [type=submit]').disabled)$('#df-login-status').textContent=error.message;}
+    return;
+  }
   try {session=await api('session');} catch(e){
     if(e.previewAllowed&&$('#df-dashboard')&&window.DEWFORD_ADMIN_PREVIEW){preview=true;session=await api('session');}
     else {($('#df-login-status')||$('#df-auth-loading')).textContent=e.message;return;}
-  }
-  if($('#df-login-form')){
-    if(session.authenticated){location.replace(returnPath());return;}
-    $('#df-password-toggle').addEventListener('click',e=>{const input=$('[name=password]');const show=input.type==='password';input.type=show?'text':'password';e.currentTarget.textContent=show?'숨기기':'표시';e.currentTarget.setAttribute('aria-pressed',String(show));});
-    $('#df-login-form').addEventListener('submit',async e=>{e.preventDefault();const button=e.target.querySelector('[type=submit]');button.disabled=true;$('#df-login-status').textContent='로그인 중입니다.';try{await api('login','POST',Object.fromEntries(new FormData(e.target)));location.replace(returnPath());}catch(error){$('#df-login-status').textContent=error.message;button.disabled=false;}});return;
   }
   if(!session.authenticated){location.replace('admin-login.html?next='+encodeURIComponent('admin.html'+location.search));return;}
   $('#df-auth-loading').hidden=true;$('#df-dashboard').hidden=false;

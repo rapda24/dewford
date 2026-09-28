@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "test": "node --test cloudflare/worker.test.mjs",
+    "test": "node --test cloudflare/*.test.mjs",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev --local"
   },
