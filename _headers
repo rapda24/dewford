@@ -11,3 +11,6 @@
   Cache-Control: no-store
 /admin-login.html
   Cache-Control: no-store
+
+/assets/images/dewford/responsive/*
+  Cache-Control: public, max-age=604800

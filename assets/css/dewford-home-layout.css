@@ -73,9 +73,9 @@ body[data-dewford-page="home"] .dewford-home-pricing h2{font-weight:800!importan
  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
  background:linear-gradient(180deg,rgba(18,19,23,0) 20%,rgba(18,19,23,.18) 43%,rgba(18,19,23,.84) 77%,rgba(18,19,23,.94) 100%);
 }
-.dewford-pricing-grid>.elementor-element:nth-child(1){--dewford-card-image:url('../images/dewford/unique/growth-reader-v1.jpg');}
-.dewford-pricing-grid>.elementor-element:nth-child(2){--dewford-card-image:url('../images/dewford/unique/growth-writer-v1.jpg');}
-.dewford-pricing-grid>.elementor-element:nth-child(3){--dewford-card-image:url('../images/dewford/unique/growth-learner-v1.jpg');}
+.dewford-pricing-grid>.elementor-element:nth-child(1){--dewford-card-image:url('../images/dewford/responsive/growth-reader-v1-907572be-1120.webp');}
+.dewford-pricing-grid>.elementor-element:nth-child(2){--dewford-card-image:url('../images/dewford/responsive/growth-writer-v1-8f819ac6-1120.webp');}
+.dewford-pricing-grid>.elementor-element:nth-child(3){--dewford-card-image:url('../images/dewford/responsive/growth-learner-v1-dcc11c3e-1120.webp');}
 .dewford-pricing-grid .pxl-pricing.pxl-pricing1 .pxl-item--price{display:block;margin:0 0 12px;}
 .dewford-pricing-grid .pxl-pricing.pxl-pricing1 .pxl--price{
  font-size:clamp(24px,2.25vw,32px)!important;line-height:1.18;letter-spacing:-.025em;

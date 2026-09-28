@@ -40,7 +40,7 @@
     revealTimer = setTimeout(reveal, Math.max(0, 1000 - (performance.now() - started)));
   }
   var safetyTimer = setTimeout(finish, 6000);
-  if (reducedMotion) { finish(); return; }
+  if (reducedMotion || window.matchMedia('(max-width: 767px)').matches) { finish(); return; }
   root.classList.add('dewford-intro-active');
   document.addEventListener('keydown', onKey, true);
   if (document.readyState === 'complete') ready();

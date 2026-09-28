@@ -102,7 +102,7 @@ html body #inquiry :is(input,textarea,select):focus {border-color:var(--dewford-
 @media(max-width:767px){
  html body #inquiry .elementor-element.elementor-element-8f6c08f {
   padding-top:66.625vw!important;
-  background-image:linear-gradient(180deg,rgba(48,16,63,0) 65%,#30103f 100%),url('../images/dewford/unique/admissions-inquiry-hero-variety-v4.jpg');
+  background-image:linear-gradient(180deg,rgba(48,16,63,0) 65%,#30103f 100%),url('../images/dewford/responsive/admissions-inquiry-hero-variety-v4-29746edb-1600.webp');
   background-size:100% 66.625vw,100% auto;
   background-position:center top,center top;
   background-repeat:no-repeat;
@@ -131,19 +131,19 @@ html body :is(.dewford-native-main .btn,.pxl-button > a.btn,#inquiry .wpcf7-subm
 html body .dewford-native-main .btn:not(:has(.pxl--btn-icon)) {padding:12px 20px!important;min-height:48px;line-height:1.4;}
 /* Individual focal points keep faces within the taller subpage hero. */
 html body .dewford-title-slide img {object-position:var(--title-focus,50% 35%);transform-origin:var(--title-focus,50% 35%);}
-html body .dewford-title-slide img[src$="22129289.jpg"] {--title-focus:50% 35%;--title-focus-mobile:54% 35%;}
-html body .dewford-title-slide img[src$="22483744.jpg"] {--title-focus:65% 35%;--title-focus-mobile:76% 35%;}
-html body .dewford-title-slide img[src$="21362222.jpg"] {--title-focus:50% 22%;--title-focus-mobile:54% 25%;}
-html body .dewford-title-slide img[src$="title-36.png"] {--title-focus:50% 38%;--title-focus-mobile:48% 38%;}
-html body .dewford-title-slide img[src$="title-63.png"] {--title-focus:50% 35%;--title-focus-mobile:50% 35%;}
-html body .dewford-title-slide img[src$="title-57.png"] {--title-focus:50% 25%;--title-focus-mobile:50% 35%;}
-html body .dewford-title-slide img[src$="2346810929.webp"] {--title-focus:50% 32%;--title-focus-mobile:55% 32%;}
-html body .dewford-title-slide img[src$="2439954451.webp"] {--title-focus:50% 35%;--title-focus-mobile:55% 35%;}
-html body .dewford-title-slide img[src$="2452912103.webp"] {--title-focus:50% 30%;--title-focus-mobile:47% 30%;}
-html body .dewford-title-slide img[src$="2500679803.webp"] {--title-focus:50% 30%;--title-focus-mobile:30% 30%;}
-html body .dewford-title-slide img[src$="2644817201.webp"] {--title-focus:50% 30%;--title-focus-mobile:55% 30%;}
-html body .dewford-title-slide img[src$="2644823085.webp"] {--title-focus:50% 30%;--title-focus-mobile:48% 30%;}
-html body .dewford-title-slide img[src$="2490871681.webp"] {--title-focus:50% 30%;--title-focus-mobile:50% 30%;}
-html body .dewford-title-slide img[src$="2492054923.webp"] {--title-focus:50% 30%;--title-focus-mobile:55% 30%;}
-html body .dewford-title-slide img[src$="2646107545.webp"] {--title-focus:50% 40%;--title-focus-mobile:50% 40%;}
+html body .dewford-title-slide img:is([src$="22129289.jpg"],[data-original-src$="22129289.jpg"]) {--title-focus:50% 35%;--title-focus-mobile:54% 35%;}
+html body .dewford-title-slide img:is([src$="22483744.jpg"],[data-original-src$="22483744.jpg"]) {--title-focus:65% 35%;--title-focus-mobile:76% 35%;}
+html body .dewford-title-slide img:is([src$="21362222.jpg"],[data-original-src$="21362222.jpg"]) {--title-focus:50% 22%;--title-focus-mobile:54% 25%;}
+html body .dewford-title-slide img:is([src$="title-36.png"],[data-original-src$="title-36.png"]) {--title-focus:50% 38%;--title-focus-mobile:48% 38%;}
+html body .dewford-title-slide img:is([src$="title-63.png"],[data-original-src$="title-63.png"]) {--title-focus:50% 35%;--title-focus-mobile:50% 35%;}
+html body .dewford-title-slide img:is([src$="title-57.png"],[data-original-src$="title-57.png"]) {--title-focus:50% 25%;--title-focus-mobile:50% 35%;}
+html body .dewford-title-slide img:is([src$="2346810929.webp"],[data-original-src$="2346810929.webp"]) {--title-focus:50% 32%;--title-focus-mobile:55% 32%;}
+html body .dewford-title-slide img:is([src$="2439954451.webp"],[data-original-src$="2439954451.webp"]) {--title-focus:50% 35%;--title-focus-mobile:55% 35%;}
+html body .dewford-title-slide img:is([src$="2452912103.webp"],[data-original-src$="2452912103.webp"]) {--title-focus:50% 30%;--title-focus-mobile:47% 30%;}
+html body .dewford-title-slide img:is([src$="2500679803.webp"],[data-original-src$="2500679803.webp"]) {--title-focus:50% 30%;--title-focus-mobile:30% 30%;}
+html body .dewford-title-slide img:is([src$="2644817201.webp"],[data-original-src$="2644817201.webp"]) {--title-focus:50% 30%;--title-focus-mobile:55% 30%;}
+html body .dewford-title-slide img:is([src$="2644823085.webp"],[data-original-src$="2644823085.webp"]) {--title-focus:50% 30%;--title-focus-mobile:48% 30%;}
+html body .dewford-title-slide img:is([src$="2490871681.webp"],[data-original-src$="2490871681.webp"]) {--title-focus:50% 30%;--title-focus-mobile:50% 30%;}
+html body .dewford-title-slide img:is([src$="2492054923.webp"],[data-original-src$="2492054923.webp"]) {--title-focus:50% 30%;--title-focus-mobile:55% 30%;}
+html body .dewford-title-slide img:is([src$="2646107545.webp"],[data-original-src$="2646107545.webp"]) {--title-focus:50% 40%;--title-focus-mobile:50% 40%;}
 @media(max-width:767px){html body .dewford-title-slide img {object-position:var(--title-focus-mobile,50% 35%);transform-origin:var(--title-focus-mobile,50% 35%);}}

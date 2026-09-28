@@ -10,9 +10,8 @@
     card.querySelectorAll('a').forEach(function (link) { link.href = url; });
     var image = card.querySelector('.pxl-post--featured img');
     if (image) {
-      image.src = post.image;
+      window.dewfordImage(image,post.image,home?'(max-width:767px) 100vw, 50vw':'(max-width:767px) 100vw, 33vw');image.loading='lazy';
       image.alt = post.alt || post.title;
-      image.removeAttribute('srcset');
       image.removeAttribute('title');
       image.width = 600;
       image.height = 600;

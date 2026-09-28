@@ -630,7 +630,7 @@ body #pxl-footer-elementor a.dewford-social-youtube:is(:hover, :focus-visible) .
 /* Fill the consultation section with the photo positioned at 30% vertically. */
 body #inquiry .elementor-element.elementor-element-8f6c08f {
   background-color: #30103f !important;
-  background-image: linear-gradient(90deg, rgba(42, 15, 56, .78), rgba(42, 15, 56, .48)), url('../images/dewford/unique/admissions-inquiry-hero-variety-v4.jpg');
+  background-image: linear-gradient(90deg, rgba(42, 15, 56, .78), rgba(42, 15, 56, .48)), url('../images/dewford/responsive/admissions-inquiry-hero-variety-v4-29746edb-1600.webp');
   background-position: center, center 30%;
   background-size: 100% 100%, cover;
   background-repeat: no-repeat;

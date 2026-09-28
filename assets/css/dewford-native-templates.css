@@ -15,10 +15,10 @@ body .dewford-native-main .pxl-accordion--title { line-height: 1.5; }
 body .dewford-native-main .pxl-accordion--title:focus-visible { outline: 2px solid #52196d; outline-offset: 4px; }
 body .dewford-native-title { padding-top: 32px; }
 body .dewford-native-title :is(.elementor-element-fd39a41,.elementor-element-e578bb3) {
- background-image: url('../images/dewford/events-title.jpg') !important;
+ background-image: url('../images/dewford/responsive/events-title-44ec2af7-1920.webp') !important;
  background-position: center 35%;
 }
-body .dewford-native-title .elementor-element-e842371 > .e-con { background-image: url('../images/dewford/events-title.jpg') !important; }
+body .dewford-native-title .elementor-element-e842371 > .e-con { background-image: url('../images/dewford/responsive/events-title-44ec2af7-1920.webp') !important; }
 body .dewford-native-title :is(.elementor-element-fd39a41,.elementor-element-e578bb3)::before {
  background-image: linear-gradient(180deg,rgba(82,25,109,0),rgba(82,25,109,.3)) !important;
 }

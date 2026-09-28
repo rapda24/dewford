@@ -9,10 +9,17 @@
   var timer;
   var started = false;
   var zooms = [];
+  var visible = true;
+  function prepare(image) {
+    if(image.dataset.srcset){image.srcset=image.dataset.srcset;delete image.dataset.srcset;}
+    if(image.dataset.src){image.loading='eager';image.src=image.dataset.src;delete image.dataset.src;}
+  }
+  if('IntersectionObserver' in window)new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;schedule();},{rootMargin:'100px'}).observe(hero);
+
   function zoom(slide) {
     var image = slide.querySelector('img');
     image.getAnimations().forEach(function (animation) { animation.cancel(); });
-    if (!motion.matches) {
+    if (!motion.matches && !window.matchMedia('(max-width: 767px)').matches) {
       zooms = zooms.filter(function (animation) { return animation.playState !== 'idle'; });
       zooms.push(image.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.08)' }],
         { duration: 5000, easing: 'linear', fill: 'forwards' }));
@@ -20,10 +27,11 @@
   }
   function schedule() {
     clearTimeout(timer);
-    if (!started || motion.matches || document.hidden) return;
+    if (!started || motion.matches || document.hidden || !visible) return;
     timer = setTimeout(function () {
       var next = (index + 1) % slides.length;
       var image = slides[next].querySelector('img');
+      prepare(image);
       // Keep the current image if the next asset has not loaded successfully.
       if (image.complete && image.naturalWidth > 0) {
         zoom(slides[next]);

@@ -44,14 +44,14 @@
   root.querySelectorAll('[data-detail-image]').forEach(function (node) {
     var n = Number(node.dataset.detailImage);
     if (!images[n]) { node.hidden = true; return; }
-    node.src = images[n];
+    window.dewfordImage(node,images[n],'(max-width:767px) 100vw, 70vw');
     node.alt = n === 0 ? post.alt : post.title + ' — 배움의 순간 ' + n;
   });
   if (images.length > 3) {
     var anchor = root.querySelector('[data-detail-image="0"]');
     var gallery = document.createElement('div');
     gallery.style.cssText = 'display:grid;gap:20px;margin-top:24px';
-    images.slice(3).forEach(function (src) { var img = document.createElement('img'); img.src=src; img.alt=post.title; img.loading='lazy'; img.style.width='100%'; gallery.append(img); });
+    images.slice(3).forEach(function (src) { var img = document.createElement('img'); window.dewfordImage(img,src); img.alt=post.title; img.loading='lazy'; img.style.width='100%'; gallery.append(img); });
     anchor.parentElement.append(gallery);
   }
   function nav(selector, nextIndex) {
@@ -68,7 +68,7 @@
     var row = document.createElement('div'); row.className = 'pxl--item';
     var imageBox = document.createElement('div'); imageBox.className = 'pxl-item--img pxl-mr-20';
     var link = document.createElement('a'); link.href = 'detail.html?id=' + encodeURIComponent(item.id);
-    var img = document.createElement('img'); img.src = item.image; img.alt = item.alt; img.width = 592; img.height = 408; img.loading = 'lazy';
+    var img = document.createElement('img'); window.dewfordImage(img,item.image,'(max-width:767px) 100vw, 30vw'); img.alt = item.alt; img.width = 592; img.height = 408; img.loading = 'lazy';
     link.appendChild(img); imageBox.appendChild(link);
     var holder = document.createElement('div'); holder.className = 'pxl-item--holder';
     var heading = document.createElement('h6'); heading.className = 'pxl-item--title';
