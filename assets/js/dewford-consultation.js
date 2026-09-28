@@ -5,7 +5,7 @@
     const consent=document.createElement('label');consent.className='df-consent';const check=document.createElement('input');check.type='checkbox';check.name='consent';check.required=true;
     consent.append(check,document.createTextNode('상담 답변을 위해 성함, 이메일 및 입력한 상담 내용을 수집·이용하는 데 동의합니다. 입력 내용은 상담 목적으로 저장되며, ADMIN@DEWFORD.COM으로 삭제를 요청할 수 있습니다. 동의하지 않으면 신청할 수 없습니다.'));
     const submit=form.querySelector('[type=submit]');submit.closest('p').before(consent);
-    let status=form.querySelector('.wpcf7-response-output,[role=status]');if(!status){status=document.createElement('p');form.append(status);}status.removeAttribute('aria-hidden');status.setAttribute('role','status');status.setAttribute('aria-live','polite');status.classList.add('df-consultation-status');
+    let status=form.querySelector('.wpcf7-response-output,[role=status]');if(!status){status=document.createElement('p');form.append(status);}status.removeAttribute('aria-hidden');status.setAttribute('role','status');status.setAttribute('aria-live','polite');status.classList.remove('wpcf7-response-output','df-consultation-status');status.classList.add('dewford-form-feedback');status.textContent='';
   });}
   document.addEventListener('submit',async event=>{
     const form=event.target;if(!form.matches('[data-native-consultation],[data-dewford-inquiry]'))return;
